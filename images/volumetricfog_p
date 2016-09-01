@@ -1,0 +1,20 @@
+void p_volumeFog 
+{
+
+
+
+in float4	kVertexColor;
+in 	float2	kTCoord;
+out float4	kPixelColor;
+uniform sampler2D BaseSampler;
+
+
+//THe blending euqation is
+// (rf,gf,bf = (1-av)*(rt,gt,bt)+av*(rv,gv,bv)
+// where (rf,gf,bf) is the final color, (rt,gt,bt)
+// is the texture color and (rv,gv,bv,av) is the vertex color
+
+float4 kTextureColor = tex2D(BaseSampler, kTCoord);
+kPixelColor.rgb = (1.0f - kVertexColor.a)*kTextureColor.rgb + kVertexColor.a*kVertexColor.rgb;
+kPixelColor.a = 1.0f;
+}

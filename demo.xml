@@ -1,0 +1,19 @@
+
+
+<LevelRoot>
+
+	<FirstPersonPlayerCharacterService/>
+	<WSFirstPersonPlayerCharacter startx="0.0" starty="0.0" startz="0.0">
+		<CameraObjectService/>
+		<WSCameraObject startx="-1.0" starty="0.0" startz="1.0"/>
+	</WSFirstPersonPlayerCharacter>
+	<PointLightService/>
+	<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
+	<BoxService/>
+	<WSBox/>
+
+
+</LevelRoot>
+
+
+

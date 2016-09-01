@@ -1,0 +1,7 @@
+1. Create an XML loader mapping XML to the scene graph
+2. Get the damn 3D working
+3. Go through variables and "tweak" them
+4. Go through variables and use object pool
+5. Add Deferred Methods to source using DeferredMemoryManager
+6. Add Bloom Filters to complex functions
+7. Create Dialogues for Options Menu

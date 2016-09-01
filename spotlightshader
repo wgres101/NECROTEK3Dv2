@@ -1,0 +1,52 @@
+void v_LIs
+{
+in float4 ModelPOisition;
+in float3 kModelNormal;
+out float4 kClipPosition;
+out float4 kVertexColor;
+uniform mat4 WVPMatrix;
+uniform mat4 WMatrix;
+uniform float3 CameraModelPosition;
+uniform float3 MaterialEmissive;
+uniform float3 MaterialAmbient;
+uniform float3 MaterialDiffuse;
+uniform float3 MaterialSpecular;
+uniform float3 Light0ModelPosition;
+uniform float3 Light0ModelDirection;
+uniform float3 Light0Ambient;
+uniform float3 Light0Diffuse;
+uniform float3 Light0Specular;
+uniform float4 Light0SpotCutoff;
+uniform float4 Light0Attenuation;
+}
+
+//Transform the position from model space to clip space
+
+kCliupPosition = mul(kModelPosition, WVPMatrix);
+
+float fDiff, fSpec, fSpot;
+
+GetSpotLightFactors(kModelPosition.xyz, kModelNormal, CameraModelPosition,
+				Light0ModelPosition, MaterialSpecular.a, 
+				Light0ModelDirection, Light0SpotCutoff.y, 
+				Light0SpotCutoff.w, fDiff, fSpec, fSpot);
+				
+float fAttn = GetAttenuation((Mat3)WMatrix, kModelPosition.xyz,
+				Light0ModelPosition, Light0Attenuation);
+				
+float3 kColor = MaterialAmbient*Light0Ambient;
+
+if (fSpot > 0.0f)
+{
+	if (fDiff > 0.0f)
+	{
+		kColor += (fSpot*fDiff)*MaterialDiffuse.rgb*Light0Diffuse;
+		if (fSpec > 0.0f)
+		{
+			kColor += (fSpot*fSpec)*MaterialSpecular.rgb*Light0Specular;
+		}
+	}
+}
+
+kVertexColor.rgb = MaterialEmissive + fAttn*kColor;
+kVertexColor.a = MaterialDiffuse.a;

@@ -1,0 +1,53 @@
+// Growable Poisson Disc Filter
+//for Heat and Haze Post Processing
+
+
+
+// sampler tSource = source texture being filtered
+// float2 texCoord = texture coordinate for destination texel
+// float2 pixelSize = sizes of a texel in the source and destination
+//				image, usually this will be a vector like <1/width, 1/height>
+// float discRadius = size to grow cirle of confusion (0 will only sample
+//					from texel at texCoordDest, 1.0 will sample from up to a 
+//					pixel away in any direction, etc.
+
+
+float3 SiGrowablePoissonDisc13FilterRGB(sampler tSource, float2 texCoord, 
+			float2 pixelSize, float discRadius)
+{
+	float3 cOut;
+	float2 poissonDis[12] = {   float2(-0.326212f, -0.40581f),
+								float2(-0.840144f, -0.07358f),
+								float2(-0.695914f, 0.457137f),
+								float2(-0.203345f, 0.620716f),
+								float2(0.962334f, -0.194983f),
+								float2(0.473434f, -0.8420026f),
+								float2(0.519456f, 0.767022f),
+								float2(0.185461f, -0.893124f),
+								float2(0.507431f, 0.064425f),
+								float2(0.89642f, 0.412458f),
+								float2(-0.32194f, -0.932615f),
+								float2(-0.791559f, -0.59771)};
+								
+	//center tap
+	
+	cOut = text2D(tSource, texCoord);
+	
+	for (int tap = 0; tap<12; tap++)
+	{
+		float2 offset = (pixelSize*poissonDisc[tap]*discRadius);
+		float2 coord = texCoord.xy + offset;
+		
+		//sample pixel
+		cOut += tex2D(tSource, coord);
+		
+	}
+	
+	//average and return
+	
+	return (cOut/ 13.0f);
+}
+	
+	
+	
+	

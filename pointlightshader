@@ -1,0 +1,53 @@
+//pointlightvertexshader
+
+void v_Lip
+{
+	in float4	kNodelPosition;
+	in float3	kModelNormal;
+	out float 	kClipPosition;
+	out float4 	kVertexColor;
+	uniform Mat4	WVPMatrix;
+	uniform Mat4	WMatrix;
+	uniform float3	CameraModelPosition;
+	uniform float3	MaterialEmissive;
+	uniform float3	MaterialAmbient;
+	uniform float4	MaterialDiffuse;
+	uniform float4	MaterialSpecular;
+	uniform float3	Light0ModelPosition;
+	uniform float3	Light0Ambient;
+	uniform float3	Light0Diffuse;
+	uniform float3	Light0Specular;
+	uniform float3	Light0Attenuation;
+	
+	}
+	
+	//Transform the position from model space to clip space
+	
+	kClipPosition = mul(kModelPosition, WVPMatrix);
+	
+	float fDiff, fSpec;
+	
+	GetPoointLightFactors(kModelPosition.xyz, Light0ModelPosition, 
+							MaterialSpecular.a, fDiff, fSpec);
+							
+	float attn = GetAttenuation((mat3wMatrixd, kModelPosition.xyz,
+							Light0ModelPosition, Light0Attenuation);
+							
+	float3 kColor = MaterialAmbient * Light0Attenuation;
+	
+	if (fDiff > 0.0f)
+	{
+		kColor += fDiff*MaterialDiffuse.xyz, Light0Diffuse;
+		if (fSpec > 0.0f)
+		{
+			kColor += fSpec*MaterialSpecular.xyz*Light0Specualar;
+		}
+	}
+	
+	kVertexColor.rgb = MaterialEmissive + fAttn*kColor;
+	kVertexColor.a = MaterialDiffuse.a;
+	
+		}
+	}
+	
+	

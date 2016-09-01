@@ -1,0 +1,28 @@
+ARCHITECUTRE AND DESIGN
+
+
+
+1) Every object (such as a cube or sphere all the way to a rigidbody component) has its
+own WebService and WSObject. The WebService controls all the functionality -that is
+the game logic, and WSObject contains the data of an instance of a Web Service.
+
+2) Every object has its own place in the scene graph. This includes scripts,
+skeletal meshes, nav meshes, AI behaviors, ProjectileMovement objects, 
+static meshes, etc. 
+
+3) Every object has a WSObject which translates to a details panel. For example,
+I may add a primitie cube with a brick texture. That is added to the scene graph. When 
+the scene graph is iterated and reaches the box, it calls the box's primitive's 
+web service with a newly created WSObject for the box. SHould the user click on
+the box, on the right hand side a panel will appear for the box containing all
+the box's variables that can be adjusted (position, texture, m ash type, etc.) in
+the inspector
+
+4) Also, when a node is reached on the scene graph, since EVERY implementation of
+a node on the scene graph MUST implement three functions: create, update, and destroy,
+when the obejct is reached during iteration it will immediately call that object's
+Update method. 
+
+
+5) The Blackboard object is a means for services to comunicate with each other. Important
+variables are placed on the blackboard allowing for other services to check their values. 
