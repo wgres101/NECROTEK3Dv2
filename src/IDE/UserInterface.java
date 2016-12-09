@@ -44,7 +44,7 @@ import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 
-import EngineTester.MainGameLoop;
+
 import Listeners.BasicMenuListener;
 
 public class UserInterface implements Runnable {
@@ -1200,7 +1200,7 @@ public class UserInterface implements Runnable {
 
 				frame.addMouseListener(new MousePopupListener());
 				
-				MainGameLoop.maingame();
+				//MainGameLoop.maingame();
 			}
 			
 

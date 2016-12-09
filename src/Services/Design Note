@@ -1,0 +1,4 @@
+Design Note: By using web services that are decouppled into a service and an object
+we allow the code to be injectable at any time. This comes in handy when an unforeseen
+feature, or operation, must be performed. By decoupling the data from the code we
+are able to interject and possibly go another route unforeseen.

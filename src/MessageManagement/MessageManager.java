@@ -28,6 +28,8 @@ import java.util.Queue;
 // 			
 
 
+// delay message delivery
+
 public  class MessageManager {
 
 		static Queue<Message> messagesQueue = new PriorityQueue<Message>();

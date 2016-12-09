@@ -1,7 +1,7 @@
 package IDE;
 
 import Debugger.DebugManager;
-import EngineTester.MainGameLoop;
+
 
 public class GameLogic implements Runnable {
 

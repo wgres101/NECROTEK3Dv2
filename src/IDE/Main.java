@@ -4,20 +4,20 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import Blackboard.GameBlackboard;
-import EngineTester.MainGameLoop;
+
 import Factory.WebServiceFactory;
 import GameMap.XMLAdapter;
 import InspectorPanels.InspectorManager;
 import MainGame.Loop;
 import MessageManagement.MessageManager;
-import RenderEngine.CoreRaster;
+
 import SceneGraph.SceneGraphManager;
 import SchedulingManager.Scheduler;
 
 
 public class Main  extends JFrame   {
 
-	static CoreRaster coreRaster = new CoreRaster();
+	//static CoreRaster coreRaster = new CoreRaster();
 
 	static MessageManager messageManager = new MessageManager();
 	

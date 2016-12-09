@@ -1,0 +1,2 @@
+So that packets cannot be stored and replicated,
+for each packet generate a random number buindled with the packet
