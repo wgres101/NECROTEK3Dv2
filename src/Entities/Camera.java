@@ -1,5 +1,7 @@
 package Entities;
 
+import custom3DDataTypes.Keyboard;
+import custom3DDataTypes.Vector3f;
 
 public class Camera {
 	private Vector3f position = new Vector3f(0,0,0);
@@ -13,15 +15,15 @@ public class Camera {
 	}
 	
 	public void move() {
-			if(Keyboard.isKeyDown(Keyboard.KEY_W)) {
+			if(Keyboard.isKeyDown(Keyboard.keys.KEY_W)) {
 				position.z -= 0.02;
 			}
 			
-			if (Keyboard.isKeyDown(Keyboard.KEY_D)) {
+			if (Keyboard.isKeyDown(Keyboard.keys.KEY_D)) {
 				position.x += 0.02f;
 			}
 			
-			if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
+			if (Keyboard.isKeyDown(Keyboard.keys.KEY_A)) {
 				position.x -= 0.02f;
 			}
 	}

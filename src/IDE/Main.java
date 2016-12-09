@@ -86,9 +86,9 @@ public class Main  extends JFrame   {
 		
 		//load sample map
 		
-		XMLAdapter adapter = new XMLAdapter();
+		//XMLAdapter adapter = new XMLAdapter();
 		
-		adapter.adapt();
+		//adapter.adapt();
 		
 		//three threads:
 		//1. UI

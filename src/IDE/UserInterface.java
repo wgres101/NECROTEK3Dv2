@@ -118,7 +118,7 @@ public class UserInterface implements Runnable {
 		ExtendedAttachments extended  = new ExtendedAttachments();
 		JMenu Extended = extended.init();
 		
-
+		
 		
 		
 		//show animation toolbar
@@ -325,10 +325,15 @@ public class UserInterface implements Runnable {
 //		
 //		
 		
+		JMenu miscellaneousMenu = new JMenu("Miscellaneous");
+		
+		miscellaneousMenu.setFont(new Font("Arial", Font.BOLD, 10));
+		
 		menuBar.add(fileMenu);
 		menuBar.add(EditMenu);
 		menuBar.add(viewMenu);
 		menuBar.add(selector); // selects the toolbar mode
+		menuBar.add(miscellaneousMenu);
 		menuBar.add(helpMenu);
 		
 		//menuBar.add(scrollMenu);
@@ -380,7 +385,7 @@ public class UserInterface implements Runnable {
 		//2. Optional: What happens when the frame closes?
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("NECRO-TEK 3D WORLD EDITOR"); 
-		frame.setSize(300,250);
+		frame.setSize(800,600);
 		//This will center the JFrame in the middle of the screen 
 		frame.setLocationRelativeTo(null);
 
@@ -429,9 +434,9 @@ public class UserInterface implements Runnable {
 
 
 
-		mainScreen.setPreferredSize(new Dimension(1000,1000));
-		left.setPreferredSize(new Dimension(200, 700));
-		right.setPreferredSize(new Dimension(200, 700));
+		mainScreen.setPreferredSize(new Dimension(2000,2000));
+		left.setPreferredSize(new Dimension(400, 700));
+		right.setPreferredSize(new Dimension(400, 700));
 		bottom.setPreferredSize(new Dimension(1000, 300));
 
 		/*************SCENE GRAPH WINDOW/PANEL**************/
@@ -697,11 +702,23 @@ public class UserInterface implements Runnable {
 	
 		/**********************/
 
-		frame.setBounds(0, 0, 640, 480);
-		frame.setPreferredSize(new Dimension(1200,800));
+	    
+	    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+	    double width = screenSize.getWidth();
+	    double height = screenSize.getHeight();
+
+	    frame.setBounds(0, 0, (int)width, (int)height);
+		frame.setPreferredSize(new Dimension((int)width,(int)height));
 		frame.setResizable(false);
 		frame.setVisible( true );
 
+
+	    
+//		frame.setBounds(0, 0, 4200, 1000);
+//		frame.setPreferredSize(new Dimension(4200,1000));
+//		frame.setResizable(false);
+//		frame.setVisible( true );
+//
 
 
 		mainScreen.setLayout(new FlowLayout());

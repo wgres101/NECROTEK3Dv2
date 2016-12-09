@@ -2,6 +2,7 @@ package Entities;
 
 
 
+import custom3DDataTypes.Vector3f;
 import models.TexturedModel;
 
 public class Entity {
