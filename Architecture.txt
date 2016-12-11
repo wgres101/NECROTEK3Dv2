@@ -5,6 +5,9 @@ ARCHITECUTRE AND DESIGN
 1) Every object (such as a cube or sphere all the way to a rigidbody component) has its
 own WebService and WSObject. The WebService controls all the functionality -that is
 the game logic, and WSObject contains the data of an instance of a Web Service.
+The Web Services use a WebServiceFactory, a class designed to create instances of objects
+You get a WSObject from the service via SpawnServiceObject()
+
 
 2) Every object has its own place in the scene graph. This includes scripts,
 skeletal meshes, nav meshes, AI behaviors, ProjectileMovement objects, 
@@ -25,4 +28,118 @@ Update method.
 
 
 5) The Blackboard object is a means for services to comunicate with each other. Important
-variables are placed on the blackboard allowing for other services to check their values. 
+variables are placed on the blackboard allowing for other services to check their values. The Blackboard
+is a means to share variables.
+
+6) Fireable Events: Classes that contain an update() and create() function are considered "fireable events"
+
+7) The AssetHandler: this class is designed to unload objects when they get
+out of view and reload them whent hey grow closer
+for example, if a resource is more than two hexagons 
+away it will be unloaded by the assethotloader. If the
+asset approaches and is travelling towards the plauyer,
+when it reaches within two hexagonals its data will
+be loaded into the game. This yields a neverending
+map if desired - if tied in with procedural functinos.
+All objects are required to register with the AssetHandler.
+
+8) Blackboard: The blackboard allows a quick way to access foreign variables. All public
+variables that span across more than one class are to register with the blackboard manager.
+
+9)BloomFilter - Heavy functions - that is, functions that do a large amount of processing
+like the graphics library functions are required to use a bloom filter to prevent needless
+repetition of CPU-intensive code
+
+10)Assert - There is a custom assert function which is to be used for EVERY conditional test
+
+11)Debugging - There is a debug manager. All debugging should pass through that
+
+12)Deferred Methods - FOr functions which do not need to be immediately executed, submit them to the
+deferred memory manager and they will be called when necessary
+
+13) Web Services - all web service objects are produced from the WebServiceFactory
+
+14) HANDLE - All references that act like pointers, that is, references passed from method
+to method, should be wrapped in a HANDLE object. 
+
+15)MessageManager - Services work on messages passed to them, the message manager receives and sends
+messages that in queue to to the other services that are runing
+
+so it
+a: receives messages from servies
+b: puts (stores) messages in a list
+c: passes along all messages to all services that are awake
+d: removes messages from list after complete
+
+The message manager must be used to communicate between web services
+
+
+
+16) If available, a registered variable should be used instead of the built in primitives and classes
+
+17) The scheduling manager controls the message manager. Objects are to be s ubmitted to the scheduler
+which upon clocktime up the scheduling manager will send the message to the message manager for handling. All operations
+go through the scheduler. 
+
+18) Tweaking. Variables that can be changed in-game should have been submitted to the tweaker, which
+allows for modification of code during run-time.
+
+19) XML GameMap  //a map described entirely in XML - an entire scenegraph Is used for loading and saving levels
+
+20) 
+HUD //uses an overhead plastic approach to UI
+
+21) THe Object Manager -a memory manager that has a set pool of memory for variables
+
+22) Resources are a representation of a map as a binary file to save and load
+
+23) 
+
+
+-----------------------------
+
+Scheduler - Distributes it to the message queue
+Each service has a parseMessage function that acts on various objects
+MessageManagement - holds on to and distributes messages to services
+Web Service -Attached to scene graph, iterate through scene graph and
+			call Update() and parseMessage()
+
+			
+-----------------
+
+Use bloom fliters for complex objects
+Use Tweaker to adjust values
+Use object maanger to allocate objects
+Put globals in Blackboard
+]Use web service facetory to spawn webservice and wsobjects
+			
+			
+CODING STANDARDS
+=================
+
+1. Camel Case is to be used for all variables, objects, and functions
+2. When editing a piece of code, leave a comment with name, date, and the change you made
+3. Use javadoc as mmuc as possible. Anything that seems vague or may be confusing leave a java doc comment
+4. Class names are capitalized/
+5. Closing brace of a block (for loop, if-else statement, end of class, end of function) shoudl be marked with the name of the
+   calling function:
+   public void fubar(int fu) 
+   {
+   
+   ...
+   } //end fubar()
+   
+ 6. Braces are to be structured as such:
+ 
+ public void fubar()
+ {
+ 	//some code goes here
+ }			
+ 
+ 7. Code for a method should not exceed 100 lines. If it does it must be broken up into smaller functions and procedur es
+ 8. Code for a class should not exceed 200 lines. If so, aggregates and inheritane should be used.
+ 
+ 9.All service packages have the word "services" apppended to them. i.e.,  "ParticleSystemServices"
+ 10. All services have the word "service" appeneded to them. i.e., "LineOfSightService.java"
+ 11. All "service objects" have the word "WSObject" prepended to them
+ 

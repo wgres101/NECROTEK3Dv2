@@ -1,5 +1,5 @@
 package BlueChartNodes;
 
-public class LessThanNode {
+public class DoWhileNode {
 
 }

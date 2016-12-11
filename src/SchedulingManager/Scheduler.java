@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import Debugger.DebugManager;
 import MessageManagement.Message;
 
+//all functionality goes through the scheduler
+//the scheduler will subdivide ticks or time steps, giving certain processes more priority than others
+
 public class Scheduler {
 
 	static ArrayList<Message> priorityList = new ArrayList<Message>();
