@@ -119,6 +119,7 @@ CODING STANDARDS
 
 1. Camel Case is to be used for all variables, objects, and functions
 2. When editing a piece of code, leave a comment with name, date, and the change you made
+3. Classes, Interfaces, Abstract Classes, etc. have their own naming convention. See below:
 3. Use javadoc as mmuc as possible. Anything that seems vague or may be confusing leave a java doc comment
 4. Class names are capitalized/
 5. Closing brace of a block (for loop, if-else statement, end of class, end of function) shoudl be marked with the name of the
@@ -142,4 +143,159 @@ CODING STANDARDS
  9.All service packages have the word "services" apppended to them. i.e.,  "ParticleSystemServices"
  10. All services have the word "service" appeneded to them. i.e., "LineOfSightService.java"
  11. All "service objects" have the word "WSObject" prepended to them
- 
+
+
+CODING CONVENTIONS
+========================
+We use a generic version of Hungarian Notatoin:
+
+
+f 
+Flag (Boolean, logical). If qualifier is used, it should describe the true state of the flag. Exception: the constants fTrue and fFalse. 
+w 
+Word with arbitrary contents. 
+ch 
+Character, usually in ASCII text. 
+b 
+Byte, not necessarily holding a coded character, more akin to w. Distinguished from the b constructor by the capital letter of the qualifier in immediately following. 
+sz 
+Pointer to first character of a zero terminated string. 
+st 
+Pointer to a string. First byte is the count of characters cch. 
+h 
+pp (in heap).  
+
+p
+Pointer
+Finger* pRude;
+In most cases, p is combined with another prefix; the prefix of the type of object being pointed to. For example:
+String* psName
+is a pointer to a string object containing a name.
+s
+str
+String
+String sName;
+String strName;
+This convention is generally used for first-class string classes.
+sz
+psz
+zero-terminated / null-terminated string
+char szName[16];
+char* pszName;
+h
+Handle
+HWND hWindow
+c
+Character (char)
+char cLetter;
+Sometimes c is used to denote a counter object.
+by
+y
+Byte or Unsigned Char
+byte byMouthFull;
+byte yMouthFull;
+n
+Integer (int)
+int nSizeOfArray;
+f
+Float
+float fRootBeer;
+d
+Double
+double dDecker;
+b
+Boolean
+boolean bIsTrue;
+BOOL bIsTrue;
+int bIsTrue;
+An integer can store a boolean value as long as you remember not to assign it a value other than 0 or 1
+u
+Unsigned...
+w
+Word or Unsigned Integer
+unsigned int wValue; 
+ 
+l
+Long
+long lIdentifier;
+Sometimes l is appended to p to denote that the pointer is a long. For example:
+lpszName
+is a long pointer to a zero-terminated string.
+dw
+Unsigned Long Integer
+C
+or just a capital first letteri
+Class
+Class CObject;
+Class Object;
+C is used heavily in Microsoft's Foundation Classes but using just a capital first letter is emphasized by Microsoft's J++.
+I
+Interface (ususally a struct or class with only pure virtual methods and no member variables) 
+class IMotion {
+public:
+   virtual void Fly() = 0;
+};
+Used extensively in COM.
+X
+Nested Class
+class CRocket {
+public:
+   class XMotion:public IMotion {
+   public:
+      void Fly();
+   } m_xUnknown;
+}
+Used extensively in COM.
+x
+Instantiation of a nested class.
+class CAirplane {
+public:
+   class XMotion:public IMotion {
+   public:
+      void Fly();
+   } m_xUnknown;
+}
+Used extensively in COM.
+m_
+Class Member Identifiers
+class CThing {
+private:
+   int m_nSize;
+};
+g_
+Global
+String* g_psBuffer
+Constant globals are usually in all caps. The g_ would denote that a particular global is not a constant.
+v
+Void (no type)
+void* pvObject
+In most cases, v will be included with p because it is a common trick to typecast pointers to void pointers.
+Top of table 
+Type Prefixes for non-common Types
+In many cases, you will have identifiers of non-standard types. In this case, it will not do to borrow prefixes from the list of standard prefixes. Instead, the programmer needs to invent his own and, even more importantly, remain consistent with his own notation. To invent a prefix, abreviate the type name in a short and meaningful fashion. If it is not possible to abbreviate and the type name is not too long, you can just use the type name as a prefix.
+The Type Prefix will always be entirely lowercase and should reflect the name of the type by abbreviating it distinctively. 
+Example: 
+Button buttonPushMe; //this is okay, but awkward
+Button butPushMe; //a better abreviation for the type prefix
+Button bPushMe; //BAD: can be mistaken for a Boolean 
+
+Standard Qualifiers 
+Top
+The Qualifier portion of the identifier can be anything but should accurately and concisely describe the purpose of the object. There is a set of standard qualifiers for variables used in commonly performed programming tasks.
+Qualifier
+Explanation
+Sav
+A temporary from which the value will be restored
+Prev
+A value that follows one behind a current value in an iteration (eg. linked list node pointer)
+Cur
+Current value in some iteration
+Next
+Next value in some iteration
+Nil
+A special illegal value that is distinguished from all legal values. Typically denotes a certain absense of a legal value.
+Min
+Smallest legal index in an array or list. Typically zero.
+Max
+A strict upper limit for legal indexes in an array or list.
+
