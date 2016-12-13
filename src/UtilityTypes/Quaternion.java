@@ -10,9 +10,9 @@ public class Quaternion {
 	private float x,y,z,w;
 	public Quaternion Inverse() { return null;}
 	
-	public static Quaternion getQuaternionFromMatrix(Mat3f matrix) { return null;}
+	public static Quaternion getQuaternionFromMatrix(Mat4f matrix) { return null;}
 	
-	public static Mat3f getMatrixFromQuaternion(Quaternion q) { return null;}
+	public static Mat4f getMatrixFromQuaternion(Quaternion q) { return null;}
 	
 	public static void interpolate(Quaternion a, Quaternion b, float amount) {  }
 	

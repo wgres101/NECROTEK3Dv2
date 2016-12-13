@@ -15,7 +15,7 @@ public class ANode {
 	
 	public ANode Parent = null;
 	
-	public ArrayList<Location> successors = new ArrayList<Location>();
+	public ArrayList<ANode> successors = new ArrayList<ANode>();
 	
 	public ANode loc;
 	

@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import Services.AIServices.DataTypes.ANode;
 
 public class AStarService {
-
+/*
 	
 	public static void search(ANode startLoc, ANode goalLoc)
 	{
@@ -30,7 +30,7 @@ public class AStarService {
 			ANode  ANode = open.remove(); //ANode has lowest total cost
 			
 			//if at a goal we are done
-			if (ANode.equals(obj))
+			if (ANode.equals(goalLoc))
 			{
 				//construct a path backwards from ANode to StartLoc
 				//return success
@@ -82,6 +82,6 @@ public class AStarService {
 
 
 
-
+*/
 
 }
