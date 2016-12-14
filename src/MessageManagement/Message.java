@@ -2,11 +2,11 @@ package MessageManagement;
 
 public class Message {
 
-	public MESSAGES mflag;
+	public EM mflag;
 	
 	public long frame_rate;
 	
-	public enum MESSAGES 
+	public enum EM 
 		{
 				EM_CREATE, //An entity receives a create message after its container is created
 

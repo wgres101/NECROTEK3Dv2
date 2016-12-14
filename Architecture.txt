@@ -93,7 +93,8 @@ HUD //uses an overhead plastic approach to UI
 
 22) Resources are a representation of a map as a binary file to save and load
 
-23) 
+23) NecroTek3D is a message based system. e.g., to draw an entity you send it a message. To let an entity move through the world you
+	send it a message.
 
 
 -----------------------------
@@ -143,6 +144,8 @@ CODING STANDARDS
  9.All service packages have the word "services" apppended to them. i.e.,  "ParticleSystemServices"
  10. All services have the word "service" appeneded to them. i.e., "LineOfSightService.java"
  11. All "service objects" have the word "WSObject" prepended to them
+
+ 12. The programmer is to liberally use the logging class. 
 
 
 CODING CONVENTIONS
