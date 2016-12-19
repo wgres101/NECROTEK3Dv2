@@ -1,7 +1,7 @@
 package Entities;
 
-import custom3DDataTypes.Keyboard;
-import custom3DDataTypes.Vector3f;
+import MathUtils.Keyboard;
+import MathUtils.Vector3f;
 
 public class Camera {
 	private Vector3f position = new Vector3f(0,0,0);
@@ -59,4 +59,26 @@ public class Camera {
 	public void setRoll(float roll) {
 		this.roll = roll;
 	}
+	
+	
+	
+	
+	//camera
+	
+	public Vector3f Eyeposition;
+	public float NearZ;
+	public float FarZ;
+	public float FOV;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

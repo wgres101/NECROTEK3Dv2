@@ -1,6 +1,9 @@
 package MessageManagement;
 
+import MessageManagement.Message.EM;
+
 public class Message {
+
 
 	public EM mflag;
 	
@@ -8,6 +11,7 @@ public class Message {
 	
 	public enum EM 
 		{
+				EM_BOOTSTRAP, //called on program start
 				EM_CREATE, //An entity receives a create message after its container is created
 
 				EM_SET_POS,     //accessors related to physics of world
@@ -77,7 +81,9 @@ public class Message {
 				
 				EM_UPDATE_PHYSICS,  //a request to update the physics in the game
 		
-				EM_UPDATE_PATHFINDING  //runs pathfinding code
+				EM_UPDATE_PATHFINDING,  //runs pathfinding code
+				 EM_CLSNAME, EM_CLSINIT, EM_CLSFREE, EM_FREETICK
+				 
 		};
 		
 		Object sourceReference; //reference to the generator of this message

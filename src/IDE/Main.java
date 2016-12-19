@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 import Blackboard.GameBlackboard;
-
+import Debugger.RunThrough;
 import Factory.WebServiceFactory;
 import GameMap.XMLAdapter;
 import InspectorPanels.InspectorManager;
@@ -13,6 +13,7 @@ import MessageManagement.MessageManager;
 
 import SceneGraph.SceneGraphManager;
 import SchedulingManager.Scheduler;
+import TaskManager.CTaskManager;
 
 
 public class Main  extends JFrame   {
@@ -28,6 +29,8 @@ public class Main  extends JFrame   {
 	static InspectorManager insm = new InspectorManager();
 	
 	static Manager manager = new Manager();
+	
+	public static CTaskManager task_manager = new CTaskManager();
 
 	//static UserInterface ui = new UserInterface();
 	
@@ -45,7 +48,12 @@ public class Main  extends JFrame   {
 	
 	static boolean simulate = false; //set to true to run simulation without rasterization
 	
+	static RunThrough runThrough = new RunThrough();
+	
+	public static InputHandler inputHandler = new InputHandler();
 
+	
+	
 	public static void main(String[] args) {
 
 		Main mainApp = new Main();
@@ -86,6 +94,9 @@ public class Main  extends JFrame   {
 		
 		//load sample map
 		
+		//XMLAdapter xmlAdapter = new XMLAdapter();  //create and load
+		
+		//xmlAdapter.adapt();
 		//XMLAdapter adapter = new XMLAdapter();
 		
 		//adapter.adapt();
@@ -95,6 +106,8 @@ public class Main  extends JFrame   {
 		ui.run();
 		//2. Game Logic Init	
 		gameLogic.run();
+		
+		runThrough.run();
 		
 		//ENTER LOOP
 		

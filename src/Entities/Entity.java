@@ -2,8 +2,8 @@ package Entities;
 
 
 
-import custom3DDataTypes.Vector3f;
-import models.TexturedModel;
+import MathUtils.Vector3f;
+import Models.TexturedModel;
 
 public class Entity {
 	private TexturedModel model;

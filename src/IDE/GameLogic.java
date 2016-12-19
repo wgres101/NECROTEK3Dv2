@@ -1,12 +1,15 @@
 package IDE;
 
 import Debugger.DebugManager;
+import MessageManagement.Message;
+import MessageManagement.Message.EM;
 
 
 public class GameLogic implements Runnable {
 
 	@Override
 	public void run() {
+		/*
 		// TODO Auto-generated method stub
 		DebugManager.Debug("GameLogic", "DISABLED: maingameloop.maingame");
 	    //MainGameLoop.maingame(); // (EngineTester package)
@@ -18,9 +21,14 @@ public class GameLogic implements Runnable {
 		Main.insm.Update();
 		DebugManager.Debug("GameLogic", "Updating Game Scheduler");
 		Main.schedulingManager.runScheduler();
+		DebugManager.Debug("GameLogic", "Input Handler: Checking for input");
+		Main.inputHandler.handleInput();
 		
-		
+	*/
+		DebugManager.Debug(this.getClass(), "Updating Scene Graph");
+		Message message = new Message();
+		message.mflag = EM.EM_UPDATE;
+		Main.schedulingManager.addToSchedule(message); //broadcasts the update function
 	}
-
 	
 }

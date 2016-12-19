@@ -1,9 +1,8 @@
 package Toolbox;
 
-
 import Entities.Camera;
-import custom3DDataTypes.Matrix4f;
-import custom3DDataTypes.Vector3f;
+import MathUtils.Matrix4f;
+import MathUtils.Vector3f;
 
 public class Maths {
 

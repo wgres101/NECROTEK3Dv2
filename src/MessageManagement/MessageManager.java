@@ -19,7 +19,8 @@ import java.util.Queue;
 // the game itself exists on another
 
 //example:  I'd like to draw an array of triangles (me being the AI for edxample)
-//			I send a message to the message maanager
+//			I send a message to the scheduler			
+//			The scheduler isolates a thread for the message amd semds to the message manager
 //			The message manager puts my request on queue
 //			The message maanager broadcasts the "RenderTriangles" message
 //			There are only two methods (receivers) for that message

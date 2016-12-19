@@ -49,14 +49,14 @@ public class Clock implements Runnable {
 				//fire a frame event
 				Message message = new Message();
 				//actions that occur at every frame
-				message.mflag = Message.MESSAGES.EM_FRAME_TICK;
+				message.mflag = Message.EM.EM_FRAME_TICK;
 				MessageManager.EnqueueMessage(message);
 			}
 			else
 			{
 				//actions that occur at every tick
 				Message message = new Message();
-				message.mflag = Message.MESSAGES.EM_CLOCK_TICK;
+				message.mflag = Message.EM.EM_CLOCK_TICK;
 				//MessageManager.EnqueueMessage(message);
 			}
 			

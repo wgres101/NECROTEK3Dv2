@@ -1,12 +1,31 @@
 package Services.ActorServices;
 
+import MessageManagement.Message;
+
 public class CreatePawnService {
 
+	//adds to a list that are to be saved
+	public static void AddSaveObject()
+	{
+		
+	}
 	
-	public static void Update() { };
+	public static void Load() {
+		//load on demand
+	}
 	
-	public static void Message(EM message)
 	
+	public static void Save() {
+	
+		//performs that action of saving game
+		//calls SaveData() (this does the actual writing of the save)
+	}
+	
+	public static void Update() { }; //called every tick
+  	
+	public static void Message(Message.EM message)
+	{
+		
 		//do some stuff
 
 		//process messages
@@ -18,35 +37,35 @@ public class CreatePawnService {
 			break;
 			
 		//return text from parameter
-		case EM.EM_CLSINIT:
+		case EM_CLSINIT:
 			break;
 			
 		//perform free class 
-		case EM.EM_CLSFREE:
+		case EM_CLSFREE:
 			break;
 			
 		//create an entity
-		case EM.EM_CREATE:
+		case EM_CREATE:
 			break;
 		
 		//shuts down, doesn't necessarily remove from memory
-		case EM.EM_SHUTDOWN:
+		case EM_SHUTDOWN:
 			break;
 			
 		//completely remove entity from game
-		case EM.EM_DESTROY:
+		case EM_DESTROY:
 			
 			break;
 		//start an entity
-		case EM.EM_START:
+		case EM_START:
 			break;
 			
 		//called by the main loop to update environmemnt	
-		case EM.EM_UPDATE:
+		case EM_UPDATE:
 			break;
 			
 		//rendres the entity
-		case EM.EM_DRAW:
+		case EM_DRAW:
 			break;
 		
 		default:

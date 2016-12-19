@@ -68,7 +68,7 @@ messages that in queue to to the other services that are runing
 so it
 a: receives messages from servies
 b: puts (stores) messages in a list
-c: passes along all messages to all services that are awake
+c: passes along all messages to all services that are awake (pases messages down the tree of the scenegraph)
 d: removes messages from list after complete
 
 The message manager must be used to communicate between web services
@@ -89,14 +89,21 @@ allows for modification of code during run-time.
 20) 
 HUD //uses an overhead plastic approach to UI
 
-21) THe Object Manager -a memory manager that has a set pool of memory for variables
+21) THe Object Manager -a memory manager that has a set pool of memory for variables. All variables should be initialized
+					by pulling from this pool.
 
 22) Resources are a representation of a map as a binary file to save and load
 
 23) NecroTek3D is a message based system. e.g., to draw an entity you send it a message. To let an entity move through the world you
 	send it a message.
 
+24) Use the PIMPL design pattern as much as possible. 
+Explanation: Two files. One is a private class and another public. The private class funcionality is accessed
+by the public class. The public class has a reference to the private class.
 
+25) For debugging purposes, Journaling should be used throughout the engine. 
+
+26) Components are to be used for Services/WSObjects. They and their code should be as self-contained as possible
 -----------------------------
 
 Scheduler - Distributes it to the message queue
