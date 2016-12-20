@@ -3,6 +3,6 @@ package Services.GeneralCodePerformanceServices;
 
 //GEMS 7
 
-public class DeferredFunctionCallInvocationSystemService {
+public class AdvancedDebuggingTechniquesService {
 
 }

@@ -2,6 +2,6 @@ package Services.GraphicsPerformanceServices;
 
 //GEMS 7
 
-public class ClipMappingService {
+public class ANAdvancedDecalSystemService {
 
 }
