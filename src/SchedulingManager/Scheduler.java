@@ -27,7 +27,7 @@ public class Scheduler {
 	public static void addToSchedule(Message message)
 	{
 		priorityList.add(message);
-		Main.task_manager.
+		Main.task_manager.addToTaskManager(message);
 	}
 	
 	public static Thread requestThreadResource()

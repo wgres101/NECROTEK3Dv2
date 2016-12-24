@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.jdom2.Element;
 
 import Factory.WebServiceFactory;
+import MessageManagement.Message;
 import SceneGraph.Component;
 import SceneGraph.GraphNodeInstance;
 import WSObjects.WSObject;
@@ -36,7 +37,7 @@ public class ServiceRoot extends GraphNodeInstance {
 	
 	public static WSObject SpawnWebServiceObject() {
 		
-		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("VectorCameraInstance");
+		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("BoxService");
 		
 		
 		return ws_object;
@@ -48,6 +49,8 @@ public class ServiceRoot extends GraphNodeInstance {
 	{
 		
 	}
+	
+	
 	
 	
 }

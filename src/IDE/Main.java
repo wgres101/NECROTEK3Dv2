@@ -94,7 +94,7 @@ public class Main  extends JFrame   {
 		
 		//load sample map
 		
-		//XMLAdapter xmlAdapter = new XMLAdapter();  //create and load
+		XMLAdapter xmlAdapter = new XMLAdapter();  //create and load
 		
 		//xmlAdapter.adapt();
 		//XMLAdapter adapter = new XMLAdapter();

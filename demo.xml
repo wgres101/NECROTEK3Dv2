@@ -2,16 +2,21 @@
 
 <LevelRoot>
 
-	<FirstPersonPlayerCharacterService/>
-	<WSFirstPersonPlayerCharacter startx="0.0" starty="0.0" startz="0.0">
-		<CameraObjectService/>
-		<WSCameraObject startx="-1.0" starty="0.0" startz="1.0"/>
-	</WSFirstPersonPlayerCharacter>
-	<PointLightService/>
-	<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
-	<BoxService/>
-	<WSBox/>
+	<FirstPersonPlayerCharacterService>
+		<WSFirstPersonPlayerCharacter startx="0.0" starty="0.0" startz="0.0"/>
+		<CameraService>
+		<WSCameraObject starx = "0.0" starty="0.0" startz="0""/>
+		</CameraService>
+	</FirstPersonPlayerCharacterService>		
 
+	<PointLightService>
+		<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
+	</PointLightService>
+	
+	<BoxService>
+		<WSBox p_min = "-1.0" p_max = "1.0"/>
+	</BoxService>
+	
 
 </LevelRoot>
 

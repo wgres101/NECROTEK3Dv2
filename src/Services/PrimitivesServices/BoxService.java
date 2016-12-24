@@ -1,8 +1,25 @@
 package Services.PrimitivesServices;
 
-import Services.ServiceRoot;
+import org.jdom2.Element;
 
-public class BoxService {
+import Factory.WebServiceFactory;
+import MessageManagement.Message;
+import Services.ServiceRoot;
+import WSObjects.WSObject;
+
+public class BoxService extends ServiceRoot {
+
+	
+	public BoxService(Element e) {
+		super(e);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void parseMessage() {
+		// TODO Auto-generated method stub
+		super.parseMessage();
+	}
 
 	public static void Launch() {}
 	
@@ -12,9 +29,13 @@ public class BoxService {
 	
 	public static void Destroy() {}
 	
-	public static void SpawnWebServiceObject() {}
-	
-	
+	public static WSObject SpawnWebServiceObject() {
+		
+		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("BoxService");
+		
+		
+		return ws_object;
+	}
 	
 	
 }
