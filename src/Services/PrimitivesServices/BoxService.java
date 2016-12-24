@@ -1,5 +1,7 @@
 package Services.PrimitivesServices;
 
+import javax.jws.WebService;
+
 import org.jdom2.Element;
 
 import Factory.WebServiceFactory;
@@ -7,8 +9,11 @@ import MessageManagement.Message;
 import Services.ServiceRoot;
 import WSObjects.WSObject;
 
+@WebService
 public class BoxService extends ServiceRoot {
 
+	public BoxService() {
+	}
 	
 	public BoxService(Element e) {
 		super(e);
