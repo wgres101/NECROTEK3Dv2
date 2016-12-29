@@ -104,6 +104,12 @@ by the public class. The public class has a reference to the private class.
 25) For debugging purposes, Journaling should be used throughout the engine. 
 
 26) Components are to be used for Services/WSObjects. They and their code should be as self-contained as possible
+
+27) Instead of the typical null, we use null objects. A null object is an object of any object in use in a null case.
+	It is there so that there is no crash if an object returns as null, we can implement a custom behavior
+
+28) Share Nothing Approach - Objects should not share with other objects directly
+
 -----------------------------
 
 Scheduler - Distributes it to the message queue

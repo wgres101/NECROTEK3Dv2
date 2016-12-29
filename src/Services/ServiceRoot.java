@@ -16,7 +16,9 @@ import WSObjects.WSObject;
 @WebService
 public class ServiceRoot extends GraphNodeInstance {
 
-	
+	public ServiceRoot() {
+		
+	}
 	
 	public ServiceRoot(Element e) {
 		super(e);
@@ -55,6 +57,12 @@ public class ServiceRoot extends GraphNodeInstance {
 	}
 	
 
+	@WebMethod
+	public void Render()
+	{
+		
+	}
+	
 	//called every turn. checks messagemanager for message
 	@WebMethod
 	public void parseMessage()

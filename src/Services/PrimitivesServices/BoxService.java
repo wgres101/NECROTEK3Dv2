@@ -1,5 +1,6 @@
 package Services.PrimitivesServices;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import org.jdom2.Element;
@@ -26,14 +27,19 @@ public class BoxService extends ServiceRoot {
 		super.parseMessage();
 	}
 
+	@WebMethod
 	public static void Launch() {}
 	
+	@WebMethod
 	public static void Init() {}
 	
+	@WebMethod
 	public static void Update() {}
 	
+	@WebMethod
 	public static void Destroy() {}
 	
+	@WebMethod
 	public static WSObject SpawnWebServiceObject() {
 		
 		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("BoxService");

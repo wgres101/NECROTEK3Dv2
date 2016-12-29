@@ -16,7 +16,10 @@ public class GraphNodeInstance extends Component {
 	Element xmlData;
 	
 	
-	
+	public GraphNodeInstance()
+	{
+		
+	}
 	
 	public GraphNodeInstance(Element e)
 	{
