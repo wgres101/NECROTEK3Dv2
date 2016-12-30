@@ -21,6 +21,12 @@ public class BoxService extends ServiceRoot {
 		// TODO Auto-generated constructor stub
 	}
 
+	@WebMethod
+	public void Render()
+	{
+		
+	}
+	
 	@Override
 	public void parseMessage() {
 		// TODO Auto-generated method stub
@@ -47,6 +53,8 @@ public class BoxService extends ServiceRoot {
 		
 		return ws_object;
 	}
+	
+
 	
 	
 }

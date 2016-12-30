@@ -110,6 +110,8 @@ by the public class. The public class has a reference to the private class.
 
 28) Share Nothing Approach - Objects should not share with other objects directly
 
+29) Use large static arrays instead of linked lists/vectors if the array is going to be small
+
 -----------------------------
 
 Scheduler - Distributes it to the message queue

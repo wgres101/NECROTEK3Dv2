@@ -70,7 +70,10 @@ public class ServiceRoot extends GraphNodeInstance {
 		
 	}
 	
-	
+	public void Collision()
+	{
+		
+	}
 	
 	
 }
