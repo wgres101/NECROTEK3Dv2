@@ -2,7 +2,7 @@ package MessageManagement;
 
 import MessageManagement.Message.EM;
 
-public class Message {
+public class Message implements Runnable {
 
 
 	public EM mflag;
@@ -82,11 +82,23 @@ public class Message {
 				EM_UPDATE_PHYSICS,  //a request to update the physics in the game
 		
 				EM_UPDATE_PATHFINDING,  //runs pathfinding code
-				 EM_CLSNAME, EM_CLSINIT, EM_CLSFREE, EM_FREETICK
+				 EM_CLSNAME, EM_CLSINIT, EM_CLSFREE, EM_FREETICK,
+				 EM_GO_FORWARD,
+				  EM_GO_BACKWARD,
+				  EM_TURN_RIGHT_90,
+				  EM_TURN_LEFT_90,
+				  EN_SET_RANDOM_DIRECTION,
+				  EM_MOVEMENT_STOP
 				 
 		};
 		
 		Object sourceReference; //reference to the generator of this message
+
+		@Override
+		public void run() {
+			// TODO Auto-generated method stub
+			
+		}
 		
 		
 		

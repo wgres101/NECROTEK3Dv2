@@ -1,5 +1,5 @@
 package Services.ActorServices;
 
-public class CreateSolidModellingGrammarObjectService {
+public class CreateSolidModellingGrammarObjectService extends CreateEmptyActorService  {
 
 }

@@ -78,11 +78,11 @@ The message manager must be used to communicate between web services
 16) If available, a registered variable should be used instead of the built in primitives and classes
 
 17) The scheduling manager controls the message manager. Objects are to be s ubmitted to the scheduler
-which upon clocktime up the scheduling manager will send the message to the message manager for handling. All operations
+which upon clocktime up the scheduling manager will send the message to the med to the tweaker, which
+allows for modification of code during run-time.ssage manager for handling. All operations
 go through the scheduler. 
 
-18) Tweaking. Variables that can be changed in-game should have been submitted to the tweaker, which
-allows for modification of code during run-time.
+18) Tweaking. Variables that can be changed in-game should have been submitte
 
 19) XML GameMap  //a map described entirely in XML - an entire scenegraph Is used for loading and saving levels
 
@@ -112,6 +112,19 @@ by the public class. The public class has a reference to the private class.
 
 29) Use large static arrays instead of linked lists/vectors if the array is going to be small
 
+30) Critical sections of code should be reported immediately on screen using calls to a porfiler
+
+31) Use loop unrolling. For example, 1,000 item loop can be be broken down into ten, 100 item loops
+
+32) Use look-up tables for processor-heavy instructions
+
+33) Use fixed point numbers instead of floats
+
+34) Keep functions limited to a few lines so they can fit into the Pentium cache (32KB)
+
+35) Publisher publishes key threads such as Run and Render to the scheduler to be scheduled
+
+26) The Schedduler sends out messages dependent upon the message in the message pool
 -----------------------------
 
 Scheduler - Distributes it to the message queue
@@ -317,3 +330,13 @@ Smallest legal index in an array or list. Typically zero.
 Max
 A strict upper limit for legal indexes in an array or list.
 
+
+Additional Code Conventions
+=============================
+Classes derived from Actor prefixed with A, e.g. AController.
+Classes derived from Object are prefixed with U, e.g. UComponent.
+Enums are prefixed with E, e.g. EFortificationType.
+Interface classes are usually prefixed with I, e.g. IAbilitySystemInterface.
+Template classes are prefixed by T, e.g. TArray.
+Classes that derive from SWidget (Slate UI) are prefixed by S, e.g. SButton.
+Everything else is prefixed by the letter F , e.g. FVector.

@@ -2,7 +2,7 @@ package Services.ActorServices;
 
 import MessageManagement.Message;
 
-public class CreatePawnService {
+public class CreatePawnService extends CreateCharacterService {
 
 	//adds to a list that are to be saved
 	public static void AddSaveObject()

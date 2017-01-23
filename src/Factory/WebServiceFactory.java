@@ -8,7 +8,7 @@ import Services.PrimitivesServices.VectorCameraService;
 import WSObjects.WSObject;
 import WSObjects.Primitives.WSVectorCamera;
 
-public class WebServiceFactory {
+public class WebServiceFactory implements Runnable {
 
 	public static ServiceRoot launchWebService(String serviceName) {
 
@@ -39,6 +39,13 @@ public class WebServiceFactory {
 		}
 		
 		return null;
+	}
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

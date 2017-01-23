@@ -1,6 +1,6 @@
 package ObjectManagement;
 
-public class ObjectManager {
+public class ObjectManager implements Runnable {
 
 	static Pool pool = new Pool();
 	
@@ -19,6 +19,12 @@ public class ObjectManager {
 		Object o = pool.requestMemory("name", classVar);
 		
 		return o;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

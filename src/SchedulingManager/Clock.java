@@ -18,6 +18,13 @@ public class Clock implements Runnable {
 	
 	}
 	
+	//COMPUTR ONE SENDS ITS STATE TO COMPUTER 2
+	//ONLY WHEN COMPUTER 2 ACKNOWLEDGES THIS AND SENDS ITS STATE
+	//CAN COMPUTER ONE CONTINUE
+	public void sendTokenToRemote() { } //
+	
+	public void receiveTokenFromRemote() { } //returns this objects token
+	
 	
 	
 	

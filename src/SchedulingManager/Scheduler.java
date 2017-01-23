@@ -10,7 +10,7 @@ import MessageManagement.Message;
 //all functionality goes through the scheduler
 //the scheduler will subdivide ticks or time steps, giving certain processes more priority than others
 
-public class Scheduler {
+public class Scheduler implements Runnable {
 
 	static ArrayList<Message> priorityList = new ArrayList<Message>();
 	
@@ -33,5 +33,11 @@ public class Scheduler {
 	public static Thread requestThreadResource()
 	{
 		return new Thread();
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 }

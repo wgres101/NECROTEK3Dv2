@@ -2,7 +2,7 @@ package IDE;
 
 import javax.swing.tree.DefaultMutableTreeNode;
 
-public class SceneGraph {
+public class SceneGraph implements Runnable {
 	//scene graph
 	DefaultMutableTreeNode root = new DefaultMutableTreeNode();
 	DefaultMutableTreeNode bottom  = new DefaultMutableTreeNode();
@@ -32,5 +32,12 @@ public class SceneGraph {
 	{
 		DefaultMutableTreeNode newNode = new DefaultMutableTreeNode("Box");
 		root.add(newNode);
+	}
+
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 }
