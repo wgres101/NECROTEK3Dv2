@@ -1,5 +1,5 @@
 package RegisteredVariables;
 
-public class FloatRegister {
+public class FloatRegister extends RegisteredVar {
 
 }

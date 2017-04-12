@@ -7,6 +7,7 @@ import javax.jws.WebService;
 
 import org.jdom2.Element;
 
+import DTI.DTIClass;
 import Factory.WebServiceFactory;
 import MessageManagement.Message;
 import SceneGraph.Component;
@@ -16,6 +17,11 @@ import WSObjects.WSObject;
 @WebService
 public class ServiceRoot extends GraphNodeInstance {
 
+	
+	//required///
+	
+	DTIClass dtiClass = new DTIClass();
+	
 	public ServiceRoot() {
 		
 	}
@@ -75,5 +81,27 @@ public class ServiceRoot extends GraphNodeInstance {
 		
 	}
 	
+	//when the game requires this particular state to be active
+	
+	public void OnEnter()
+	{
+		
+	}
+	
+	//When the object no longer needs to be attachd to the scene graph
+	
+	public void OnExit()
+	{
+	}
+
+	//for exammple, hitting the pause button
+	
+	public void OnSuspend()
+	{
+	}
+	
+
+
+	//
 	
 }

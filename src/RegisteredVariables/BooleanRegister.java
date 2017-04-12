@@ -1,5 +1,5 @@
 package RegisteredVariables;
 
-public class BooleanRegister {
+public class BooleanRegister extends RegisteredVar {
 
 }

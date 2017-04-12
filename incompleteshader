@@ -1,0 +1,30 @@
+//gems 7 5.9
+
+//INCOMPLETE
+
+
+//the control structure was created earlier to dictate where you cna create graftal
+//imposters as well as what kind of graftal to draw on
+//you need to test a triangle to determine if the primitive is eligible
+//for a graftal imposter and assign a type if it is
+
+texCoordCentroid { vertex1uv + vertex2uv + vertex3uv) / 3;
+controlSample = controlTexture.sample( sampler, texCoordCentroid);
+if (controlSample.a == 1)
+{
+	if (controlSample.r = 1)
+	{
+		glyphType = 0;
+	}
+	
+	else if (controlSampler.g == 1)
+	{
+		glyphType = 1;
+	}
+	
+	else
+	{
+		glyphType = 2;
+	}
+	
+	

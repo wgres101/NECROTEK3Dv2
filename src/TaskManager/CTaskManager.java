@@ -11,6 +11,12 @@ import MessageManagement.Message;
 
 //coordinates task execution (where in this case, the classes it monitors are services?
 
+//Handles the registrationa and organization of taks
+//Each task has a standardized interface that contains a calback function for the manager to execute.
+//The task manager maintains a list of tasks, along with scheduling informatgion abouti each one
+//such as start time, execution frequency, duration, priority, and other required properties.
+//
+
 public class CTaskManager {
 
 	static PriorityQueue<Message> taskList = new PriorityQueue<Message>();

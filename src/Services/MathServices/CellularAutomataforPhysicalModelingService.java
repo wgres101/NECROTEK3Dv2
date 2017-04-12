@@ -1,5 +1,5 @@
 package Services.MathServices;
-
+/*
 import java.util.ArrayList;
 
 import javax.jws.WebMethod;
@@ -152,3 +152,4 @@ public class CellularAutomataforPhysicalModelingService {
 
 
 }
+ * /

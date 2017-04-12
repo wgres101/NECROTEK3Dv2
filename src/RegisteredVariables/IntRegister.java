@@ -1,5 +1,5 @@
 package RegisteredVariables;
 
-public class IntRegister {
+public class IntRegister extends RegisteredVar {
 
 }

@@ -4,4 +4,8 @@ package Services.GeneralCodePerformanceServices;
 
 public class ContextSensitiveHUDSforEditorsService {
 
+	
+	// Heads Up Display for Editor parameters and actions
+	// works like an overhead projection overlapping acetate for transparency
+	
 }

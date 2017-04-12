@@ -1,5 +1,5 @@
 package RegisteredVariables;
 
-public class QueueRegister {
+public class QueueRegister extends RegisteredVar {
 
 }

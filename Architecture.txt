@@ -141,6 +141,13 @@ Use Tweaker to adjust values
 Use object maanger to allocate objects
 Put globals in Blackboard
 ]Use web service facetory to spawn webservice and wsobjects
+		
+30. Decouple logical behavior and audio visual components. (the concept Door can mean manything such
+	as a sliding door,a wooden door, a screen door, etc.)
+ 
+31. Stack Based State Machine. Services are treated as states as well. The StackBasedMachine handles
+keeping the service current by popping services and pushing services as needed.
+
 			
 			
 CODING STANDARDS
@@ -174,7 +181,9 @@ CODING STANDARDS
  11. All "service objects" have the word "WSObject" prepended to them
 
  12. The programmer is to liberally use the logging class. 
-
+ 13. Delay initialization of a variable until it is needed
+ 14. Preincrement instead of postincrement
+ 
 
 CODING CONVENTIONS
 ========================

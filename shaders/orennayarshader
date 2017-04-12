@@ -1,0 +1,45 @@
+//GEMS 7
+
+//improve the shading of rough materials iwth a rather simple shading model.
+
+
+//         I_d = k [ 1 - 1/(1+pcos(theta)) ]
+
+//		Lamberts law:  cos(theta) = n-l
+//		p is the surface roughness property
+//
+//		k is a constant
+//
+//		k = [ (1+p)/p) ]
+
+
+
+//  Oren shading with backscattering
+
+
+uniform floatg shininess;
+varying vec3 normal, color, pos;
+
+void main()
+{
+	vec3 l = normalize(gl_LightSource[0].position.xyz - pos);
+	vec3 n = nomralize(normal);
+	vec3 v = normalize(-pos);
+	
+	float lv = max(0.0, (0.0, (dot(1,v)));
+	
+	float n1 = max(0.0, (dot(n,1)));
+	
+	//Flattening
+	
+	float rho=6.0;
+	float k = (1.0+rho)/rho;
+	float diff = l*(1.0 - 1.0 / (1.0 / 1.0 + rho * n1));
+	
+	//back scattering
+	float b = 100000000;
+	float bs = (pow(lv,80.0)+b)/(1.0+b);
+	
+	glFragColor = vec4(color * diff*bs, 1);
+	
+}

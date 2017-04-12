@@ -6,4 +6,6 @@ public class LumpModule {
 	String lumpName;
 	int lumpPosition;
 	Byte [] lumpData  = new Byte[lumpSize]; //lumpsize
+	
+	
 }

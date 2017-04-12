@@ -6,29 +6,5 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/Ted Gress/Desktop/lwjgl"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="lib/jdom-2.0.6-contrib.jar"/>
-	<classpathentry kind="lib" path="lib/jdom-2.0.6-javadoc.jar"/>
-	<classpathentry kind="lib" path="lib/jdom-2.0.6-junit.jar"/>
-	<classpathentry kind="lib" path="lib/jdom-2.0.6-sources.jar"/>
-	<classpathentry kind="lib" path="lib/jdom-2.0.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-opengl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-glfw.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-bgfx.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-egl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-jawt.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-jemalloc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-lmdb.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-nanovg.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-nfd.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-nuklear.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-openal.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-opengles.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-ovr.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-par.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-sse.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-stb.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-tinyfd.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Ted Gress/Desktop/lwjgl/lwjgl-xxhash.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

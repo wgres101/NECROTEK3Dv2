@@ -88,7 +88,7 @@ import SceneGraph.GraphNodeInstance;
 
 
 
-
+/*
 
 public class XMLAdapter {
 
@@ -184,3 +184,4 @@ public class XMLAdapter {
 	        }
 	}
 }
+ * /

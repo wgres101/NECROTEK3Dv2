@@ -1,5 +1,5 @@
 package RegisteredVariables;
 
-public class DoubleRegister {
+public class DoubleRegister extends RegisteredVar {
 
 }
