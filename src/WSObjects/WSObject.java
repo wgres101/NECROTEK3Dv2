@@ -9,7 +9,7 @@ import Services.ServiceRoot;
 public class WSObject extends GraphNodeInstance {
 	
 	public WSObject(Element e) {
-		super(e);
+		
 		// TODO Auto-generated constructor stub
 	}
 	

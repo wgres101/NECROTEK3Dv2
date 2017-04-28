@@ -81,6 +81,7 @@ public class ObjectManager implements Runnable {
 	
 	public static Resource GetResource()
 	{
+		return null;
 	}
 	
 	public static void Lock()

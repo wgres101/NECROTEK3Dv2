@@ -88,10 +88,10 @@ import SceneGraph.GraphNodeInstance;
 
 
 
-/*
+
 
 public class XMLAdapter {
-
+/*
 	public void adapt()
 	{
 		DebugManager.Debug("XMLAdapter", "Loading XML Level");
@@ -182,6 +182,5 @@ public class XMLAdapter {
 	        	
 	        	recursiveAdd(child.getChildren(), child);
 	        }
-	}
+	}*/
 }
- * /

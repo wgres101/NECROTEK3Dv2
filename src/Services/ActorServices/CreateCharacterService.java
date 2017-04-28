@@ -9,7 +9,7 @@ public class CreateCharacterService extends ServiceRoot{
 	{
 		switch(message.mflag)
 		{
-		case Message.EM.EM_GO_BACKWARD:
+		case EM_GO_BACKWARD:
 			break;
 			
 			

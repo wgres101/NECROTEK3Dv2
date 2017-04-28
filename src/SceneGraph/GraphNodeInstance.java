@@ -19,7 +19,7 @@ public class GraphNodeInstance extends Component {
 	ArrayList<GraphNodeInstance> children;
 	Element xmlData;
 	
-	
+	/*
 	public GraphNodeInstance()
 	{
 		
@@ -47,10 +47,8 @@ public class GraphNodeInstance extends Component {
 		
 	}
 	
-	//call to destroy object
-	public void Destroy()
-	{
-	}
+	
+
 	
 	//put end object code here
 	public void EndPlay()
@@ -70,7 +68,7 @@ public class GraphNodeInstance extends Component {
 	public static void Init() {}
 	
 
-	
+	//call to destroy object
 	@WebMethod
 	public static void Destroy() {}
 	
@@ -83,7 +81,6 @@ public class GraphNodeInstance extends Component {
 		return null; //return ws_object;
 	}
 	
-
+ */
 	
-	}
 }

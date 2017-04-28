@@ -22,15 +22,15 @@ public class BoxService extends ServiceRoot {
 	}
 
 	@WebMethod
-	public void Render()
+	public static void Render()
 	{
 		
 	}
 	
-	@Override
-	public void parseMessage() {
+	@WebMethod
+	public static void parseMessage() {
 		// TODO Auto-generated method stub
-		super.parseMessage();
+		
 	}
 
 	@WebMethod

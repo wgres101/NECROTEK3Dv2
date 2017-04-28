@@ -1,5 +1,5 @@
 package Services.MathServices;
-/*
+
 import java.util.ArrayList;
 
 import javax.jws.WebMethod;
@@ -12,7 +12,7 @@ import WSObjects.WSObject;
 //GEM 3
 
 public class CellularAutomataforPhysicalModelingService {
-	
+/*
 	Octree octree = new Octree();
 	
 	public octree_cell findNextDoorNeighbor(octree_cell cell);
@@ -150,6 +150,6 @@ public class CellularAutomataforPhysicalModelingService {
 	
 	
 
-
+ */
 }
- * /
+ 

@@ -27,7 +27,7 @@ public class ServiceRoot extends GraphNodeInstance {
 	}
 	
 	public ServiceRoot(Element e) {
-		super(e);
+		
 		// TODO Auto-generated constructor stub
 	}
 
@@ -64,39 +64,39 @@ public class ServiceRoot extends GraphNodeInstance {
 	
 
 	@WebMethod
-	public void Render()
+	public static void  Render()
 	{
 		
 	}
 	
 	//called every turn. checks messagemanager for message
 	@WebMethod
-	public void parseMessage()
+	public static void parseMessage()
 	{
 		
 	}
 	
-	public void Collision()
+	public static void  Collision()
 	{
 		
 	}
 	
 	//when the game requires this particular state to be active
 	
-	public void OnEnter()
+	public static void  OnEnter()
 	{
 		
 	}
 	
 	//When the object no longer needs to be attachd to the scene graph
 	
-	public void OnExit()
+	public static void  OnExit()
 	{
 	}
 
 	//for exammple, hitting the pause button
 	
-	public void OnSuspend()
+	public static void  OnSuspend()
 	{
 	}
 	

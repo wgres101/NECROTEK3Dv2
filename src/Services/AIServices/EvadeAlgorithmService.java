@@ -1,7 +1,7 @@
 package Services.AIServices;
 
 public class EvadeAlgorithmService {
-	
+	/*
 	public update()
 	{
 		if (player_x < monster_x)
@@ -25,5 +25,5 @@ public class EvadeAlgorithmService {
 			monster_y--;;
 		}
 		
-	
+	*/
 }

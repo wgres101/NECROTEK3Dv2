@@ -2,9 +2,10 @@ package Services.AIServices;
 
 public class TrackerAIService {
 
-	
+	/*
 	public update()
 	{
+		/*
 		if (player_x > monster_x)
 		{
 			monster_x++;
@@ -26,6 +27,7 @@ public class TrackerAIService {
 			monster_y--;;
 		}
 		
-	}
+		
+	}*/
 	
 }
