@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Floors;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface IDarkSandStoneFloor extends IBaseConstruction {
 

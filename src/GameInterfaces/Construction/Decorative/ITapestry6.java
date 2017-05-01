@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Decorative;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface ITapestry6 extends IBaseConstruction {
 

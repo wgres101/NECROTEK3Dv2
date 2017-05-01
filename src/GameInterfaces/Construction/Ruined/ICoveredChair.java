@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Ruined;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface ICoveredChair extends IBaseConstruction {
 

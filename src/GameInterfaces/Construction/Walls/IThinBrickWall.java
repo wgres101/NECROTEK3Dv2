@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Walls;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface IThinBrickWall extends IBaseConstruction {
 

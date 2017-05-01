@@ -1,6 +1,6 @@
 package GameInterfaces.Miscellaneous;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface IFullJar1 extends IBaseConstruction {
 

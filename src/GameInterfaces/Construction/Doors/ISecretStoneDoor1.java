@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Doors;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface ISecretStoneDoor1 extends IBaseConstruction {
 

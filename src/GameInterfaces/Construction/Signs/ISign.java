@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Signs;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface ISign extends IBaseConstruction {
 

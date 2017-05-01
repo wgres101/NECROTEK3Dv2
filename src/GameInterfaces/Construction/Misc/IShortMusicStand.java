@@ -1,6 +1,6 @@
 package GameInterfaces.Construction.Misc;
 
-import GameInterfaces.IBaseConstruction;
+import GameInterfaces.Construction.IBaseConstruction;
 
 public interface IShortMusicStand extends IBaseConstruction {
 
