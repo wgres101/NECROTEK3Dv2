@@ -15,7 +15,7 @@ public class QuaternionsForGameProgrammingService {
 	{
 		return -1;
 	}
-	
+	/*
 	float multiplyi_j(float i, float j)
 	{
 		return k;
@@ -30,9 +30,11 @@ public class QuaternionsForGameProgrammingService {
 	{
 		return j;
 	}
-	
+	*/
+	/*
 	Quaternion multiply(Quaternion q1, Quaternion q2)
 	{
+		
 		Quaternion total = new Quaternion();
 		total.w = (q1.w*q2.w -q1.i*q1.i - q1.j*q2.j - q1.k*q2-q2.k);
 
@@ -42,7 +44,7 @@ public class QuaternionsForGameProgrammingService {
 		
 		total.k = (q1.i*q2.j - q1.i*q2.j + q1.w*q2.k + q1.w*q2.k);
 	
-	}
+	}*/
 	
 	float norm(Quaternion q)
 	{
@@ -53,11 +55,11 @@ public class QuaternionsForGameProgrammingService {
 	
 	Quaternion conjugate(Quaternion q)
 	{
-		Quaternion q;
-		q.i = -q.i;
-		q.j = -q.j;
-		q.k = -q.k;
-		return q;
+		Quaternion q_t = new Quaternion();
+		q_t.i = -q.i;
+		q_t.j = -q.j;
+		q_t.k = -q.k;
+		return q_t;
 	}
 	
 	//pure means no scalar w
@@ -65,7 +67,7 @@ public class QuaternionsForGameProgrammingService {
 	
 	Quaternion pureQuaternion()
 	{
-		
+		return null;
 	}
 	
 	
@@ -77,12 +79,13 @@ public class QuaternionsForGameProgrammingService {
 	// Rotation of around quaternion q is done by
 	//multipluing the original quaternion q by the pure quaternion
 	//by the conjugate of the result
-	
+	/*
 	Matrix4f QuaternionToMatrix
 	{
 		Matrix4f mat = new Matrix4f;
 		
 		m
 	}
+	*/
 }
 
