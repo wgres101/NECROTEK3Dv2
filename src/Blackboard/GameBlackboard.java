@@ -1,5 +1,9 @@
 package Blackboard;
 
+
+//The game blackboard holds "global" variable information
+
+
 public class GameBlackboard {
 
 	
