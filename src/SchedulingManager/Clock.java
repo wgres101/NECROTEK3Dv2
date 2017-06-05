@@ -5,6 +5,12 @@ import java.util.Date;
 import MessageManagement.Message;
 import MessageManagement.MessageManager;
 
+
+//clock component keeps track of real time
+//the current virtual time and frame count
+// 
+
+
 public class Clock implements Runnable {
 
 	float frame_rate;

@@ -1,4 +1,4 @@
-package TaskManager;
+package SchedulingManager;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;

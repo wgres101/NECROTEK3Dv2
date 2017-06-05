@@ -12,8 +12,8 @@ import MainGame.Loop;
 import MessageManagement.MessageManager;
 
 import SceneGraph.SceneGraphManager;
+import SchedulingManager.CTaskManager;
 import SchedulingManager.Scheduler;
-import TaskManager.CTaskManager;
 
 
 public class Main  extends JFrame   {

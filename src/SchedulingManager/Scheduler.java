@@ -10,6 +10,11 @@ import MessageManagement.Message;
 //all functionality goes through the scheduler
 //the scheduler will subdivide ticks or time steps, giving certain processes more priority than others
 
+
+//virtual time scheduler divides time into frames
+//tasks are executedd in batches between frames
+//
+
 public class Scheduler implements Runnable {
 
 	static ArrayList<Message> priorityList = new ArrayList<Message>();
