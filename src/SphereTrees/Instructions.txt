@@ -1,0 +1,49 @@
+A sphere tree is simply a hierarchical tree of spheres where each sphere in 
+a tree node encloses all other sphere in the tree nodes below it. A simple
+bounding sphere test could be used to determine the location of
+tens or  hundreeds of polygons at a time
+
+1) First calculate a bounding sphere enclosing all the polygon soup
+this is the bounding sphere for the root node.
+
+2) First calculat ethe bounding sphere box, then create the sphere
+using the largest size as the radius and adjust the bound sphere
+s as necessary
+
+3) Next compute an axial plane on the x-axis that conincides with
+the bounding spheres center'
+
+4) Create a splitter plane. If a polygon straddles the plane
+and put it on the sphere where it has more vertices
+
+5) Once the bounding spheres are computed, compute the
+bounding spheres of each subgroup. Create two child nodes
+in the sphere trees, attach them to the parent,
+and assign the enclosed poolygons to the nodes.
+
+6) Continue the process recrusively, using y axis, then z axis,
+then x axis, etc.
+
+7) Continue until there is only one polygon in a sphere
+
+8) Each polygon is tested as a splitter candidate. It is tested
+against all the other plygons in the BSP branch.  We can now
+test each splitter candidate against the spheres instead of 
+individual polygons
+
+9) For each sphere tree node, the node's bounding sphere
+is tested against the splitter candidate's facet plane.
+
+10) If a sphere sits on the back or front entirely of the splitter
+plane, There are no polygon splits occur within that sphere
+tree branch.
+
+11)If a sphere overlaps the plane, the plygons within may overlap
+the plane as well. In this case, sphere children must be recursivcely
+gone through until there is a absolutely one polygon wit h in a sphere
+
+12) If no such sphere can be reached, the individual polygons must be
+tested against the plane. This is the only instance where
+individual polygons are tested.
+
+13) 
