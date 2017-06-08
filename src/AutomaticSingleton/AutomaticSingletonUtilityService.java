@@ -1,4 +1,4 @@
-package Services.GeneralCodePerformanceServices;
+package AutomaticSingleton;
 
 //GEMS 1
 

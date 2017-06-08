@@ -3,6 +3,9 @@ package ObjectManagement;
 
 //GEMS 7
 
+//USE POLICIES TO DECIDE ON TYPE OF FREELIST TO USE
+//See Gems 5 1.11
+
 //Page allocation requirements are a mix of 
 //age (how long since the page was 'born'
 //and APC (how big the page is)
@@ -39,7 +42,7 @@ public class ObjectManager implements Runnable {
 	
 	
 	
-	public static Object requestClass(Class classVar, String name)
+	public static <T> requestClass(Class classVar, String name)
 	{
 		
 		pool.getEntry(name);
@@ -47,7 +50,7 @@ public class ObjectManager implements Runnable {
 		return null;
 	}
 	
-	public static Object requestObjectOfClass(Class classVar, String name)
+	public static <T> requestObjectOfClass(Class classVar, String name)
 	{
 		Object o = pool.requestMemory("name", classVar);
 		
