@@ -1,5 +1,8 @@
 package SchedulingManager;
 
+import java.util.PriorityQueue;
+
+import SceneGraph.SceneGraphManager;
 
 //event manager is the heart of the scheduler
 //each task in the task manager defines
@@ -17,6 +20,43 @@ package SchedulingManager;
 //
 
 
-public class CEventManager {
+public class CEventManager extends CTask implements Runnable {
 
+	
+	static PriorityQueue<CEvent> events_q = new PriorityQueue<CEvent>();
+	
+	public static void push_events(CEvent events)
+	{
+		events_q.add(events);
+		
+			
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		while (true)
+		{
+			//when reaches a certain time, fires off a message to all functions
+			//in the scene graph
+			//clock timer calls this function
+			
+			//process priority queue
+			CEvent event = events_q.remove();
+			
+			//broadcast messages across scene graph
+					
+			SceneGraphManager.parseMessages(event);
+		}
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
 }

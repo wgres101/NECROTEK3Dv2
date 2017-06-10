@@ -1,5 +1,5 @@
 package RTTI;
-
+/*
 public class  CTypedProperty <E> extends CAbstractProperty {
 
 	public ePropertyType GetType() { return null; }
@@ -10,3 +10,4 @@ public class  CTypedProperty <E> extends CAbstractProperty {
 		
 	
 }
+ */

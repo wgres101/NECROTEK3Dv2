@@ -2,7 +2,7 @@ package Services.MathServices;
 
 
 //GEMS ONE
-
+/*
 public class QuaternionsForGameProgrammingService {
 
 	
@@ -30,8 +30,7 @@ public class QuaternionsForGameProgrammingService {
 	{
 		return j;
 	}
-	*/
-	/*
+	
 	Quaternion multiply(Quaternion q1, Quaternion q2)
 	{
 		
@@ -44,7 +43,7 @@ public class QuaternionsForGameProgrammingService {
 		
 		total.k = (q1.i*q2.j - q1.i*q2.j + q1.w*q2.k + q1.w*q2.k);
 	
-	}*/
+	}
 	
 	float norm(Quaternion q)
 	{
@@ -86,6 +85,6 @@ public class QuaternionsForGameProgrammingService {
 		
 		m
 	}
-	*/
+	
 }
-
+*/

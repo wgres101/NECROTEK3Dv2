@@ -1,5 +1,5 @@
 package PlayerCharacter;
-
+/*
 public class CCmpHealth implements ICmpHealth {
 
 	@Override
@@ -95,3 +95,4 @@ public class CCmpHealth implements ICmpHealth {
 	
 	
 }
+ */

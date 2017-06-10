@@ -2,20 +2,24 @@ package Debugger;
 
 import IDE.Main;
 import MessageManagement.Message;
+import SchedulingManager.CTask;
+import SchedulingManager.EEventMachine;
 
 public class RunThrough {
 
 	
 	public static void run()
 	{
-		JournalManager.setJournalEtry(RunThrough.class,"RunThrough beginning initialization");		
+		JournalManager.setJournalEntry(RunThrough.class,"RunThrough beginning initialization");		
 		
 		Message message = new Message();
 		
-		message.mflag = Message.EM.EM_START;
+		message.mflag = EEventMachine.EM_START;
 		
-		Main.schedulingManager.addToSchedule(message);
+		CTask task = new CTask();
 		
+		
+
 	}
 	
 	

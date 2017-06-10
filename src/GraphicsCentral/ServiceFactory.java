@@ -1,4 +1,4 @@
-package Central;
+package GraphicsCentral;
 
 import Services.BasicServices.ServiceBox;
 import Services.BasicServices.ServiceCamera;

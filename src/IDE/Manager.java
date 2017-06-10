@@ -1,12 +1,10 @@
 package IDE;
-import Central.WSObjectFactory;
+import GraphicsCentral.PanelFactory;
+import GraphicsCentral.Renderer;
+import GraphicsCentral.ServiceFactory;
+import GraphicsCentral.WSObjectFactory;
 import InspectorPanels.BoxInspector;
 import Services.BasicServices.ServiceBox;
-import Central.PanelFactory;
-import Central.Renderer;
-import Central.ServiceFactory;
-
-
 import WSObjects.WSObject;
 
 

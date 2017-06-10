@@ -1,5 +1,8 @@
 package SchedulingManager;
 
+import java.time.Clock;
+import java.time.Instant;
+import java.time.ZoneId;
 import java.util.Date;
 
 import MessageManagement.Message;
@@ -9,9 +12,9 @@ import MessageManagement.MessageManager;
 //clock component keeps track of real time
 //the current virtual time and frame count
 // 
+//CClock is a thread class that maintains frames and current time
 
-
-public class Clock implements Runnable {
+public class CClock extends Clock implements Runnable {
 
 	float frame_rate;
 	Date date = new Date();
@@ -62,25 +65,32 @@ public class Clock implements Runnable {
 				//fire a frame event
 				Message message = new Message();
 				//actions that occur at every frame
-				message.mflag = Message.EM.EM_FRAME_TICK;
+				message.mflag = EEventMachine.EM_FRAME_TICK;
 				MessageManager.EnqueueMessage(message);
 			}
 			else
 			{
 				//actions that occur at every tick
 				Message message = new Message();
-				message.mflag = Message.EM.EM_CLOCK_TICK;
+				message.mflag = EEventMachine.EM_CLOCK_TICK;
 				//MessageManager.EnqueueMessage(message);
 			}
 			
-			for (int i=0;i<Scheduler.priorityList.size(); i++)
+			for (int i=0;i<CScheduler.priorityTaskList.size(); i++)
 			{
 				//scheduled for messages for events that are
 				//not top priority
-				Message tempMessage = Scheduler.priorityList.get(i);
-				if (time_cum >= tempMessage.frame_rate)
+				Message temp_message =new  Message();
+				temp_message.mflag = EEventMachine.EM_BOOTSTRAP;
+				
+				
+				
+				
+				
+				
+				if (time_cum >= temp_message.frame_rate)
 				{
-					MessageManager.EnqueueMessage(tempMessage);
+					MessageManager.EnqueueMessage(temp_message);
 				}
 				
 			}
@@ -93,6 +103,24 @@ public class Clock implements Runnable {
 	public  void Destroy()
 	{
 		
+	}
+
+	@Override
+	public ZoneId getZone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Instant instant() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Clock withZone(ZoneId arg0) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

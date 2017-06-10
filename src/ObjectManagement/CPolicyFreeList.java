@@ -1,7 +1,7 @@
 package ObjectManagement;
 
 //Book 5 Section 1.11
-
+/*
  class FreeList <T, GrowthPolicy, AllocationPolicy>
  {
 	 public FreeList()
@@ -56,3 +56,4 @@ package ObjectManagement;
 	
 
 }
+ */

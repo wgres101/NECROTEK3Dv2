@@ -1,4 +1,4 @@
-package Central;
+package GraphicsCentral;
 
 import java.util.ArrayList;
 

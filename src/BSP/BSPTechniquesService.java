@@ -3,7 +3,7 @@ package BSP;
 import java.util.ArrayList;
 
 //GEMS 6
-
+/*
 public class BSPTechniquesService {
 
 	/* 
@@ -186,7 +186,7 @@ public class BSPTechniquesService {
 	
 			
 			
-*/			
+			
 }
 
-	
+*/	

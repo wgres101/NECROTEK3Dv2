@@ -1,9 +1,9 @@
-package Services.CodeWiseServices;
 
 //GEMS 5 Section 1.14
 
 //AN ABT Tree// Self-balancing binary tree with two nodes per level
 
+/*
 
 public class AnEffectiveCacheObliviousABTTreeService {
 	
@@ -55,3 +55,4 @@ public class AnEffectiveCacheObliviousABTTreeService {
 	}
 	
 }
+*/

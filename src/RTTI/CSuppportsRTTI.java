@@ -1,7 +1,7 @@
 package RTTI;
 
 //Book 5 Section 1.4
-
+/*
 
 
 public class CSuppportsRTTI <  T extends CSuppportsRTTI,  BaseClass, CLID>  extends CBaseClass
@@ -33,3 +33,4 @@ public class CSuppportsRTTI <  T extends CSuppportsRTTI,  BaseClass, CLID>  exte
 	
 	public void 
 }
+ */

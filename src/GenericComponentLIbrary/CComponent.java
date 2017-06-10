@@ -1,5 +1,5 @@
 package GenericComponentLIbrary;
-
+/*
 public class <TypeID, InterfaceID> CComponent {
 
 	
@@ -26,3 +26,4 @@ public class <TypeID, InterfaceID> CComponent {
 	}
 	
 }
+ */

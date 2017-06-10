@@ -1,7 +1,7 @@
 package GenericTreee;
 
 public class CGenericTree {
-
+/*
 	
 	public void insert_subtree(TreeT child, TreeT next);
 	public void remove_subtree(TreeT child);
@@ -89,5 +89,5 @@ public class CGenericTree {
 	}
 	
 	
-	
+	 */
 }

@@ -4,7 +4,7 @@ public class CBIts {
 
 	
 	//bits
-	
+/*	
 	boolean jumping;
 	boolean battle_mode;
 	boolean falling;
@@ -17,7 +17,7 @@ public class CBIts {
 	boolean using_abilities;
 	boolean dead;
 	boolean ghost;
-	
+	*/
 /*	
 	Wall	Turns his head and shakes it	No
 	Nothing	Looks up then down and then at you	Yes
@@ -35,7 +35,7 @@ public class CBIts {
 	High Cliff	Turns around and looks at you	Yes
 */
 	
-	boolean wall;
+/*	boolean wall;
 	boolean nothing;
 	boolean locked_door;
 	boolean building;
@@ -49,7 +49,7 @@ public class CBIts {
 	boolean floor_switch;
 	boolean low_cliff;
 	boolean high_cliff;
-	
+	 */
 	
 	
 }

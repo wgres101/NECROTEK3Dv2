@@ -13,7 +13,7 @@ import MessageManagement.MessageManager;
 
 import SceneGraph.SceneGraphManager;
 import SchedulingManager.CTaskManager;
-import SchedulingManager.Scheduler;
+import SchedulingManager.CScheduler;
 
 
 public class Main  extends JFrame   {
@@ -38,7 +38,7 @@ public class Main  extends JFrame   {
 	
 	public static GameLogic gameLogic = new GameLogic();
 	
-	public static Scheduler schedulingManager = new Scheduler();
+	public static CScheduler schedulingManager = new CScheduler();
 	
 	//COMMON ACROSS CLASSES
 	

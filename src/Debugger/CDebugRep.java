@@ -4,7 +4,8 @@ package Debugger;
 public class CDebugRep {
 
 	//various debug representations
-	
+	//show in viewport
+	/*
 	
 	public class SCroll
 	{
@@ -24,4 +25,6 @@ public class CDebugRep {
 	
 	
 	//IMPLETMENT USING A  GRAPH AS WELL
+	 
+	 */
 }

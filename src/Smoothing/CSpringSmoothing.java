@@ -5,7 +5,7 @@ public class CSpringSmoothing {
 	
 	//time delta is the time step between updates
 	//of the specified code in seconds
-	
+	/*
 	public static float SmoothCD(float from, float to, float vel, float smoothTime)
 	{
 		float omega = 2.f/smoothTime;
@@ -16,6 +16,6 @@ public class CSpringSmoothing {
 		vel = (vel - omega*temp)*exp; //equation 5
 		return to + (change+temp)*exp; //equation 4
 	}
-	
+	*/
 	
 }

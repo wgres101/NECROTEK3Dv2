@@ -2,7 +2,7 @@ package ObjectManagement;
 
 public class CConstantGrowth {
 
-	
+	/*
 	CConstantGrowth(int pre, int grow)
 	{
 		pre=16;
@@ -24,5 +24,5 @@ public class CConstantGrowth {
 		private int numToGrow;
 	}
 	
-	
+	*/
 }

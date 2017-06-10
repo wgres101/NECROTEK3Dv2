@@ -2,7 +2,7 @@ package RTTI;
 
 
 
-
+/* 
 public class CProperty <OwnerType, T> extends CTypedProperty {
 	
 	T GetValue(CBaseObject pObject)
@@ -35,4 +35,4 @@ public class CProperty <OwnerType, T> extends CTypedProperty {
 	}
 	
 	
-}
+}*/

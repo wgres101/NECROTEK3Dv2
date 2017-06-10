@@ -1,5 +1,5 @@
 package GenericComponentLIbrary.SampleImplementation;
-
+/* 
 public class CPlayer extends CComponent implements IMovable {
 
 	float x, y;
@@ -25,3 +25,4 @@ public class CPlayer extends CComponent implements IMovable {
 	
 	
 }
+*/

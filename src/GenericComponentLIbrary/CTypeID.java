@@ -1,7 +1,7 @@
 package GenericComponentLIbrary;
 
 public class  CTypeID {
-	
+/*	
 	 <Type> CTypeID(Type type);
 	
 	 int equals(TypeID left, TypeID right)
@@ -57,7 +57,7 @@ public class  CTypeID {
 		 }
 	 }
 	 
-	 
+	*/ 
 	 
 }
 

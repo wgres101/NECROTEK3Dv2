@@ -36,6 +36,7 @@ package ObjectManagement;
 //Use red-black trees to searcfh through large memory allocated. Self-balancing
 //and easy to search through. Each "bin" (node) can easily be found with little search
 
+/*
 public class ObjectManager implements Runnable {
 
 	static Pool pool = new Pool();
@@ -107,3 +108,4 @@ public class ObjectManager implements Runnable {
 	
 	
 }
+*/

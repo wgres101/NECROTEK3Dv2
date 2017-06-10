@@ -1,7 +1,7 @@
 package Component;
 
 public class CComponentObjectManager {
-
+/*
 	
 	public void PostMessage(CObjectID objectID, EObjectPoster post)
 	{
@@ -29,4 +29,5 @@ public class CComponentObjectManager {
 		//Message Data
 		Set<ECFomponentTypeID> mMessageTypeToComponentTypes[NUM_MEESSAGE_TYPE_IDS];
 	}
+	 */
 }

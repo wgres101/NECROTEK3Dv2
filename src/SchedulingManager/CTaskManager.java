@@ -2,8 +2,10 @@ package SchedulingManager;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
+import java.util.Vector;
 
 import MessageManagement.Message;
+import Timer.CTimerManager;
 
 //the purpose of the task manager is to monitor running classes
 //the display for this is similar to Windows' task managerf
@@ -19,13 +21,13 @@ import MessageManagement.Message;
 
 public class CTaskManager {
 
-	static PriorityQueue<Message> taskList = new PriorityQueue<Message>();
+	static PriorityQueue<CTask> taskList = new PriorityQueue<CTask>();
 	
-	ArrayList<Message> getCurrentTasks()
+	public static Vector<CTask> getCurrentTasks()
 	{
-		ArrayList<Message> list = new ArrayList<Message>();
+		Vector<CTask> list = new Vector<CTask>();
 		
-		for (Message m : list)
+		for (CTask m : list)
 		{
 			taskList.add(m);
 		}
@@ -33,7 +35,7 @@ public class CTaskManager {
 		return list;
 	}
 	
-	public boolean isInTaskList(Message message)
+	public static boolean isInTaskList(Message message)
 	{
 		ArrayList<Message> list = new ArrayList<Message>();
 		
@@ -48,10 +50,16 @@ public class CTaskManager {
 		
 	}
 	
-	public void addToTaskManager(Message message)
+	public static void addToTaskManager(CTask task)
 	{
-		taskList.add(message);
+		taskList.add(task);
+		CTimerManager.getNewTimer(30, 1);
+		
 	}
-	
-	
+/*	
+	public removeFinishedTasks()
+	{
+		
+	}
+	*/
 }

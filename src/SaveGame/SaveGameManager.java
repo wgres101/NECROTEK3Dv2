@@ -2,7 +2,7 @@ package SaveGame;
 
 //Book 3
 //Section 1.7
-
+/*
 public class SaveGameManager {
 
 	///saveable objects inherit from this
@@ -39,3 +39,4 @@ public class SaveGameManager {
 	}
 }
 
+ */

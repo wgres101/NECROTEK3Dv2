@@ -125,7 +125,19 @@ by the public class. The public class has a reference to the private class.
 35) Publisher publishes key threads such as Run and Render to the scheduler to be scheduled
 
 26) The Schedduler sends out messages dependent upon the message in the message pool
+
+27) Time-sensitive functions should be called in the middle of the render loop.
+
+28) Pack Data Efficiently! Order does matter in structs and classes - order struct variables largest to smallest 
+
+29) Code is data! The smaller your code is, the easier it is cached
+
+30) Prefetch Data.  If the CPU is going to spin, access the data ahead of time
+
+31) Stack Allocation - example, if you have a list that will always be 256 items, create a stack of 256 array items and pop them as you need them
+
 -----------------------------
+
 
 Scheduler - Distributes it to the message queue
 Each service has a parseMessage function that acts on various objects

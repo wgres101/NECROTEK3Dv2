@@ -6,7 +6,7 @@ package Journaling;
 import java.util.ArrayList;
 
 public class CSwitch {
-
+/*
 	
 	typedef Root OwnerType;
 	
@@ -56,4 +56,5 @@ public class CSwitch {
 		
 		propagateState(source);
 	}
+	 */
 }

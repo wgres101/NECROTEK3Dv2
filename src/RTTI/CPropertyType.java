@@ -1,7 +1,6 @@
 package RTTI;
 
-
-enum EPROPS  {
+/* EPROPS  {
 		eptBOOL,
 		eptINT,
 		eptFLOAT,
@@ -29,3 +28,4 @@ public class CPropertyType <T> {
 	
 	
 }
+ */

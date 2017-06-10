@@ -4,7 +4,7 @@ package ObjectManagement;
 //an alllocation policy
 //allows chunks of contiguous memory
 //and partitions them in blocks of size T
-
+/*
 public class <T> CPlacementNewEmbeddedLink {
 	
 		//public
@@ -60,3 +60,4 @@ public class <T> CPlacementNewEmbeddedLink {
 		}
 
 }
+*/ 

@@ -2,7 +2,7 @@ package AIAlgorithms.Boids;
 
 public class CBoid {
 
-	
+	/*
 	//static variables
 	
 	static CBoid VisibleFriendsList[MAX_FRIENDS_VISIBLE];
@@ -155,4 +155,6 @@ public class CBoid {
 	//+z through the nose of the model
 	
 	void ComputeRPY();
+*/
 }
+

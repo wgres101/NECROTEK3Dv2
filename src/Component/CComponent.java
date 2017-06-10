@@ -5,7 +5,7 @@ package Component;
 
 public class CComponent {
 
-	
+	/*
 
 	public boolean Init(CParameterNode compNode)
 	{
@@ -57,5 +57,5 @@ public class CComponent {
 	
 	
 	
-	
+	*/
 }

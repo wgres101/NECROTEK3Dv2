@@ -3,7 +3,7 @@
 //Book 5 Section 1.5
 
 package SphereTrees;
-
+/*
 public class CBSPTreeBuilder {
 
 	public void TestSplitCandidate(CSphereTreeNode pSphereTreeNode, boolean bTerminateEarl)
@@ -87,3 +87,4 @@ public class CBSPTreeBuilder {
 	}
 	
 }
+ */

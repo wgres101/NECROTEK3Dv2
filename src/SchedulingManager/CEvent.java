@@ -10,8 +10,11 @@ package SchedulingManager;
 //For example, time events can occur every 10 ms
 //regardless of the rendering frame
 
-//
-
+//An EVENT wraps a task
 public class CEvent {
 
+
+	CTask task = new CTask();
+	EEventMachine current_event; 
 }
+

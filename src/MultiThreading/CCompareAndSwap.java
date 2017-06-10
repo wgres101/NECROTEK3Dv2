@@ -1,16 +1,32 @@
 package MultiThreading;
 
-public class CCompareAndSwap {
+public class CCompareAndSwap 
+{
 
-	boolean compare_and_swap(int accum, int dest, int newval)
+	public int CAS(int Ptr, int Value, int Comparand)
 	{
-	  if (accum == dest) {
-	      dest = newval;
-	      return true;
-	  } else {
-	      accum = dest;
-	      return false;
-	  }
+		if (Ptr == Comparand)
+		{
+			Ptr = Value;
+			return Comparand;
+		}
+		return Ptr;
 	}
 	
 }
+
+//Example
+/*I
+int AtomicAND(int Value, int Op)
+{
+	while(true)
+	{
+		int CurValue = Value;
+		int NewValue = (CurValue & Op);
+		if (CAS(Value, NewValue, CurValue) == CurValue)
+		{
+			return NewValue;
+		}
+	}
+}
+ */

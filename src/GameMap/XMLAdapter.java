@@ -35,6 +35,7 @@ import SceneGraph.GraphNodeInstance;
 //WSChild
 //WSFirstPlayerActor
 //WSThirdPersonPlayerActor
+//WSPlayerCharacter
 //WSEmptyActor
 //WSLightActor
 //WSLightMapImportance
@@ -72,6 +73,7 @@ import SceneGraph.GraphNodeInstance;
 
 //Primitives
 //------------------
+//WSHexTile
 //WSAnimatedCamera
 //WSBox
 //WSCameraControlTechniques
@@ -79,6 +81,7 @@ import SceneGraph.GraphNodeInstance;
 //WSFog
 //WSSphereStaticMesh
 //WSVectorCamera
+//
 
 
 //WorldGeneration

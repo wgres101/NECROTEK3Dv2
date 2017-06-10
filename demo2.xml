@@ -1,0 +1,29 @@
+<LevelRoot>
+
+	<WSHexTile horizontalSize = "10.0" verticalSize = "10.0" centerPoint = "5.0">
+	
+		<PlayerCharacterService>
+		
+			<WSPlayerCharacter startx = "5.0" starty = "5.0"/>
+
+			<CameraService>
+				<WSCameraObject starx = "3.0" starty="3.0" startz="10.0"/>
+			</CameraService>
+
+		</PlayerCharacterService>
+
+		<PointLightService>
+			<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
+		</PointLightService>
+	
+		<BoxService>
+			<WSBox p_min = "-1.0" p_max = "1.0"/>
+		</BoxService>
+	
+	</WSHexTile>
+
+
+
+
+
+</LevelRoot>

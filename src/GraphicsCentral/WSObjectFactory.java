@@ -1,5 +1,5 @@
 
-package Central;
+package GraphicsCentral;
 
 import org.jdom2.Element;
 
@@ -14,6 +14,7 @@ import WSObjects.WSObject;
 //WSObjects have member variables
 //the code resides in the service
 //Member variables manifest in the inspector of an object
+
 public class WSObjectFactory {
 
 	public static Object getWSObject(String command)

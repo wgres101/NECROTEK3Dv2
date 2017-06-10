@@ -1,4 +1,4 @@
-package Central;
+package GraphicsCentral;
 
 public class Vertex {
 

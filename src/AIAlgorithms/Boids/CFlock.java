@@ -3,7 +3,7 @@ package AIAlgorithms.Boids;
 import java.util.Vector;
 
 public class CFlock {
-
+/*
 	
 		Vector<CBoid> boids = new Vector<CBoid>();
 		
@@ -35,6 +35,6 @@ public class CFlock {
 		private m_num_members;	//number of boids in this flock
 		CBoid m_first_member; //pointer to first member
 		
-		
+	*/	
 	
 }

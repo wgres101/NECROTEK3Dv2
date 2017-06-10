@@ -1,5 +1,6 @@
 package PlayerCharacter;
 
+/*
 import Component.IComponent;
 
 public interface ICmpHealth extends IComponent {
@@ -14,3 +15,4 @@ public interface ICmpHealth extends IComponent {
 	
 	
 }
+ */

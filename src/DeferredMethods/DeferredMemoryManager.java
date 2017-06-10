@@ -8,7 +8,9 @@ import java.util.PriorityQueue;
 
 
 //the role of this class is to act as storage for methods that don't
-//have to be immediately executed
+//have to be immediately executed.
+//these functions should be called in time windows where it isn't urgent
+//to run the function
 
 public class DeferredMemoryManager {
 
