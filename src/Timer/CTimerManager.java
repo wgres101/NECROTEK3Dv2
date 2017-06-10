@@ -18,7 +18,7 @@ import SchedulingManager.UniversalStateMachine;
 	//updates internal time values (CCLock)
 	//update all timers dependent on the clock
 
-public class CTimerManager 
+public class CTimerManager  implements Runnable
 {
 	static Vector<CTimer> listOfTimers = new Vector<CTimer>();
 	
@@ -34,9 +34,9 @@ public class CTimerManager
 		
 		CTimer timer_obj = new CTimer();
 		
-		timer_obj.frames_per_tick = 30;
+		timer_obj.frames_per_tick = frames_per_tick;
 		
-		timer_obj.ticks_per_second = 2;        //set priority. Gets 2 runs for every run
+		timer_obj.ticks_per_second = ticks_per_second;        //set priority. Gets 2 runs for every run
 		
 		Timer timer = new Timer();
 
@@ -48,12 +48,18 @@ public class CTimerManager
 
 
 		/* timer_obj.t.schedule(new CTimer(), 0, callback_object_type); */ 
-		
+		CJournal.Journal(CTimerManager.class, "Timer creation success. Adding CTimer object to internal list Of Timers");
 		
 		listOfTimers.addElement(timer_obj);
 		
 		
 		return timer_obj;
+		
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
 		
 	}
 		

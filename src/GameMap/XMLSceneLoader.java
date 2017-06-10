@@ -1,17 +1,9 @@
 package GameMap;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.jdom2.contrib.beans.StringConverter.Factory;
-
 import Factory.WebServiceFactory;
 import SceneGraph.GraphNodeInstance;
 import SceneGraph.SceneGraphManager;
 import Services.ServiceRoot;
-import Services.ActorServices.CreateCharacterService;
 import WSObjects.WSObject;
 
 public class XMLSceneLoader {

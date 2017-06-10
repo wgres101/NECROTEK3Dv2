@@ -2,6 +2,7 @@ package ObjectManagement;
 
 import java.util.ArrayList;
 import java.util.Stack;
+import java.util.Vector;
 
 public class Pool {
 
@@ -9,7 +10,9 @@ public class Pool {
 	
 	
 	
-	static private Stack<Object> poolEntries = new Stack<Object>();
+	static private Vector<Object> poolEntries = new Vector<Object>();
+	
+	static private CMemoryTrie<Object> trieEntries = new CMemoryTrie<Object>();
 	
 	static public void InitPool()
 	{
@@ -20,7 +23,6 @@ public class Pool {
 		}
 	}
 	
-
 	
 	static public Object getEntry(String name)
 	{
@@ -34,7 +36,11 @@ public class Pool {
 		
 		if (poolEntries.size() > MAX_ENTRIES)
 		{
-
+			
+			//ran out of memory!
+			
+			
+				/*
 			try {
 				c = Class.forName(classVar.getName());
 			} catch (ClassNotFoundException e) {
@@ -51,6 +57,8 @@ public class Pool {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			*/
+			
 			
 			poolEntries.setSize(MAX_ENTRIES*10);
 			MAX_ENTRIES *= 10;
@@ -90,5 +98,8 @@ public class Pool {
 		}
 		return null;
 	}
+	
+
+	
 	
 }

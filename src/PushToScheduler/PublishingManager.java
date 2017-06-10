@@ -1,4 +1,4 @@
-package Publisher;
+package PushToScheduler;
 
 public class PublishingManager {
 

@@ -25,7 +25,7 @@ public class CScheduler implements Runnable {
 	
 	static Vector<CTask> priorityTaskList = new Vector<CTask>();
 	static Vector<CTask> pendingTaskList = new Vector<CTask>();
-	
+	static CTaskManager taskManager = new CTaskManager();
 	
 	public static void runScheduler()
 	{
@@ -65,7 +65,8 @@ public class CScheduler implements Runnable {
 		
 		//2.Schedule Ready Tasks - assign taks that are readyf or worker threads
 		
-		// Use a spiffy algorithm here. For now we just pop the top and add it to the priority list 
+		// Use a spiffy algorithm here. For now we just pop the top and add it to the priority list
+		// Use an MRU or LRU to re-order priority queue
 		
 		CScheduler.addToSchedule(task);
 		

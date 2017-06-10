@@ -20,7 +20,7 @@ public class CTask {
 	
 	//wrapper class for Message State
 	
-	Message message = new Message();
+	public Message message = new Message();
 	
 	
 }
