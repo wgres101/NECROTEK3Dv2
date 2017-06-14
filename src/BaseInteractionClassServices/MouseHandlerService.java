@@ -1,4 +1,4 @@
-package BaseEnvironmentClassesServices;
+package BaseInteractionClassServices;
 
 public class MouseHandlerService {
 

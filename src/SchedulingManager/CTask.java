@@ -17,8 +17,10 @@ import MessageManagement.Message;
 //a task wraps a message
 public class CTask {
 
-	
+	public int count = 0;
 	//wrapper class for Message State
+	
+	public boolean dead = false;
 	
 	public Message message = new Message();
 	

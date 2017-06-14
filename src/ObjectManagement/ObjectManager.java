@@ -43,7 +43,7 @@ public class ObjectManager implements Runnable {
 	
 	
 	
-	public static <T> requestClass(Class classVar, String name)
+	public static Object requestClass(Class classVar, String name)
 	{
 		
 		pool.getEntry(name);
@@ -51,11 +51,11 @@ public class ObjectManager implements Runnable {
 		return null;
 	}
 	
-	public static <T> requestObjectOfClass(Class classVar, String name)
+	public static <E> E requestObjectOfClass()
 	{
-		Object o = pool.requestMemory("name", classVar);
-		
-		return o;
+		//E t = Pool.<E>requestMemoryTyped();
+		return null;
+		//return t;
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class ObjectManager implements Runnable {
 	
 	
 	}
-	
+	/*
 	public static void InsertMemoery()
 	{
 		
@@ -105,7 +105,6 @@ public class ObjectManager implements Runnable {
 	
 	
 	
-	
+*/	
 	
 }
-*/

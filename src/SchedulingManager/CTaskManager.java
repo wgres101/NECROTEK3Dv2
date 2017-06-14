@@ -21,7 +21,7 @@ import Timer.CTimerManager;
 
 public class CTaskManager {
 
-	static PriorityQueue<CTask> taskList = new PriorityQueue<CTask>();
+	static Vector<CTask> taskList = new Vector<CTask>();
 	
 	public static Vector<CTask> getCurrentTasks()
 	{
@@ -56,6 +56,39 @@ public class CTaskManager {
 		CTimerManager.getNewTimer(30, 1);
 		
 	}
+	public static void updateTaskList()
+	{
+		//LRU and MRU
+		//increment time on the task list
+		for (CTask task : taskList)
+		{
+			task.count++;
+		}
+		
+		//perform LRU
+		
+		for (int i=0;i<taskList.size();i++)
+		{
+			if (taskList.get(i).count < taskList.get(i+1).count)
+			{
+				CTask new_task = taskList.get(i);
+				taskList.add(new_task);
+			}
+		}
+		
+		//perform MRU
+		
+		for (int i=0;i<taskList.size();i++)
+			{
+				if (taskList.get(i).count > taskList.get(i+1).count)
+				{
+					CTask new_task = taskList.get(i);
+					taskList.add(new_task);
+				}
+			}
+		
+	}
+	
 /*	
 	public removeFinishedTasks()
 	{

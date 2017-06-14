@@ -6,21 +6,31 @@ import java.util.Vector;
 
 public class Pool {
 
-	static private int MAX_ENTRIES = 200;
+	static private int MAX_ENTRIES = 50;
 	
-	
+	static private int LARGE_ENTRIES = 200;
 	
 	static private Vector<Object> poolEntries = new Vector<Object>();
 	
-	static private CMemoryTrie<Object> trieEntries = new CMemoryTrie<Object>();
+	static private Vector<Object> largePoolEntires = new Vector<Object>();
 	
-	static public void InitPool()
+	/*static private CMemoryTrie<Object> trieEntries = new CMemoryTrie<Object>();*/
+	
+	static public <E> void InitPool()
 	{
 		for (int i =0; i<MAX_ENTRIES;i++)
 		{
-			Object o = null;
+			E o = null;
 			poolEntries.add(o);
 		}
+		
+		for (int i = 0; i<LARGE_ENTRIES;i++)
+		{
+			E o = null;
+			largePoolEntires.addElement(o);
+			
+		}
+		
 	}
 	
 	
@@ -28,16 +38,26 @@ public class Pool {
 	{
 		return findEntry(name);
 	}
+	public static <E> E requestMemoryTyped()
+	{
+		//memory unit
+		
+		Object entry = poolEntries.get(0);
+		E unit = (E)entry;
+		return unit;
+	}
 	
-	static public Object requestMemory(String name, Class classVar)
+	
+	public static <classtype> Object requestMemory(String name, Class classVar)
 	{	
 		Class c = null;
 		Object o = null;
 		
 		if (poolEntries.size() > MAX_ENTRIES)
 		{
-			
+	/*		
 			//ran out of memory!
+			//pool memory from Trie class
 			
 			
 				/*
@@ -71,7 +91,7 @@ public class Pool {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			o = poolEntries.pop();
+			o = poolEntries.remove(0);
 			return o;
 		}
 
