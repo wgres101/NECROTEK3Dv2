@@ -53,9 +53,9 @@ public class ObjectManager implements Runnable {
 	
 	public static <E> E requestObjectOfClass()
 	{
-		//E t = Pool.<E>requestMemoryTyped();
-		return null;
-		//return t;
+		E t = Pool.<E>requestMemoryTyped();
+	
+		return t;
 	}
 
 	@Override
