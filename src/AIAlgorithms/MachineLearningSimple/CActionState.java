@@ -1,4 +1,4 @@
-package AIAlgorithms.MachineLearningSImple;
+package AIAlgorithms.MachineLearningSimple;
 
 import java.util.Vector;
 
@@ -16,6 +16,6 @@ public class CActionState {
 	
 	public CActionRuleSet actionRuleSet = new CActionRuleSet();
 	
-	public void transitiion() { }
+	public void transition() { }
 	
 }

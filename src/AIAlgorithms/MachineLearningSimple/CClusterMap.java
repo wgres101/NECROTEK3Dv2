@@ -1,4 +1,4 @@
-package AIAlgorithms.MachineLearningSImple;
+package AIAlgorithms.MachineLearningSimple;
 
 import java.util.HashMap;
 

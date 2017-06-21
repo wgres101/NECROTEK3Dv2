@@ -1,4 +1,6 @@
-package AIAlgorithms.MachineLearningSImple;
+package AIAlgorithms.MachineLearningSimple;
+
+//Book 3 Section 3.1
 
 public class CActor {
 
