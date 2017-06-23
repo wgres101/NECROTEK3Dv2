@@ -12,12 +12,12 @@ import WSObjects.WSObject;
 
 
 @WebService
-public class GraphNodeInstance extends Component {
+public interface GraphNodeInstance extends Component {
 	
 	
-	GraphNodeInstance parent;
-	ArrayList<GraphNodeInstance> children;
-	Element xmlData;
+	GraphNodeInstance parent = null;
+	ArrayList<GraphNodeInstance> children = null;
+	Element xmlData = null;
 	
 	/*
 	public GraphNodeInstance()

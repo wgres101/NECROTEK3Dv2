@@ -1,39 +1,24 @@
 package Services;
 
-import java.util.ArrayList;
-
 import javax.jws.WebMethod;
-import javax.jws.WebService;
 
-import org.jdom2.Element;
-
-import DTI.DTIClass;
 import Factory.WebServiceFactory;
-import MessageManagement.Message;
-import SceneGraph.Component;
 import SceneGraph.GraphNodeInstance;
 import WSObjects.WSObject;
 
-@WebService
-public class ServiceRoot implements GraphNodeInstance {
+public class CTrigger extends ServiceRoot implements GraphNodeInstance {
 
+	//if condition is met execute response
 	
-	//required///
+	//if passed in function is true (condition) then execute a response function
 	
-	DTIClass dtiClass = new DTIClass();
-	
-	public ServiceRoot() {
-		
+	public void trigger(CTriggerConditionEnum condition)
+	{
+		switch(condition)
+		{
+			
+		}
 	}
-	
-	public ServiceRoot(Element e) {
-		
-		// TODO Auto-generated constructor stub
-	}
-
-
-	public static ArrayList<WSObject> objectPossesions = new ArrayList<WSObject>();
-	
 	
 	//called by the engine to create an instance
 	//of the object WSObject that is associated with this service
@@ -103,5 +88,9 @@ public class ServiceRoot implements GraphNodeInstance {
 
 
 	//
+	
+}
+
+	
 	
 }

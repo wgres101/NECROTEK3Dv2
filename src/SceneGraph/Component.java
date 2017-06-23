@@ -1,5 +1,5 @@
 package SceneGraph;
 
-public class Component  {
+public interface Component  {
 	
 }

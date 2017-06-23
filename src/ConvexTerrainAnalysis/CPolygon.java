@@ -1,4 +1,4 @@
-package TerrainAnalysisi;
+package ConvexTerrainAnalysis;
 
 public class CPolygon {
 

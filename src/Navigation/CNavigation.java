@@ -26,7 +26,22 @@ public class CNavigation {
 	//use path of least cost
 	
 	
-			
+	//use A* in this manner
+	//when performing searching through vertices add an AIMING and RISK component
+	//based off of the location of the enemy. f(x) = g(x) + h(x) + r(x)
+	//where r(x) is the risk component (or aiming component)
+	
+	//so search is instead of iterating over nodes we iterate over
+	//cubes in the octree.
+	
+	//navmesh:create 1 layer thick surface that covers the terrain.
+	//We use this in this navigation algorithm as follows:
+	//First off, the artist has to draw the nav mesh onto the terrain
+	//and possibly flag it for who it is being used for.
+	//Step two: The squares calculated at the very top of this page
+	//are triangulated. The triangles (once squares) are matched up
+	//with the nav mesh. If they agree, then it is an open path
+	
 	
 	
 }

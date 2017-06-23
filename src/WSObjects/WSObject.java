@@ -2,11 +2,12 @@ package WSObjects;
 
 import org.jdom2.Element;
 
+import Hierarchy.PlayerCharacter.CPrimitive;
 import SceneGraph.Component;
 import SceneGraph.GraphNodeInstance;
 import Services.ServiceRoot;
 
-public class WSObject extends GraphNodeInstance {
+public class WSObject extends CPrimitive implements GraphNodeInstance {
 	
 	public WSObject(Element e) {
 		
