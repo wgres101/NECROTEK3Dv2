@@ -1,4 +1,4 @@
-package ClockTimer;
+package Timer.ClockTimer;
 
 public class CTimer {
 

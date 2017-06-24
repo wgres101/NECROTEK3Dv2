@@ -1,4 +1,4 @@
-package BSP;
+package DataStructures.BSP;
 
 import java.util.ArrayList;
 

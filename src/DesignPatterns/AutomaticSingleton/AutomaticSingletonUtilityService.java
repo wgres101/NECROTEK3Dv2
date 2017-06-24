@@ -1,4 +1,4 @@
-package AutomaticSingleton;
+package DesignPatterns.AutomaticSingleton;
 
 //GEMS 1
 

@@ -1,6 +1,6 @@
 package RenderEngine;
 
-import Entities.Camera;
+import Hierarchy.Entities.Camera;
 import MathUtils.DotProduct;
 import MathUtils.Subtraction;
 import MathUtils.Vector3f;

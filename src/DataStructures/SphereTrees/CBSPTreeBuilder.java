@@ -2,7 +2,7 @@
 
 //Book 5 Section 1.5
 
-package SphereTrees;
+package DataStructures.SphereTrees;
 /*
 public class CBSPTreeBuilder {
 

@@ -1,4 +1,4 @@
-package DynamicSkill;
+package AIAlgorithms.DynamicSkill;
 
 
 //adjusts difficulty according to a variety of factors

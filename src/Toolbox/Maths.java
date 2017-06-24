@@ -1,6 +1,6 @@
 package Toolbox;
 
-import Entities.Camera;
+import Hierarchy.Entities.Camera;
 import MathUtils.Matrix4f;
 import MathUtils.Vector3f;
 

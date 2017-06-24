@@ -1,4 +1,4 @@
-package DecisionTree;
+package AIAlgorithms.DecisionTree;
 
 //Book 5
 

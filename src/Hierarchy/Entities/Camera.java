@@ -1,4 +1,4 @@
-package Entities;
+package Hierarchy.Entities;
 
 import MathUtils.Keyboard;
 import MathUtils.Vector3f;

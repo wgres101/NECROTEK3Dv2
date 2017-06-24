@@ -1,4 +1,4 @@
-package GameAI;
+package AIAlgorithms.GameAI;
 
 public class QState {
 

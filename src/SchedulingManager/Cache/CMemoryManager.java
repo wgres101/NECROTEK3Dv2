@@ -1,4 +1,4 @@
-package Cache;
+package SchedulingManager.Cache;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;
