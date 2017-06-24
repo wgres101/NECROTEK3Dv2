@@ -1,7 +1,7 @@
 package ConvexTerrainAnalysis;
 
 public class CPolygon {
-
+/*
 	Vector<C2DPoint> mPoints = new Vector<C2DPoint>(); //all the vertices of the polygon
 	C2DRectangle mBoundingBox = new C2DRectangle(); //Quick representation of the area of the polygon
 	C2DPoint mCenterPoint = new C2DPoint();    //center of mass point. handy for making quick fuzzy decisions
@@ -29,7 +29,7 @@ public class CPolygon {
 	
 	trimToVitalPoints() { } // this si where the convex hull creation algorithm should run. however a normal polygon would probabnly do nothing in this method
 	
-
+*/
 }
 
 

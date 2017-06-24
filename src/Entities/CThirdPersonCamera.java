@@ -11,6 +11,7 @@ import MathUtils.Vector3f;
 
 public class CThirdPersonCamera {
 
+	float PI = 3.14f;
 	//spherical coordinates to rectangular
 	
 	public void getX(float rho, float theta, float phi)
@@ -41,9 +42,11 @@ public class CThirdPersonCamera {
 		theta = inverse_tangent(y/x);
 	}
 
-	public void phi(z, rho)
+	public void phi(float z, float rho)
 	{
+		/*
 		inverse_cosine(z/rho)- PI/2;
+		*/
 	}
 	
 	

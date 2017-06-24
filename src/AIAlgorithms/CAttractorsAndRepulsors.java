@@ -2,7 +2,7 @@ package AIAlgorithms;
 
 //Book 4 Section 4.6 
 
-public class CActratorsAndRepulsors {
+public class CAttractorsAndRepulsors {
 
 	
 	// y=-x^-1. Pushes you away as you come closer to the repulsor

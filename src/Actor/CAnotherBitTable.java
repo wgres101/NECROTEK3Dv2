@@ -78,7 +78,7 @@ public class CAnotherBitTable {
 	boolean automatically_expands;
 	boolean effected_by_gravity;
 	boolean playercontroller;
-	booolean autoslide;
+	boolean autoslide;
 	
 }
 	

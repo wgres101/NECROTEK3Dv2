@@ -8,7 +8,7 @@ import java.util.Vector;
 /* Under construction */
 
 public class CMemoryTrie <T> {
-
+/*
 	Vector<Object> objects = new Vector<Object>();
 	
 	public Object getNewLargeMemory() 
@@ -105,7 +105,7 @@ public class CMemoryTrie <T> {
 			private    TrieNode root;
 
 			
-
+*/
 	}
 	
 	

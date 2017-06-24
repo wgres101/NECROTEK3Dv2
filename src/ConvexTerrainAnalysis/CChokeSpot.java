@@ -2,7 +2,7 @@ package ConvexTerrainAnalysis;
 
 public class CChokeSpot {
 	
-	
+	/*
 	public void mainloop {
 	
 		
@@ -26,7 +26,7 @@ public class CChokeSpot {
 	}
 		
 		
-		
+	
 		
 		
 		
@@ -52,5 +52,5 @@ public class CChokeSpot {
 	
 	
 	
-	
+	*/
 }

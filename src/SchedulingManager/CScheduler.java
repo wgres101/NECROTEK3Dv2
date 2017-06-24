@@ -23,6 +23,11 @@ import Debugger.DebugManager;
 //2.Schedule Ready Tasks - assign taks that are readyf or worker threads
 //3.Delete executed tasks - delete tasks by calling ONExecuted on them
 
+//
+//Grouping
+//small tasks should be grouped together and executed as a single batch
+
+
 public class CScheduler implements Runnable {
 
 	
