@@ -3,25 +3,27 @@ package Hierarchy.Entities;
 
 
 
-import MathUtils.Vector3f;
+import UtilityTypes.Mat4;
+import UtilityTypes.Vec3f;
+import UtilityTypes.MathUtils.Vector3f;
 
 
 //Book 3 Section 4.1
 
 
 public class CThirdPersonCamera {
-
+/*
 	float PI = 3.14f;
 	//spherical coordinates to rectangular
 	
 	public void getX(float rho, float theta, float phi)
 	{
-		float x = rho*cos(theta)sin(phi + PI/2);
+		float x = rho*cos(theta)*sin(phi + PI/2);
 	}
 	
 	public void getY(float rho, float theta, float phi)
 	{
-		float y = rho*sin(theta)sin(phi + PI/2);
+		float y = rho*sin(theta)*sin(phi + PI/2);
 		
 	}
 	
@@ -37,7 +39,7 @@ public class CThirdPersonCamera {
 		float rho = sqrt(x*x + y*y + z*z);
 	}
 	
-	public void theta(float x, y)
+	public void theta(float x, float y)
 	{
 		theta = inverse_tangent(y/x);
 	}
@@ -46,17 +48,17 @@ public class CThirdPersonCamera {
 	{
 		/*
 		inverse_cosine(z/rho)- PI/2;
-		*/
+		
 	}
 	
 	
 	
 	class ChaseCamera
 	{
-		Vector3f m_vPosition;
-		Vector3f m_vVelocity;
-		Vector3f m_vTargetPos;
-		Vector3f m_vIdealSpherical;
+		Vec3f m_vPosition;
+		Vec3f m_vVelocity;
+		Vec3f m_vTargetPos;
+		Vec3f m_vIdealSpherical;
 		Mat4 m_mView;
 		
 		void Update(float fTime)
@@ -69,8 +71,8 @@ public class CThirdPersonCamera {
 			m_fAzimuthVel += fAzimuthAccel * fTime;
 			//APply it to the camera's position
 			
-			Vector3f vCurSpherical = CartesianToSpherical(m_vPosition - m_vTargetPos);
-			Vector3f vCurSpherical.y = NormalizeAngle(vCurSpherical.y + m_fAzimuthVel * fTime);
+			Vec3f vCurSpherical = CartesianToSpherical(m_vPosition - m_vTargetPos);
+			Vec3f vCurSpherical.y = NormalizeAngle(vCurSpherical.y + m_fAzimuthVel * fTime);
 			m_vPosition = SphericalToCartesian(vCurSpherical);
 			
 			//Update the ideal azimuth based on the camera's
@@ -94,5 +96,5 @@ public class CThirdPersonCamera {
 		}
 	}
 
-	
+	*/
 }

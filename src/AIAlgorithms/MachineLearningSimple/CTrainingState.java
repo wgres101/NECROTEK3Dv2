@@ -9,5 +9,5 @@ public class CTrainingState {
 	
 	public void performAction() { }
 	public void requestAction() { }
-	public boolean train() { }
+	public boolean train() { return false; }
 }

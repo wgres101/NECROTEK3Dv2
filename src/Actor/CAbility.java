@@ -1,4 +1,4 @@
-package Actor.PlayerCharacter;
+package Actor;
 
 public class CAbility {
 

@@ -23,7 +23,7 @@ public class CMatchbox {
 	
 	public boolean contains(long inNum) { 					//REturns true if the passed-in point exists. (real or implied) inside this container
 	
-		return (inNum >= this.mStart && inNum <= this.mEnd)
+		return (inNum >= this.mStart && inNum <= this.mEnd);
 		
 	}
 	

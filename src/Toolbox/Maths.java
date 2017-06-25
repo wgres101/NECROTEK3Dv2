@@ -1,8 +1,8 @@
 package Toolbox;
 
 import Hierarchy.Entities.Camera;
-import MathUtils.Matrix4f;
-import MathUtils.Vector3f;
+import UtilityTypes.MathUtils.Matrix4f;
+import UtilityTypes.MathUtils.Vector3f;
 
 public class Maths {
 

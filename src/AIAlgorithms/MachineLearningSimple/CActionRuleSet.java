@@ -2,13 +2,13 @@ package AIAlgorithms.MachineLearningSimple;
 
 public class CActionRuleSet {
 
-	public boolean addRule() { }
+	public boolean addRule() { return true; }
 	
-	public void getFirst() { }
+	public void getFirst() { return; }
 	
-	public void getNext() { }
+	public void getNext() {return; }
 	
-	public boolean removeRule() { }
+	public boolean removeRule() { return true;}
 	
 	
 	

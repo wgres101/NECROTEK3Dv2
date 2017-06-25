@@ -3,6 +3,6 @@ package AIAlgorithms.MachineLearningSimple;
 public class CAIControlState {
 
 	
-	performAction() { }
+	public void performAction() { return; }
 	
 }

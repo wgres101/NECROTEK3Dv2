@@ -10,7 +10,7 @@ public class Pool {
 	
 	static private int LARGE_ENTRIES = 200;
 	
-	static private Vector<Object> poolEntries = new Vector<Object>();
+	static private Stack<Object> poolEntries = new Stack<Object>();
 	
 	static private Vector<Object> largePoolEntires = new Vector<Object>();
 	
@@ -42,7 +42,7 @@ public class Pool {
 	{
 		//memory unit
 		
-		Object entry = poolEntries.get(0);
+		Object entry = poolEntries.pop();
 		E unit = (E)entry;
 		return unit;
 	}

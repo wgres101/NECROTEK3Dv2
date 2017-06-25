@@ -2,8 +2,8 @@
 
 
 
-import MathUtils.Vector3f;
 import Models.TexturedModel;
+import UtilityTypes.MathUtils.Vector3f;
 
 public class Entity {
 	private TexturedModel model;
