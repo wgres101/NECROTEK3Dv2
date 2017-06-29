@@ -6,7 +6,7 @@ import Planner.Types.ICreature;
 import Planner.Types.IItem;
 
 public class COperators {
-
+/*
 	public void take(ICreature p, IItem i)
 	{
 		CRoom r = new CRoom();
@@ -24,7 +24,7 @@ public class COperators {
 			
 		
 		}
-			
+	*/		
 			
 		
 	

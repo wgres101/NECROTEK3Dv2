@@ -13,7 +13,7 @@ import Planner.Types.ILocation;
 
 public class CPredicates {
 
-	
+	/*
 	public enum predicate { INROOM, CARRYING, LOCKED, UNLOCKED, PREPARED, INSIDE, OUTROOM
 	
 	}
@@ -34,6 +34,6 @@ public class CPredicates {
 	public static predicate prepared(IFood f) { state.put(predicate.PREPARED, true); }
 	
 	public static predicate inside(IItem i, IContainer c) { state.put(predicate.INSIDE, true); }
-	
+	*/
 	
 }

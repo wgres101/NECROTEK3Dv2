@@ -16,17 +16,17 @@ public class Pool {
 	
 	/*static private CMemoryTrie<Object> trieEntries = new CMemoryTrie<Object>();*/
 	
-	static public <E> void InitPool()
+	static public void InitPool()
 	{
 		for (int i =0; i<MAX_ENTRIES;i++)
 		{
-			E o = null;
+			Object o = new Object();
 			poolEntries.add(o);
 		}
 		
 		for (int i = 0; i<LARGE_ENTRIES;i++)
 		{
-			E o = null;
+			Object o = new Object();
 			largePoolEntires.addElement(o);
 			
 		}
@@ -38,13 +38,12 @@ public class Pool {
 	{
 		return findEntry(name);
 	}
-	public static <E> E requestMemoryTyped()
+	public static Object requestMemoryTyped()
 	{
 		//memory unit
 		
 		Object entry = poolEntries.get(0);
-		E unit = (E)entry;
-		return unit;
+		return entry;
 	}
 	
 	

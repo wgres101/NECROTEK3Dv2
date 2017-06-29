@@ -10,7 +10,7 @@ import MathUtils.Vector3f;
 
 
 public class CThirdPersonCamera {
-
+/*I
 	float PI = 3.14f;
 	//spherical coordinates to rectangular
 	
@@ -46,7 +46,7 @@ public class CThirdPersonCamera {
 	{
 		/*
 		inverse_cosine(z/rho)- PI/2;
-		*/
+		*//*
 	}
 	
 	
@@ -93,6 +93,6 @@ public class CThirdPersonCamera {
 			m_mView = MatrixLookAt(m_vPosition, vTargetPos, GetWorldUpVector());
 		}
 	}
-
+*/
 	
 }

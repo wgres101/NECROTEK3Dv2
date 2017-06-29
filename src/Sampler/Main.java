@@ -87,13 +87,13 @@ public class Main {
 			
 			CJournal.Journal(Main.class, "Attempting memory request: Dummy string object" );
 			
-			String stringObject = ObjectManager.<String>requestObjectOfClass();
+			String stringObject = (String) ObjectManager.requestObjectOfClass();
 			
 			System.out.println(stringObject);
 			
 			CJournal.Journal(Main.class, "Attempting integer memory request. Dummy integer objects");
 			
-			Integer intObject = ObjectManager.<Integer>requestObjectOfClass();
+			Integer intObject = (Integer) ObjectManager.requestObjectOfClass();
 			
 			//test formula
 			

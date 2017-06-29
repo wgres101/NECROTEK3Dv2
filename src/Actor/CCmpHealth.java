@@ -1,4 +1,4 @@
-package Actor.PlayerCharacter;
+
 /*
 public class CCmpHealth implements ICmpHealth {
 

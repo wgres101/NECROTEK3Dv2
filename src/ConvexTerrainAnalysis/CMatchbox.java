@@ -5,7 +5,7 @@ import java.util.Vector;
 //Book 3 Section 3.4
 
 public class CMatchbox {
-
+/*
 	Vector<CMatchboxListHeader> MPointArray;		//x axis representation of points. Each element in the array is a y (start-end) point rangeed list
 	
 	long mOffset;								//Odds are that it won't start with x = 0. In case, we can shift it (10,50) to (25, 99) for example
@@ -44,5 +44,5 @@ public class CMatchbox {
 												
 	public void remove() { }					//Given a point or vector of points, the method should remove them from t he container.
 	
-	
+	*/
 }

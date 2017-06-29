@@ -51,9 +51,9 @@ public class ObjectManager implements Runnable {
 		return null;
 	}
 	
-	public static <E> E requestObjectOfClass()
+	public static Object requestObjectOfClass()
 	{
-		E t = Pool.<E>requestMemoryTyped();
+		 Object t = Pool.requestMemoryTyped();
 	
 		return t;
 	}
