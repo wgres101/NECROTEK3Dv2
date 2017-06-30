@@ -2,7 +2,9 @@ package Sampler;
 
 import Journaling.CJournal;
 import MainGame.Loop;
+import MessageManagement.CMessagePool;
 import MessageManagement.Message;
+import MessageManagement.MessageManager;
 import ObjectManagement.ObjectManager;
 import ObjectManagement.Pool;
 import SchedulingManager.CEvent;
@@ -78,6 +80,7 @@ public class Main {
 			
 			
 		//Initialize memory system
+			/*
 			
 			CJournal.Journal(Main.class, "Testing Memory System");
 			
@@ -104,7 +107,7 @@ public class Main {
 			
 			CJournal.Journal(Main.class, "Dumy keycode for memory. Value is " + c + "should add to 1");
 			
-			
+			*/
 			
 		
 		//Initialize Thread Pooling Thread System?
@@ -118,7 +121,16 @@ public class Main {
 		//launching scenegraph parser
 		//upon launching file, use hotloader to load the resources
 		
+		//initialize message manager
+		CJournal.Journal(Main.class, "Initializing message manager");
+		MessageManager messageManager = new MessageManager();
+		messageManager.run();
 		
+		//send bootstrap message
+		CJournal.Journal(Main.class, "Testing messanger: ending bootstrapping message to messagemanager");
+		Message boot_strap_message = new Message();
+		boot_strap_message.mflag = EEventMachine.EM_BOOTSTRAP;
+		CMessagePool.EnqueueMessage(boot_strap_message);
 
 		Loop loop = new Loop();  //hand over to game loop
 		

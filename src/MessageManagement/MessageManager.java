@@ -3,6 +3,9 @@ package MessageManagement;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import Journaling.CJournal;
+import SchedulingManager.EEventMachine;
+
 //Services work on messages passed to them
 //the message manager receives and sends messages
 //that in queue to to the other services that are runing
@@ -31,21 +34,26 @@ import java.util.Queue;
 
 // delay message delivery
 
-public  class MessageManager {
+public  class MessageManager implements Runnable {
 
-		static Queue<Message> messagesQueue = new PriorityQueue<Message>();
 	
-		public static void EnqueueMessage(Message message)
-		{
-			messagesQueue.add(message);
-		}
-		
-		public static void Update()
-		{
-			//handle messaging duties such as calling parseMessage
-			//on the scene graph and removing the message from the queue
-			//after its been sent out
-			
+		@Override
+		public  void run() {
+			// TODO Auto-generated method stub
+			while (true)
+			{
+				//pull message from queue
+				Message message = CMessagePool.messagesQueue.remove();
+				
+				//dispatch messages according to their type
+				switch(message.mflag)
+				{
+				case EM_BOOTSTRAP:
+					CJournal.Journal(MessageManager.class, "Messaging system working properly.");
+				default:
+					CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+				}
+			}
 		}
 		
 	

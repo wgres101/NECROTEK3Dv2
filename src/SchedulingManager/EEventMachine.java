@@ -82,6 +82,8 @@ public enum EEventMachine {
 				
 				EM_UPDATE_PHYSICS,  //a request to update the physics in the game
 		
+				EM_UPDATE_COLLISION, //a request to update collisions in the game
+				
 				EM_UPDATE_PATHFINDING,  //runs pathfinding code
 				 EM_CLSNAME, EM_CLSINIT, EM_CLSFREE, EM_FREETICK,
 				 EM_GO_FORWARD,
