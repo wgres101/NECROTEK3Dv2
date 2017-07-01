@@ -38,12 +38,13 @@ public class Pool {
 	{
 		return findEntry(name);
 	}
+	@SuppressWarnings("unchecked")
 	public static <E> E requestMemoryTyped()
 	{
 		//memory unit
 		
-		Object entry = poolEntries.pop();
-		E unit = (E)entry;
+		Object unit1 = poolEntries.pop();
+		E unit =  (E)poolEntries.pop();
 		return unit;
 	}
 	

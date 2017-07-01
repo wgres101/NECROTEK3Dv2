@@ -53,8 +53,12 @@ public class ObjectManager implements Runnable {
 	
 	public static <E> E requestObjectOfClass()
 	{
+		Debugger.DebugManager.Debug(ObjectManager.class, "Attempting to get memory from Pool");
+		
 		E t = Pool.<E>requestMemoryTyped();
 	
+		Debugger.DebugManager.Debug(t.getClass(),"Pool requested memory");
+		
 		return t;
 	}
 

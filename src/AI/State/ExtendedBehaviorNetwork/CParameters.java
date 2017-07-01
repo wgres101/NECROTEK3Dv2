@@ -7,8 +7,8 @@ public class CParameters {
 	static float beta;  //inertia
 	static float theta; //global threshold
 	static float deltatheta; //decay
-	public static float triangularnorm() { }//
+	public static float triangularnorm() { return 0; }//
 	static float ex_j;
-	public static float sigma(float value) { }
-	public static float tau(float value) { }
+	public static float sigma(float value) { return 0; }
+	public static float tau(float value) { return 0; }
 }

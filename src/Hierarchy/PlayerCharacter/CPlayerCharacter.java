@@ -1,6 +1,6 @@
 package Hierarchy.PlayerCharacter;
 
-import Hierarchy.Character.CCharacter;
+import AI.BitTables.Character.CCharacter;
 
 //inherits from Character. A playable character
 

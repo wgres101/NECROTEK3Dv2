@@ -2,11 +2,11 @@ package Hierarchy.PlayerCharacter;
 
 import java.util.Vector;
 
-import Hierarchy.Character.CFormulae;
-import Hierarchy.Character.CImmunity;
-import Hierarchy.Character.CPhysicalAttack;
-import Hierarchy.Character.CSkill;
-import Hierarchy.Character.CSpell;
+import AI.BitTables.Character.CFormulae;
+import AI.BitTables.Character.CImmunity;
+import AI.BitTables.Character.CPhysicalAttack;
+import AI.BitTables.Character.CSkill;
+import AI.BitTables.Character.CSpell;
 
 
 /*

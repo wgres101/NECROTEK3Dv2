@@ -48,5 +48,68 @@ public  class MessageManager {
 			
 		}
 		
-	
+
+			//called upon when object is no longer needed
+			
+			public void Destroy()
+			{
+				//called Destroy
+			}
+			
+			//called every turn. checks messagemanager for message
+			
+			public void ParseMessage()
+			{
+				
+			}
+			
+			
+			public static void Launch() {}
+			
+			
+			//called on object creation
+			
+			public static void Init() {}
+			
+
+
+			public static void  Render()
+			{
+				
+			}
+
+			
+			public static void  Collision()
+			{
+				
+			}
+			
+			//when the game requires this particular state to be active
+			
+			public static void  OnEnter()
+			{
+				
+			}
+			
+			//When the object no longer needs to be attachd to the scene graph
+			
+			public static void  OnExit()
+			{
+			}
+
+			//for exammple, hitting the pause button
+			
+			public static void  OnSuspend()
+			{
+			}
+			
+		
+		public static void Train()
+		{
+			//incoming messages are analyzed and sent
+			//to the trainer to record the behavior for the AI
+		}
+		
+		
+		
 }

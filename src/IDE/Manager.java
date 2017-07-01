@@ -3,7 +3,7 @@ import GraphicsCentral.PanelFactory;
 import GraphicsCentral.Renderer;
 import GraphicsCentral.ServiceFactory;
 import GraphicsCentral.WSObjectFactory;
-import InspectorPanels.BoxInspector;
+import IDE.InspectorPanels.BoxInspector;
 import Services.BasicServices.ServiceBox;
 import WSObjects.WSObject;
 

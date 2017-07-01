@@ -11,15 +11,8 @@ import SchedulingManager.CScheduler;
 import SchedulingManager.CTask;
 import SchedulingManager.CTaskManager;
 import SchedulingManager.EEventMachine;
-import Timer.CTimer;
-import Timer.CTimerManager;
-/*
-TODO:
-	Finish Debug System and Journaling System
-	Finish Memory System
-	 
-
-*/
+import SchedulingManager.Timer.CTimer;
+import SchedulingManager.Timer.CTimerManager;
 
 
 public class Main {

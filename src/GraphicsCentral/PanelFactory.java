@@ -1,7 +1,7 @@
 package GraphicsCentral;
 
-import InspectorPanels.BoxInspector;
-import InspectorPanels.CameraInspector;
+import IDE.InspectorPanels.BoxInspector;
+import IDE.InspectorPanels.CameraInspector;
 import Services.BasicServices.ServiceBox;
 import Services.BasicServices.ServiceCamera;
 
