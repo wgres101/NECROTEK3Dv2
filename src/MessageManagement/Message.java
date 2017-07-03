@@ -20,6 +20,7 @@ public class Message implements Runnable {
 			
 		}
 		
+		float duration;
 		
 	
 }
