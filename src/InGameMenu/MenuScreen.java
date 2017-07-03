@@ -1,6 +1,6 @@
 package InGameMenu;
 
-import Resources.ResourceFileModule;
+import SaveGame.Resources.ResourceFileModule;
 
 public class MenuScreen {
 

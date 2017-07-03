@@ -1,7 +1,10 @@
 package WSObjects;
 
+import javax.jws.WebMethod;
+
 import org.jdom2.Element;
 
+import Factory.WebServiceFactory;
 import Hierarchy.PlayerCharacter.CPrimitive;
 import SceneGraph.Component;
 import SceneGraph.GraphNodeInstance;
@@ -28,6 +31,7 @@ public class WSObject extends CPrimitive implements GraphNodeInstance {
 	//update is called once per tick
 	//to update internal variables
 	//and to execute per turn actions
+	//used to update state
 	public void Update()
 	{
 		//called Update
@@ -46,4 +50,52 @@ public class WSObject extends CPrimitive implements GraphNodeInstance {
 	{
 		
 	}
+	
+	
+	public static void Launch() {}
+	
+	
+	//called on object creation
+	
+	public static void Init() {}
+	
+
+
+	public static void  Render()
+	{
+		
+	}
+
+	public static void parseMessage()
+	{
+		
+	}
+	
+	public static void  Collision()
+	{
+		
+	}
+	
+	//when the game requires this particular state to be active
+	
+	public static void  OnEnter()
+	{
+		
+	}
+	
+	//When the object no longer needs to be attachd to the scene graph
+	
+	public static void  OnExit()
+	{
+	}
+
+	//for exammple, hitting the pause button
+	
+	public static void  OnSuspend()
+	{
+	}
+	
+
+
+	//
 }

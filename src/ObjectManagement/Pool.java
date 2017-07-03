@@ -10,7 +10,7 @@ public class Pool {
 	
 	static private int LARGE_ENTRIES = 200;
 	
-	static private Vector<Object> poolEntries = new Vector<Object>();
+	static private Stack<Object> poolEntries = new Stack<Object>();
 	
 	static private Vector<Object> largePoolEntires = new Vector<Object>();
 	
@@ -38,12 +38,23 @@ public class Pool {
 	{
 		return findEntry(name);
 	}
+<<<<<<< HEAD
 	public static Object requestMemoryTyped()
+=======
+	@SuppressWarnings("unchecked")
+	public static <E> E requestMemoryTyped()
+>>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 	{
 		//memory unit
 		
+<<<<<<< HEAD
 		Object entry = poolEntries.get(0);
 		return entry;
+=======
+		Object unit1 = poolEntries.pop();
+		E unit =  (E)poolEntries.pop();
+		return unit;
+>>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 	}
 	
 	

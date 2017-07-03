@@ -2,8 +2,10 @@ package Actor.PlayerCharacter;
 
 import java.util.Vector;
 
-import Hierarchy.Character.CSkill;
-import Hierarchy.Character.CSpell;
+import AI.BitTables.Character.CSkill;
+import AI.BitTables.Character.CSpell;
+import Actor.PlayerCharacter.DoubleTech.CDoubleTech;
+import Actor.PlayerCharacter.PhysicalAttacks.CPhysicalAttack;
 import Hierarchy.PlayerCharacter.CAbility;
 import Hierarchy.PlayerCharacter.CSingleTech;
 import Hierarchy.PlayerCharacter.CTalent;

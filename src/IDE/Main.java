@@ -7,7 +7,7 @@ import Blackboard.GameBlackboard;
 import Debugger.RunThrough;
 import Factory.WebServiceFactory;
 import GameMap.XMLAdapter;
-import InspectorPanels.InspectorManager;
+import IDE.InspectorPanels.InspectorManager;
 import MainGame.Loop;
 import MessageManagement.MessageManager;
 

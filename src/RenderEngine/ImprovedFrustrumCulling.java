@@ -1,9 +1,9 @@
 package RenderEngine;
 
 import Hierarchy.Entities.Camera;
-import MathUtils.DotProduct;
-import MathUtils.Subtraction;
-import MathUtils.Vector3f;
+import UtilityTypes.MathUtils.DotProduct;
+import UtilityTypes.MathUtils.Subtraction;
+import UtilityTypes.MathUtils.Vector3f;
 
 
 //INCOMPLETE. GEMS SECTION1 PAG

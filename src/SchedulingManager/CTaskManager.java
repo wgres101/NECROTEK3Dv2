@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Vector;
 
 import MessageManagement.Message;
-import Timer.CTimerManager;
+import SchedulingManager.Timer.CTimerManager;
 
 //the purpose of the task manager is to monitor running classes
 //the display for this is similar to Windows' task managerf

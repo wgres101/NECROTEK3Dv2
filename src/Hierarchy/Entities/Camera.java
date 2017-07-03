@@ -1,7 +1,7 @@
 package Hierarchy.Entities;
 
-import MathUtils.Keyboard;
-import MathUtils.Vector3f;
+import UtilityTypes.MathUtils.Keyboard;
+import UtilityTypes.MathUtils.Vector3f;
 
 public class Camera {
 	private Vector3f position = new Vector3f(0,0,0);
