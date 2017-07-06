@@ -4,15 +4,16 @@ package AI.State.PatternBasedModularAI;
 
 public class CConsiderationBoolean {
 
-	
+	/*
 	CConsiderationBoolean() { }
 	
 	//Evaluate this consideration
 	boolean Evaluate(CDecisionContext ctxt)
 	{
-		//Get the health that we're checking - player or npc and 
+		
+	   //Get the health that we're checking - player or npc and 
 		//compare it to the cutoff
-		float health;
+		float currentHealth;
 		if (m_CheckPlayer)
 	//get appropriate health value from the context and ci
 				health = ctxt.GetHealth(ctxt.GetPlayer());
@@ -22,7 +23,7 @@ public class CConsiderationBoolean {
 		//Do the check
 		if (m_HighIsGood) 
 		{
-			return curentHealth >= m_Cutoff;
+			return currentHealth >= m_Cutoff;
 		}
 		else
 		{
@@ -46,6 +47,6 @@ public class CConsiderationBoolean {
 		//our health is below the cutoff
 		m_HighIsGood = node.GetBoolean("HighIsGood");
 	}
-	
+	*/
 }
  

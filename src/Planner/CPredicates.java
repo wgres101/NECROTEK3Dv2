@@ -1,16 +1,5 @@
 package Planner;
 
-import java.util.HashMap;
-
-import Planner.PObjects.IRoom;
-import Planner.Types.IContainer;
-import Planner.Types.ICreature;
-import Planner.Types.IFood;
-import Planner.Types.IItem;
-import Planner.Types.IKey;
-import Planner.Types.ILocatable;
-import Planner.Types.ILocation;
-
 public class CPredicates {
 
 	/*

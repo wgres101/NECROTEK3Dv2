@@ -2,7 +2,7 @@ package AI.State.PatternBasedModularAI;
 
 import java.util.ArrayList;
 
-import AI.State.PatternBasedModularAI.Considerations.IConsiderations;
+import AI.State.PatternBasedModularAI.Considerations.CConsiderations;
 
 public class CTransitions {
 
@@ -10,6 +10,6 @@ public class CTransitions {
 	
 	//each transition has a list of considerations that need to be made
 	
-	ArrayList<Considerations> considerations = new ArrayList<Considerations>();
+	ArrayList<CConsiderations> considerations = new ArrayList<CConsiderations>();
 	
 }

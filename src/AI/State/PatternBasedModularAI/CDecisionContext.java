@@ -5,11 +5,11 @@ package AI.State.PatternBasedModularAI;
 //whether it is the current game time, a pointer to the actor being controlled
 //OR even where beliefs about the world are being stored
 public class CDecisionContext {
-
+/*
 	
-	float getMyPlayer
+	float getMyPlayer;
 	
-	float getMyActor
+	float getMyActor;
 	
-	
+	*/
 }

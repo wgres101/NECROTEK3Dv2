@@ -1,10 +1,10 @@
 
 
+package Actor;
+
+
+public interface ICmpHealth  {
 /*
-import Component.IComponent;
-
-public interface ICmpHealth extends IComponent {
-
 	public int GetHealth();
 	public static void RegisterInterface()
 	{
@@ -12,7 +12,7 @@ public interface ICmpHealth extends IComponent {
 	}
 	
 	
-	
+*/	
 	
 }
- */
+ 

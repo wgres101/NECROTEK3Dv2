@@ -36,26 +36,38 @@ import SchedulingManager.EEventMachine;
 
 public  class MessageManager implements Runnable {
 
+		PriorityQueue<Message> messagesQueue = new PriorityQueue<Message>();
 	
+		
+		public void EnqueueMessage(Message message)
+		{
+			messagesQueue.add(message);
+		}
+		
 		@Override
 		public  void run() {
 			// TODO Auto-generated method stub
 			while (true)
 			{
 				//pull message from queue
-				Message message = CMessagePool.messagesQueue.remove();
 				
-				//dispatch messages according to their type
-				switch(message.mflag)
+				
+				if (!messagesQueue.isEmpty())
 				{
-				case EM_BOOTSTRAP:
-					CJournal.Journal(MessageManager.class, "Messaging system working properly.");
-				default:
-					CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+					CJournal.Journal(MessageManager.class, "Found a message");
+					Message message = messagesQueue.remove();
+					
+					//dispatch messages according to their type
+					switch(message.mflag)
+					{
+					case EM_BOOTSTRAP:
+						CJournal.Journal(MessageManager.class, "Messaging system working properly.");
+					default:
+						CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+					}
 				}
 			}
 		}
-		
 
 			//called upon when object is no longer needed
 			

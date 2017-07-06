@@ -20,5 +20,5 @@ public class CSpaceFillingVolume {
 	 * If there is a collision, subdivide the quad and test the new quad
 	 * over again. If there is a collision, repeat several times to
 	 * a certain threshold. 
-	
+	*/
 }

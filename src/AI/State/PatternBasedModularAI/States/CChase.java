@@ -36,5 +36,5 @@ public class CChase {
 	dodge->chase
 		we've completed the dodge action
 		transition to the chase state
-	/*
+	*/
 }

@@ -5,7 +5,6 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.util.Date;
 
-import MessageManagement.CMessagePool;
 import MessageManagement.Message;
 import MessageManagement.MessageManager;
 
@@ -67,7 +66,7 @@ public class CClock extends Clock implements Runnable {
 				Message message = new Message();
 				//actions that occur at every frame
 				message.mflag = EEventMachine.EM_FRAME_TICK;
-				CMessagePool.EnqueueMessage(message);
+				//MessageManager.EnqueueMessage(message);
 			}
 			else
 			{
@@ -91,7 +90,7 @@ public class CClock extends Clock implements Runnable {
 				
 				if (time_cum >= temp_message.frame_rate)
 				{
-					CMessagePool.EnqueueMessage(temp_message);
+					//MessageManager.EnqueueMessage(temp_message);
 				}
 				
 			}

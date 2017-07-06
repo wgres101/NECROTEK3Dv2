@@ -16,5 +16,5 @@ Been Begged	#times teleported	Cycle immunities	Stunned?	Mounted?	Nailed xyz?
 
 
 */
- */
+ 
 }

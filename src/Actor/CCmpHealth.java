@@ -1,11 +1,8 @@
-<<<<<<< HEAD
+package Actor;
 
-=======
- 
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
-/*
+
 public class CCmpHealth implements ICmpHealth {
-
+/*
 	@Override
 	public int GetHealth() {
 		// TODO Auto-generated method stub
@@ -97,6 +94,5 @@ public class CCmpHealth implements ICmpHealth {
 	int mHealth;
 
 	
-	
+*/	
 }
- */
