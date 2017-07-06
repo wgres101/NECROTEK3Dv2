@@ -2,7 +2,6 @@ package Sampler;
 
 import Journaling.CJournal;
 import MainGame.Loop;
-import MessageManagement.CMessagePool;
 import MessageManagement.Message;
 import MessageManagement.MessageManager;
 import ObjectManagement.ObjectManager;
@@ -116,14 +115,17 @@ public class Main {
 		
 		//initialize message manager
 		CJournal.Journal(Main.class, "Initializing message manager");
-		MessageManager messageManager = new MessageManager();
-		messageManager.run();
+		//MessageManager messageManager = new MessageManager();
 		
+		MessageManager messageManager = new MessageManager();
+		messageManager.start();
+		
+				
 		//send bootstrap message
 		CJournal.Journal(Main.class, "Testing messanger: ending bootstrapping message to messagemanager");
 		Message boot_strap_message = new Message();
 		boot_strap_message.mflag = EEventMachine.EM_BOOTSTRAP;
-		CMessagePool.EnqueueMessage(boot_strap_message);
+		messageManager.EnqueueMessage(boot_strap_message);
 
 		Loop loop = new Loop();  //hand over to game loop
 		

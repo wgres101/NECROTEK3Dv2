@@ -15,7 +15,7 @@ public class CChase {
 	
 	//chase then shoot
 	//chase then dodge
-	/*Chase->Shoot
+	/* Chase->Shoot
 	if (CLineOfSight && )
 		it hsa been at least two seconds since our last shot
 		it has been one second since our last dodge
@@ -36,5 +36,5 @@ public class CChase {
 	dodge->chase
 		we've completed the dodge action
 		transition to the chase state
-	/*
+	*/
 }

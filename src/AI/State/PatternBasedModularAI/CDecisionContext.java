@@ -6,10 +6,10 @@ package AI.State.PatternBasedModularAI;
 //OR even where beliefs about the world are being stored
 public class CDecisionContext {
 
-	
+	/*
 	float getMyPlayer
 	
 	float getMyActor
-	
+	*/
 	
 }

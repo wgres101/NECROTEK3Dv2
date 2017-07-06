@@ -2,6 +2,7 @@ package MessageManagement;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.concurrent.PriorityBlockingQueue;
 
 import Journaling.CJournal;
 import SchedulingManager.EEventMachine;
@@ -34,7 +35,7 @@ import SchedulingManager.EEventMachine;
 
 // delay message delivery
 
-public  class MessageManager implements Runnable {
+public  class MessageManager extends Thread {
 
 	
 		@Override
@@ -42,21 +43,33 @@ public  class MessageManager implements Runnable {
 			// TODO Auto-generated method stub
 			while (true)
 			{
-				//pull message from queue
-				Message message = CMessagePool.messagesQueue.remove();
-				
-				//dispatch messages according to their type
-				switch(message.mflag)
+
+				if (!messagesQueue.isEmpty())
 				{
-				case EM_BOOTSTRAP:
-					CJournal.Journal(MessageManager.class, "Messaging system working properly.");
-				default:
-					CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+					//pull message from queue
+					Message message = messagesQueue.remove();
+					
+					//dispatch messages according to their type
+					switch(message.mflag)
+					{
+					case EM_BOOTSTRAP:
+						CJournal.Journal(MessageManager.class, "Messaging system working properly.");
+					default:
+						CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+					}
 				}
 			}
 		}
 		
 
+		
+		public static PriorityBlockingQueue<Message> messagesQueue = new PriorityBlockingQueue<Message>();
+		
+		public static void EnqueueMessage(Message message)
+		{
+			messagesQueue.add(message);
+		}
+		
 			//called upon when object is no longer needed
 			
 			public void Destroy()

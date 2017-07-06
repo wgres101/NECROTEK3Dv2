@@ -12,11 +12,8 @@ import UtilityTypes.MathUtils.Vector3f;
 
 
 public class CThirdPersonCamera {
-<<<<<<< HEAD
-/*I
-=======
-/*
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
+
+	/*
 	float PI = 3.14f;
 	//spherical coordinates to rectangular
 	
@@ -52,11 +49,6 @@ public class CThirdPersonCamera {
 	{
 		/*
 		inverse_cosine(z/rho)- PI/2;
-<<<<<<< HEAD
-		*//*
-=======
-		
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 	}
 	
 	
@@ -102,12 +94,7 @@ public class CThirdPersonCamera {
 			//Build the view matrix
 			m_mView = MatrixLookAt(m_vPosition, vTargetPos, GetWorldUpVector());
 		}
-	}
-<<<<<<< HEAD
-*/
-	
-=======
-
-	*/
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
+	}*/
 }
+
+	

@@ -3,7 +3,7 @@ package AI.State.PatternBasedModularAI.Transitions;
 import java.util.ArrayList;
 
 import AI.State.PatternBasedModularAI.CTransitions;
-import AI.State.PatternBasedModularAI.Considerations.IConsiderations;
+import AI.State.PatternBasedModularAI.Considerations.CConsiderations;
 
 //this is atransition to from a state
 
