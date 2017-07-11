@@ -5,7 +5,7 @@
 	<FirstPersonPlayerCharacterService>
 		<WSFirstPersonPlayerCharacter startx="0.0" starty="0.0" startz="0.0"/>
 		<CameraService>
-		<WSCameraObject starx = "0.0" starty="0.0" startz="0""/>
+		<WSCameraObject startx = "0.0" starty="0.0" startz="0"/>
 		</CameraService>
 	</FirstPersonPlayerCharacterService>		
 

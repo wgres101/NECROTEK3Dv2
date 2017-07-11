@@ -9,11 +9,15 @@ import org.jdom2.Content;
 import org.jdom2.DocType;
 import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 import org.jdom2.output.XMLOutputter;
 
 import Debugger.DebugManager;
+import Journaling.CJournal;
 import SceneGraph.GraphNodeInstance;
+import SceneGraph.SceneGraphManager;
+import SceneGraph.SceneGraphNode;
 
 //all level data is stored and modified through XML
 
@@ -94,17 +98,27 @@ import SceneGraph.GraphNodeInstance;
 
 
 public class XMLAdapter {
-/*
+
+	
 	public void adapt()
 	{
-		DebugManager.Debug("XMLAdapter", "Loading XML Level");
+		CJournal.Journal(XMLAdapter.class, "Running XML Adapter: adapt()");
 		String filename = "demo.xml";
     
         // Build the document with SAX and Xerces, no validation
         SAXBuilder builder = new SAXBuilder();
         // Create the document
         File file = new File(filename);
-        Document doc = new Document();
+        Document doc = null;
+		try {
+			doc = (Document) builder.build(file);
+		} catch (JDOMException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
         
         
         
@@ -113,15 +127,17 @@ public class XMLAdapter {
         
        // Element levelRoot = doc.getRootElement();
        
-        Element root = new Element("LevelRoot");
+        //Element root = new Element("LevelRoot");
         
-        doc.setRootElement(root);
+        //doc.setRootElement(root);
         
         Element element = doc.getRootElement();
        
-        
 
-        DebugManager.Debug("XMLAdapter", "Outputting document");
+        CJournal.Journal(XMLAdapter.class, "Document Root Element is: " + doc.getRootElement().getName());
+        
+        
+        CJournal.Journal(XMLAdapter.class, "Output");
         // Output the document, use standard formatter
         XMLOutputter fmt = new XMLOutputter();
         try {
@@ -131,7 +147,7 @@ public class XMLAdapter {
 			e1.printStackTrace();
 		}
         
-        List<Element> children = root.getChildren();
+        List<Element> children = element.getChildren();
         
         System.out.println("Number of children:" + children.size());
         
@@ -152,38 +168,57 @@ public class XMLAdapter {
         // Get a list of all direct children with a given name
         //List namedChildren = element.getChildren("WSFirstPersonPlayerCharacter");
         // Get a list of the first kid with a given name
-        Element kid = element.getChild("WSFirstPersonPlayerCharacter");
+        Element kid = element.getChild("FirstPersonPlayerCharacterService");
 
-        DebugManager.Debug("XMLAdapter", "KID:" + kid.getText());
+        //wrong - has no text to output
+       // CJournal.Journal(XMLAdapter.class, "KID" + kid.getText());
+        
         
         
         DebugManager.Debug("XMLAdapter", "HasRootElement:" +  doc.hasRootElement());
-       
-      
-      
+        
+        SceneGraphNode parent = new SceneGraphNode();
 
+        //SceneGraphNode root = new SceneGraphNode();
+        SceneGraphManager.root.xmlData = doc.getRootElement();
+        SceneGraphManager.root.parent = null;
+        XMLSceneLoader.addToSceneGraph(SceneGraphManager.root, null);
+        parent = SceneGraphManager.root;
+        
         //adds the first level of children to the scenegraph
         for (Element child : children)
         {
-        	GraphNodeInstance node = new GraphNodeInstance(child);
-        	DebugManager.Debug("XMLAdapter", "XML Child:" + child.getName());
-         	XMLSceneLoader.addToSceneGraph(node, null);
-        	SceneGraph.SceneGraphManager.add(node, null);
-        	recursiveAdd(child.getChildren(), child);
+        	SceneGraphNode node = new SceneGraphNode();
+        	node.xmlData = child;
+        	node.parent = parent;
+        	parent.children.add(node);
+        	CJournal.Journal(XMLAdapter.class, "Initial Function, XML Child: " + child.getName());
+        	
+         	XMLSceneLoader.addToSceneGraph(node, parent);
+        	//SceneGraph.SceneGraphManager.add(node, null);
+        	parent = node;
+         	recursiveAdd(child.getChildren(), child, parent);
+        	
         }
         
         
 	}
-	public void recursiveAdd(List<Element> children, Element parent)
+	public void recursiveAdd(List<Element> children, Element parent, SceneGraphNode prnt)
 	{
 	      for (Element child : children)
 	        {
-	        	GraphNodeInstance node = new GraphNodeInstance(child);
-	        	DebugManager.Debug("XMLAdapter:Recursive", "XML Child:" + child.getName());
-	        	//SceneGraph.SceneGraphManager.add(node, null);
-	        	XMLSceneLoader.addToSceneGraph(node, null);
+	    	    SceneGraphNode node = new SceneGraphNode();
+	    	    node.xmlData = child;
+	    	    node.parent = prnt;
+	    	    CJournal.Journal(XMLAdapter.class, "Recursive Function, XML Child: " + child.getName());
 	        	
-	        	recursiveAdd(child.getChildren(), child);
+	        	
+	        	//SceneGraph.SceneGraphManager.add(node, null);
+	        	XMLSceneLoader.addToSceneGraph(node, node.parent);
+	        	
+	        	prnt = node;
+	        	recursiveAdd(child.getChildren(), null, prnt);
+	        	return;
 	        }
-	}*/
+	}
 }

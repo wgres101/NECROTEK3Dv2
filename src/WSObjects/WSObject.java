@@ -8,9 +8,10 @@ import Factory.WebServiceFactory;
 import Hierarchy.PlayerCharacter.CPrimitive;
 import SceneGraph.Component;
 import SceneGraph.GraphNodeInstance;
+import SceneGraph.SceneGraphNode;
 import Services.ServiceRoot;
 
-public class WSObject extends CPrimitive implements GraphNodeInstance {
+public class WSObject extends CPrimitive {
 	
 	public WSObject(Element e) {
 		

@@ -12,10 +12,11 @@ import Factory.WebServiceFactory;
 import MessageManagement.Message;
 import SceneGraph.Component;
 import SceneGraph.GraphNodeInstance;
+import SceneGraph.SceneGraphNode;
 import WSObjects.WSObject;
 
 @WebService
-public class ServiceRoot implements GraphNodeInstance {
+public class ServiceRoot extends SceneGraphNode {
 
 	
 	//required///

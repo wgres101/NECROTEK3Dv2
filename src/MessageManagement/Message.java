@@ -2,7 +2,8 @@ package MessageManagement;
 
 import SchedulingManager.EEventMachine;
 
-public class Message implements Runnable {
+
+public class Message implements Runnable,  Comparable<Message> {
 
 	//a message wraps an event from EEVentMachine
 
@@ -10,7 +11,7 @@ public class Message implements Runnable {
 	
 	public long frame_rate;
 	
-
+	public int priority = 1;
 		
 		Object sourceReference; //reference to the generator of this message
 
@@ -23,4 +24,9 @@ public class Message implements Runnable {
 		float duration;
 		
 	
+		 public int compareTo( Message o ) {
+		      int diff = priority;
+		      return diff;
+		   }
+		
 }

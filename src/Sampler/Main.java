@@ -1,11 +1,17 @@
 package Sampler;
 
+import Blackboard.GameBlackboard;
+import Factory.WebServiceFactory;
+import GameMap.XMLAdapter;
 import Journaling.CJournal;
 import MainGame.Loop;
 import MessageManagement.Message;
 import MessageManagement.MessageManager;
 import ObjectManagement.ObjectManager;
 import ObjectManagement.Pool;
+import SceneGraph.GraphNodeInstance;
+import SceneGraph.SceneGraphManager;
+import SceneGraph.SceneGraphNode;
 import SchedulingManager.CEvent;
 import SchedulingManager.CEventManager;
 import SchedulingManager.CScheduler;
@@ -21,6 +27,12 @@ public class Main {
 	//The role of this class is to test out all the
 	//programmatic systems before graphics are
 	//introduced
+	
+	static MessageManager messageManager = new MessageManager();
+	static SceneGraphManager sceneGraph = new SceneGraphManager();
+	static WebServiceFactory webServiceFactory = new WebServiceFactory();
+	static GameBlackboard gameBlackBoard = new GameBlackboard();
+	static XMLAdapter xmlAdapter = new XMLAdapter();
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to NecroTek3D");
@@ -102,33 +114,68 @@ public class Main {
 			*/
 			
 		
-		//Initialize Thread Pooling Thread System?
+		//!!!Initialize Thread Pooling Thread System?
 			
-			
-		
-		
-
-		
-		//launching xml reader
-		//launching scenegraph parser
-		//upon launching file, use hotloader to load the resources
+	
 		
 		//initialize message manager
 		CJournal.Journal(Main.class, "Initializing message manager");
 		//MessageManager messageManager = new MessageManager();
 		
-		MessageManager messageManager = new MessageManager();
 		messageManager.start();
 		
 				
 		//send bootstrap message
-		CJournal.Journal(Main.class, "Testing messanger: ending bootstrapping message to messagemanager");
+		CJournal.Journal(Main.class, "Testing messanger: sending bootstrapping message to messagemanager");
 		Message boot_strap_message = new Message();
 		boot_strap_message.mflag = EEventMachine.EM_BOOTSTRAP;
 		messageManager.EnqueueMessage(boot_strap_message);
 
-		Loop loop = new Loop();  //hand over to game loop
 		
+		
+		//initializing Scene Graph (need to perform a test, declared above)
+		CJournal.Journal(Main.class, "Testing Scene Graph");
+		SceneGraphNode sgn = new SceneGraphNode();
+		SceneGraphManager.add(sgn, SceneGraphManager.root);
+
+		sceneGraph.start();
+		
+		
+		
+		//initialziing inspector (have to rewrite)
+		
+		
+		//initializing inspector manager (have to rewrite)
+		
+		//initializing user interface (have to rewrite)
+		
+		//initializizng web service factory
+		
+		webServiceFactory.start();
+		
+		//initializing black board
+		
+		gameBlackBoard.start();
+		
+		//launching xml reader
+		xmlAdapter.adapt();
+		
+		
+		//!!!upon launching file, use hotloader to load the resources - use XMLSceneLoader to get objects and add to scenegraph
+		//load xml hexagon, start spawning position
+		//load fringe using hotloader
+		
+		
+		
+		//initailizing input handler (have to rewrite)
+		
+		//Dumping Scene Graph Info
+		SceneGraphManager.output();
+		
+		//testing main game loop
+		CJournal.Journal(Main.class, "Testing main game loop");
+		Loop loop = new Loop();  //hand over to game loop
+		loop.start();
 		
 		return;
 	}

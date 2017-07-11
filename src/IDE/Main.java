@@ -111,7 +111,7 @@ public class Main  extends JFrame   {
 		
 		//ENTER LOOP
 		
-	    Loop.loop();
+	    //Loop.loop();
 	    
 	}	
 }

@@ -55,7 +55,7 @@ public  class MessageManager extends Thread {
 					case EM_BOOTSTRAP:
 						CJournal.Journal(MessageManager.class, "Messaging system working properly.");
 					default:
-						CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+						CJournal.Journal(MessageManager.class, "Default Dispatch Message Trashed");
 					}
 				}
 			}
