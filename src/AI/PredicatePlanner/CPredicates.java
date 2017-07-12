@@ -1,4 +1,4 @@
-package Planner;
+package AI.PredicatePlanner;
 
 public class CPredicates {
 

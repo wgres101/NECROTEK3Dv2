@@ -41,12 +41,20 @@ public class SceneGraphManager extends Thread {
 		{
 			DebugManager.Debug(SceneGraphManager.class, "Children is null");
 		}
+		if (node == null)
+		{
+			DebugManager.Debug(SceneGraphManager.class, "SceneGrapHManager node is null");
+		}
+		
 		for (SceneGraphNode sgn : root.children)
 		{
-			if (sgn == parent)
+			if (sgn == parent && node != null)
 			{
 				sgn.children.add(node);
 				DebugManager.Debug(SceneGraphManager.class, "Adding node, sgn==parent");
+				DebugManager.Debug(SceneGraphManager.class, "New node: " + node.xmlData.getName());
+				DebugManager.Debug(SceneGraphManager.class, "SGN node is " + parent.xmlData.getName());
+				DebugManager.Debug(SceneGraphManager.class, "Parent node is " + parent.xmlData.getName());
 			}
 			else
 			{
@@ -59,9 +67,18 @@ public class SceneGraphManager extends Thread {
 	public static void recursive_add(SceneGraphNode node, SceneGraphNode parent, SceneGraphNode search)
 	{
 		
+
+		if (search == null)
+		{
+			return;
+		}
+		
 		//find parent, if no parent then add to root
 		for (SceneGraphNode alpha : search.children)
 		{
+		
+			
+			
 			if (alpha == parent)
 			{
 				DebugManager.Debug(SceneGraphManager.class, "Recrusive Adding node, alpha==parent");
@@ -69,7 +86,7 @@ public class SceneGraphManager extends Thread {
 			}
 			else
 			{
-				recursive_add(node, parent, search);
+				recursive_add(node, parent, alpha);
 			}
 		}
 	
