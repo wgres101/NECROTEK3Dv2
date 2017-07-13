@@ -2,6 +2,6 @@ package GameInterfaces.AlchemyAndMagic;
 
 import GameInterfaces.Construction.IBaseConstruction;
 
-public interface IEmptyAlchemistBottle extends IBaseConstruction {
+public interface IEmptyAlchemistBottle extends IBaseAlchemyMagic {
 
 }

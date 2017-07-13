@@ -1,5 +1,5 @@
 package GameInterfaces.AlchemyAndMagic;
 
-public interface IRedMoonGate {
+public interface IRedMoonGate extends IBaseAlchemyMagic{
 
 }

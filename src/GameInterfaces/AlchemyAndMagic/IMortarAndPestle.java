@@ -2,6 +2,6 @@ package GameInterfaces.AlchemyAndMagic;
 
 import GameInterfaces.Construction.IBaseConstruction;
 
-public interface IMortarAndPestle extends IBaseConstruction {
+public interface IMortarAndPestle extends IBaseAlchemyMagic {
 
 }

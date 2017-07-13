@@ -17,6 +17,29 @@
 		<WSBox p_min = "-1.0" p_max = "1.0"/>
 	</BoxService>
 	
+	<DaemonArmsService>
+		<WSDaemonArms str_requirement="60" defend_chance="50" defense="0">
+	</DaemonARmsService>
+	
+	<DaemonBoneService>
+		<WSDaemonBone/>
+	</DaemonBoneService>
+		
+	<DaemonChestService>
+		<WSDaemonChest />
+	</DaemonChestService>	
+		
+	<DaemonGlovesService>
+		<WSDaemonGloves />
+	</DaemonGlovesService>
+	
+	<DaemonHelmService>
+		<WSDaemonHelmService/>
+	</DaemonHelmService>
+	
+	<DaemonLegService>
+		<WSDaemonLegService/>
+	</DaemonLegsService>
 
 </LevelRoot>
 
