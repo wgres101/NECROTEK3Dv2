@@ -1,4 +1,4 @@
-package Services.SearchServices;
+package AI.Algorithms.A_Star2;
 
 import java.util.ArrayList;
 

@@ -1,9 +1,4 @@
-package Services.SearchServices;
-
-import java.util.ArrayList;
-import java.util.PriorityQueue;
-
-import Services.AIServices.DataTypes.ANode;
+package AI.Algorithms.A_Star2;
 
 public class AStarService {
 /*

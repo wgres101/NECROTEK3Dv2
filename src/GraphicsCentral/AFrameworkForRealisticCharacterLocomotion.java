@@ -10,6 +10,6 @@ package GraphicsCentral;
 
 //this is to avoid sliding while walking
 
-public class AFrameworkForRealisticCharacterLocomotionService {
+public class AFrameworkForRealisticCharacterLocomotion {
 
 }

@@ -30,6 +30,6 @@ package GraphicsCentral;
 //that contains a full 360-degrfee vie wof the environment surround ing 
 
 
-public class AdvancedTexturingUsingTextureCoordGenerationService {
+public class AdvancedTexturingUsingTextureCoordGeneration {
 
 }

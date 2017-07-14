@@ -84,7 +84,7 @@ public class XMLSceneLoader {
 
 			CJournal.Journal(XMLSceneLoader.class, "Adding First Player Character Service to Scene Graph");
 
-			SceneGraphManager.add(node, parent);
+			//SceneGraphManager.add(node, parent);
 		}
 
 		
@@ -98,7 +98,7 @@ public class XMLSceneLoader {
 
 			CJournal.Journal(XMLSceneLoader.class, "Adding WSPointLight Object to Scene Graph");
 
-			SceneGraphManager.add(node, parent);
+			//SceneGraphManager.add(node, parent);
 		}
 
 		

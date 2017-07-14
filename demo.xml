@@ -18,8 +18,8 @@
 	</BoxService>
 	
 	<DaemonArmsService>
-		<WSDaemonArms str_requirement="60" defend_chance="50" defense="0">
-	</DaemonARmsService>
+		<WSDaemonArms str_requirement="60" defend_chance="50" defense="0"/>
+	</DaemonArmsService>
 	
 	<DaemonBoneService>
 		<WSDaemonBone/>
@@ -39,7 +39,7 @@
 	
 	<DaemonLegService>
 		<WSDaemonLegService/>
-	</DaemonLegsService>
+	</DaemonLegService>
 
 </LevelRoot>
 
