@@ -16,6 +16,10 @@ import Hierarchy.PlayerCharacter.CWeaponMastery;
 
 public interface IPlayer {
 
+	
+		//AIType ai = null;
+	
+	
 		//In-battle stats
 		int readiness = 0;
 		int max_readiness = 0;

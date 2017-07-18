@@ -138,7 +138,19 @@ To make certain characters unique metadata can be used to add things to the char
 
 
 */
-	
+	/*
+	 * 
+	 * NECROTEK Facial Animation 
+
+
+ The facial animation system interfaces with ASA to take real-time skeletal animation skeletons and mapping them to the vertices
+  of the target face.
+This is done only once (creating the facial expression) for each emotion or facial expresssion and then mapped to the different 
+faces as appropriate.
+
+
+	 * 
+	 */
 	 
 	 
 }

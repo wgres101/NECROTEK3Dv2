@@ -1,7 +1,12 @@
 package Battle;
 
 public interface IBattleSystem {
-/* Combat System
+/* CoNECROTEK PICKING ALGORITHM
+
+Able to move around objects using mouse. For example, if a skill arrow is shot into a tree, you can click on it and it says the name of a skill. You can also drag it to your character, and the skill gets put in the characters backpack.
+
+You can also do things like picking a loaf of bread and eating it or double clicking on a potion on a table and drink it, or something as simple as move one stick of butter from one table to another.
+mbat System
 
 Enemies and Player Characters have circular attack ranges. There is extra long distance, long distance, middle, short, and adjacent. If a character is in, say, long distance and their circular distance intersects the enemy then the character can attack the enemy. What happens is if one of the player characters gets too close to an enemy character, it triggers the battle mode. All the player characters that are in play scatter into a formation. When that player is selected to attack or an enemy prepares to attack a bulls eye type image appears below the player character and below any character currently selected. Take note, this is a real time strategy RPG and all of this is happening in real time. Also see switching.
 
@@ -211,6 +216,9 @@ Pressing “A” will trigger a standard physical attack.
 Pressing “B” will trigger a standard defense position.
 Pressing “A” and “B” simultaneously will deliver a charge attack.
 Pressing the analog stick will move the character around the playing field.
+
+
+
 
 
 */

@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/AI/BitTables/Character/CPCBattleData.java=UTF-8
+encoding//src/AI/EnemyEnums/IEnemySpecificBehaviors.java=UTF-8
+encoding//src/AI/FLINCH/IFlinchNotes.java=UTF-8
+encoding//src/Actor/PlayerCharacter/DoubleTech/IForestElemental.java=UTF-8
+encoding//src/DSL/SwissDSL.java=UTF-8
+encoding//src/GameInterfaces/SpecialItems/Notes.java=UTF-8
+encoding//src/GameInterfaces/SpecialWeapons/Notes.java=UTF-8
+encoding//src/GameMap/IProceduralWorld.java=UTF-8
+encoding//src/Handlers/IAdaptiveSkeletalSystem.java=UTF-8
+encoding//src/Physics/Smoothing/Notes.java=UTF-8
