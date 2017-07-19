@@ -10,7 +10,8 @@ public class CConsiderationBoolean {
 	//Evaluate this consideration
 	boolean Evaluate(CDecisionContext ctxt)
 	{
-		//Get the health that we're checking - player or npc and 
+		
+	   //Get the health that we're checking - player or npc and 
 		//compare it to the cutoff
 		float currentHealth;
 		if (m_CheckPlayer)

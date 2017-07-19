@@ -37,15 +37,29 @@ import SchedulingManager.EEventMachine;
 
 public  class MessageManager extends Thread {
 
+		PriorityQueue<Message> messagesQueue = new PriorityQueue<Message>();
 	
+		
+		public void EnqueueMessage(Message message)
+		{
+			messagesQueue.add(message);
+		}
+		
 		@Override
 		public  void run() {
 			// TODO Auto-generated method stub
 			while (true)
 			{
+<<<<<<< HEAD
 
+=======
+				//pull message from queue
+				
+				
+>>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 				if (!messagesQueue.isEmpty())
 				{
+<<<<<<< HEAD
 					//pull message from queue
 					Message message = messagesQueue.remove();
 					
@@ -56,11 +70,22 @@ public  class MessageManager extends Thread {
 						CJournal.Journal(MessageManager.class, "Messaging system working properly.");
 					default:
 						CJournal.Journal(MessageManager.class, "Default Dispatch Message Trashed");
+=======
+					CJournal.Journal(MessageManager.class, "Found a message");
+					Message message = messagesQueue.remove();
+					
+					//dispatch messages according to their type
+					switch(message.mflag)
+					{
+					case EM_BOOTSTRAP:
+						CJournal.Journal(MessageManager.class, "Messaging system working properly.");
+					default:
+						CJournal.Journal(MessageManager.class, "Dispatch Message Trashed");
+>>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 					}
 				}
 			}
 		}
-		
 
 		
 		public static PriorityBlockingQueue<Message> messagesQueue = new PriorityBlockingQueue<Message>();
