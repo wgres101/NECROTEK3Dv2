@@ -10,7 +10,7 @@ public class CSimulateWater {
 	
 	public void generateWater(int [][] z1, int [][] z, float c, float dt, float h, int N, int [][] d)
 	{
-		
+		/*
 		float A = (c*dt/h)*(c*dt/h);
 		float B = 2-4*A;
 		int i, j;
@@ -30,7 +30,7 @@ public class CSimulateWater {
 		
 		//swap pointers
 		Swap(z.pData, z1.pData);
-		
+		*/
 	}
 
 }

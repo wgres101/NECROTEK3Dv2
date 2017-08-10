@@ -66,11 +66,7 @@ public class CClock extends Clock implements Runnable {
 				Message message = new Message();
 				//actions that occur at every frame
 				message.mflag = EEventMachine.EM_FRAME_TICK;
-<<<<<<< HEAD
-				/*CMessagePool.EnqueueMessage(message);*/
-=======
 				//MessageManager.EnqueueMessage(message);
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 			}
 			else
 			{
@@ -94,11 +90,7 @@ public class CClock extends Clock implements Runnable {
 				
 				if (time_cum >= temp_message.frame_rate)
 				{
-<<<<<<< HEAD
 					/*CMessagePool.EnqueueMessage(temp_message);*/
-=======
-					//MessageManager.EnqueueMessage(temp_message);
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 				}
 				
 			}

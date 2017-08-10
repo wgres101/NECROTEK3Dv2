@@ -53,17 +53,10 @@ public class ObjectManager implements Runnable {
 	
 	public static Object requestObjectOfClass()
 	{
-<<<<<<< HEAD
-		 Object t = Pool.requestMemoryTyped();
-	
-=======
 
 	    Object t = Pool.requestMemoryTyped();
 		Debugger.DebugManager.Debug(ObjectManager.class, "Attempting to get memory from Pool");
 		
-		
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
-		Debugger.DebugManager.Debug(t.getClass(),"Pool requested memory");
 		
 		return t;
 	}

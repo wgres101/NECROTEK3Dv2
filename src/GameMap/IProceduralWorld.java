@@ -1,4 +1,4 @@
-pack	age GameMap;
+package GameMap;
 
 public interface IProceduralWorld {
 

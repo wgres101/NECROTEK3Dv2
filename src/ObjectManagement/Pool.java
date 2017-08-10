@@ -32,15 +32,10 @@ public class Pool {
 		}
 		
 	}
-	static public Object requestMemoryTyped()
-	{
-		Object unit = (Object)poolEntries.pop();
-		return unit;
-	}
 	
 	static public Object getEntry(String name)
 	{
-<<<<<<< HEAD
+
 		return findEntry(name);
 	}
 
@@ -48,10 +43,8 @@ public class Pool {
 	{
 		//memory unit
 		
-		Object unit = poolEntries.pop();
-=======
 		Object unit =  (Object)poolEntries.pop();
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
+
 		return unit;
 	}
 	

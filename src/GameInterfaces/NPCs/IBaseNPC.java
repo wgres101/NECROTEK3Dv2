@@ -18,13 +18,13 @@ import AI.BitTables.Character.CThingInfoClass;
 import AI.BitTables.Character.CVvampireTable;
 import GameInterfaces.IBase;
 
-public interface IBaseNPC extends IBase, IEmotionParameters {
+public interface IBaseNPC extends IBase {
 
 	//AI TYPE
 	
 	int active_speed = 0;
 	boolean allured = false;
-	String corpse_name = null;
+	String corpse_name = new String();
 	direct_damage = 0;
 	energy_damage = 0;
 	

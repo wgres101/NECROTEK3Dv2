@@ -25,7 +25,7 @@ public class Quaternion {
 		return quat;
 	}
 	public static Mat4f getMatrixFromQuaternion(Quaternion q) {
-		float [][] Mat4 = new float[4][4];
+	/*	float [][] Mat4 = new float[4][4];
 		Mat4[0][0] = 1-2*(y*y+z*z);
 		Mat4[0][1] = 2*(x*y-w*z);
 		Mat4[0][2] = 2*(w*y-x*z);
@@ -66,7 +66,8 @@ public class Quaternion {
 		mat4f.matrix[3][2] = Mat4[3][2];
 		mat4f.matrix[3][3] = Mat4[3][3];
 
-		return mat4f;
+		return mat4f;*/
+		return null;
 	}
 	
 	//Book 1 2.10
@@ -98,13 +99,13 @@ public class Quaternion {
 		
 	}
 	
-	public static SphericalCubeInterpolation()
+	public static void SphericalCubeInterpolation()
 	{
 		//squad(t;p,q,a,b) = slerp(2t(1-t);slerp(t;p,q);slerp(t;a,b,)
 	}
 	
 
-	public static SphericalLinearInterpolation(Quaternion q_0, Quaternion q_1)
+	public static void SphericalLinearInterpolation(Quaternion q_0, Quaternion q_1)
 	{
 		Quaternion inversequat = Inverse(q_0);
 		Quaternion middle = Multiplication(inversequat, q_1);
@@ -143,6 +144,7 @@ public class Quaternion {
 
 	public static Quaternion Multiplication(Quaternion q, Quaternion q_prime)
 	{
+		/*
 		Quaternion double_prime = new Quaternion();
 		float x_prime = q_prime.x;
 		float y_prime = q_prime.y;
@@ -154,6 +156,8 @@ public class Quaternion {
 		double_prime.x = x_double_prime;
 		double_prime.y = y_double_prime;
 		double_prime.z = z_double_prime;
+		*/
+		return null;
 	}
 	
 	public static Quaternion Inverse(Quaternion q)
@@ -169,10 +173,10 @@ public class Quaternion {
 	public static Quaternion PowerFunction(Quaternion q, float t, float theta)
 	{
 		Quaternion quat = new Quaternion();
-		quat.x = sin(q.x*theta);
-		quat.y = sin(q.y*theta);
-		quat.z = sin(q.z(theta);
-		quat.w = cos(t*theta);
+		quat.x = (float) Math.sin(q.x*theta);
+		quat.y = (float) Math.sin(q.y*theta);
+		quat.z = (float) Math.sin(q.z*theta);
+		quat.w = (float) Math.cos(t*theta);
 		
 		return quat;
 	}
@@ -181,22 +185,22 @@ public class Quaternion {
 	{
 		//vtheta
 		Quaternion q = new Quaternion();
-		q.x = sin(theta)*vector.x;
-		q.y = sin(theta)*vector.y;
-		q.z = sin(theta)*vector.z;
+		q.x = (float) (Math.sin(theta)*vector.x);
+		q.y = (float) (Math.sin(theta)*vector.y);
+		q.z = (float) (Math.sin(theta)*vector.z);
 	}
 	
 	public static float Derivative(Quaternion q, float power)
 	{
 		//q^t log q
+		return 0;
 	}
 	
-	public static float ChainRule(Quaternion q, float power, f_of_t)
+	/*public static float ChainRule(Quaternion q, float power, f_of_t)
 	{
 		//f'(t)*q^f(t)log(q)
-	}
+	}*/
 	
->>>>>>> branch 'master' of https://ted_gress@bitbucket.org/ted_gress/necrotek3d_v2.git
 	
 	public static Quaternion multiply(Quaternion q, Quaternion q_prime)
 	{
