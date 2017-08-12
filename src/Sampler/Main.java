@@ -34,6 +34,8 @@ public class Main {
 	static GameBlackboard gameBlackBoard = new GameBlackboard();
 	static XMLAdapter xmlAdapter = new XMLAdapter();
 	
+	
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to NecroTek3D");
 		
