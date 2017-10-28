@@ -188,6 +188,8 @@ public class Quaternion {
 		q.x = (float) (Math.sin(theta)*vector.x);
 		q.y = (float) (Math.sin(theta)*vector.y);
 		q.z = (float) (Math.sin(theta)*vector.z);
+		
+		return 0;
 	}
 	
 	public static float Derivative(Quaternion q, float power)
