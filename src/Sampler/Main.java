@@ -2,6 +2,7 @@ package Sampler;
 
 import Blackboard.GameBlackboard;
 import Factory.WebServiceFactory;
+import GameMap.GameMapManager;
 import GameMap.XMLAdapter;
 import Journaling.CJournal;
 import MainGame.Loop;
@@ -28,11 +29,11 @@ public class Main {
 	//programmatic systems before graphics are
 	//introduced
 	
-	static MessageManager messageManager = new MessageManager();
-	static SceneGraphManager sceneGraph = new SceneGraphManager();
-	static WebServiceFactory webServiceFactory = new WebServiceFactory();
-	static GameBlackboard gameBlackBoard = new GameBlackboard();
-	static XMLAdapter xmlAdapter = new XMLAdapter();
+	public static MessageManager messageManager = new MessageManager();
+	public static SceneGraphManager sceneGraph = new SceneGraphManager();
+	public static WebServiceFactory webServiceFactory = new WebServiceFactory();
+	public static GameBlackboard gameBlackBoard = new GameBlackboard();
+	public static XMLAdapter xmlAdapter = new XMLAdapter();
 	
 	
 	
@@ -49,7 +50,7 @@ public class Main {
 		//Initialize scheduling system
 			CJournal.Journal(Main.class, "Launching the scheduling system");
 			CTimerManager.init();
-			CJournal.Journal(Main.class, "Begin Timing. Testing TImer Unit");
+			CJournal.Journal(Main.class, "Begin Timing. Testing Timer Unit");
 			
 			//Initialize a dummy timer
 			CTimer dummy_timer = CTimerManager.getNewTimer(30, 2);
@@ -160,18 +161,23 @@ public class Main {
 		gameBlackBoard.start();
 		
 		//launching xml reader
-		xmlAdapter.adapt();
+		xmlAdapter.adapt("demo.xml");
+		
+		//launch xml reader demo
+		
 		
 		
 		//!!!upon launching file, use hotloader to load the resources - use XMLSceneLoader to get objects and add to scenegraph
 		//load xml hexagon, start spawning position
 		//load fringe using hotloader
 		
+		GameMapManager.LoadIndices();
 		
 		
 		//initailizing input handler (have to rewrite)
 		
 		//Dumping Scene Graph Info
+		CJournal.Journal(Main.class, "Dumping scene graph output (loaded from XMLAdapter)");
 		SceneGraphManager.output();
 		
 		//testing main game loop

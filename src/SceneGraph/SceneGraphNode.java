@@ -11,4 +11,5 @@ public class SceneGraphNode extends CObject implements GraphNodeInstance   {
 	public ArrayList<SceneGraphNode> children = new ArrayList<SceneGraphNode>();
 	public Element xmlData = null;
 	
+
 }

@@ -2,8 +2,18 @@ package WSObjects.Actors;
 
 import java.util.ArrayList;
 
-public class WSCharacter {
+import org.jdom2.Element;
 
+import WSObjects.WSObject;
+
+public class WSCharacter extends WSObject {
+
+	
+	public WSCharacter(Element e) {
+		super(e);
+		// TODO Auto-generated constructor stub
+		e = new Element("CharacterInstance");
+	}
 	
 	int lives;
 	int health;

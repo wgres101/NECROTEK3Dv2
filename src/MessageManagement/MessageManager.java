@@ -58,7 +58,7 @@ public  class MessageManager extends Thread {
 					}
 				}
 			}
-		}
+		
 
 		
 		public static PriorityBlockingQueue<Message> messagesQueue = new PriorityBlockingQueue<Message>();

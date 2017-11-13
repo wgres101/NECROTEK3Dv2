@@ -1,10 +1,18 @@
 package Services.ActorServices;
 
+import org.jdom2.Element;
+
 import MessageManagement.Message;
 import SchedulingManager.EEventMachine;
 
 public class CreatePawnService extends CreateCharacterService {
 
+	public CreatePawnService(Element e) {
+		super(e);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	// adds to a list that are to be saved
 	public static void AddSaveObject() {
 

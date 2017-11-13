@@ -100,10 +100,10 @@ import SceneGraph.SceneGraphNode;
 public class XMLAdapter {
 
 	
-	public void adapt()
+	public void adapt(String filename)
 	{
 		CJournal.Journal(XMLAdapter.class, "Running XML Adapter: adapt()");
-		String filename = "demo.xml";
+		
     
         // Build the document with SAX and Xerces, no validation
         SAXBuilder builder = new SAXBuilder();
@@ -175,7 +175,7 @@ public class XMLAdapter {
         
         
         
-        DebugManager.Debug("XMLAdapter", "HasRootElement:" +  doc.hasRootElement());
+        CJournal.Journal(XMLAdapter.class, "HasRootElement:" +  doc.hasRootElement());
         
         SceneGraphNode parent = new SceneGraphNode();
 
@@ -217,7 +217,7 @@ public class XMLAdapter {
 	        	XMLSceneLoader.addToSceneGraph(node, node.parent);
 	        	
 	        	prnt = node;
-	        	recursiveAdd(child.getChildren(), null, prnt);
+	        	recursiveAdd(child.getChildren(), child, prnt);
 	        	return;
 	        }
 	}

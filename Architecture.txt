@@ -112,7 +112,7 @@ by the public class. The public class has a reference to the private class.
 
 29) Use large static arrays instead of linked lists/vectors if the array is going to be small
 
-30) Critical sections of code should be reported immediately on screen using calls to a porfiler
+30) Critical sections of code should be reported immediately on screen using calls to a profiler
 
 31) Use loop unrolling. For example, 1,000 item loop can be be broken down into ten, 100 item loops
 

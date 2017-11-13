@@ -1,8 +1,10 @@
 package MainGame;
 
+import GameMap.CHotLoader;
 import IDE.Main;
 import IDE.RenderGL;
 import Journaling.CJournal;
+import Shell.Shell;
 
 public class Loop extends Thread {
 
@@ -24,6 +26,8 @@ public class Loop extends Thread {
 			{
 				CJournal.Journal(Loop.class, "Main Game Loop is Running");
 				loop_running = true;
+				CHotLoader.HotLoad();
+				Shell.Shell();
 			}
 			// this is java ide code -> Main.gameLogic.run();
 			//each of the following run in a loop on t heir own thread

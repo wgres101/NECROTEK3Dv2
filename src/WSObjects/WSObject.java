@@ -11,7 +11,7 @@ import SceneGraph.GraphNodeInstance;
 import SceneGraph.SceneGraphNode;
 import Services.ServiceRoot;
 
-public class WSObject extends CPrimitive {
+public class WSObject extends ServiceRoot {
 	
 	public WSObject(Element e) {
 		
@@ -33,66 +33,62 @@ public class WSObject extends CPrimitive {
 	//to update internal variables
 	//and to execute per turn actions
 	//used to update state
-	public void Update()
+	public void InstanceUpdate()
 	{
 		//called Update
 	}
 	
 	//called upon when object is no longer needed
 	
-	public void Destroy()
+	public void InstanceDestroy()
 	{
 		//called Destroy
 	}
 	
 	//called every turn. checks messagemanager for message
 	
-	public void ParseMessage()
+	public void InstanceParseMessage()
 	{
 		
 	}
 	
 	
-	public static void Launch() {}
+	public static void InstanceLaunch() {}
 	
 	
 	//called on object creation
 	
-	public static void Init() {}
+	public static void InstanceInit() {}
 	
 
 
-	public static void  Render()
+	public static void  InstanceRender()
 	{
 		
 	}
 
-	public static void parseMessage()
-	{
-		
-	}
 	
-	public static void  Collision()
+	public static void  InstanceCollision()
 	{
 		
 	}
 	
 	//when the game requires this particular state to be active
 	
-	public static void  OnEnter()
+	public static void  InstanceOnEnter()
 	{
 		
 	}
 	
 	//When the object no longer needs to be attachd to the scene graph
 	
-	public static void  OnExit()
+	public static void  InstanceOnExit()
 	{
 	}
 
 	//for exammple, hitting the pause button
 	
-	public static void  OnSuspend()
+	public static void  InstanceOnSuspend()
 	{
 	}
 	

@@ -1,5 +1,9 @@
 package GameMap;
 
+import java.util.HashMap;
+
+import Journaling.CJournal;
+
 //this class handles the octree, portals, and hexagonal
 //components of the game map, as well as registering and
 //unregistering objects in the game with these components
@@ -51,5 +55,32 @@ A high lands town might have stone walls with cracks and vines and or broken dow
 
 public class GameMapManager {
 
+	
+	//for the hotloader
+	
+	//indices represent maps to be loaded
+	static HashMap<Integer, CHexagonCoordinates> mapIndex = new HashMap<Integer, CHexagonCoordinates>();
+	
+	
+	//indices represent maps to be loaded
+	static String [] filenames = new String[] { "demo.xml", "demo2.xml" };
+	
+	public static void LoadIndices()
+	{
+		
+		CJournal.Journal(GameMapManager.class, "Loading map indices into hashmap for hotloader");
+		
+		
+		mapIndex.put(0, new CHexagonCoordinates(100, 200, 200, 0, 0, 100, 300, 100, 200, 200, 100, 0, 300, 200 ));
+		
+		return;
+	}
+		
+		
+		
+		
+		
+		
+	
 	
 }

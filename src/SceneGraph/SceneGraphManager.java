@@ -5,6 +5,7 @@ import Factory.WebServiceFactory;
 import GameMap.XMLAdapter;
 import Journaling.CJournal;
 import SchedulingManager.CEvent;
+import Services.CharacterServices.FirstPersonCharacterService;
 
 
 public class SceneGraphManager extends Thread {
@@ -28,10 +29,22 @@ public class SceneGraphManager extends Thread {
 	
 	public static void add(SceneGraphNode node, SceneGraphNode parent)
 	{
-		//adds a node to the grpah
-		CJournal.Journal(SceneGraphManager.class, "Scene Graph Manager: Testing add function");
 		//add node to parent
+		//adds a node to the grpah
+		if (node != null && node.xmlData != null)
+		{
+			CJournal.Journal(SceneGraphManager.class, "Scene Graph Manager: Testing add function for node (xmldata): " + node.xmlData.getName());
+		}
 		
+		else if (node.xmlData == null)
+		{
+			CJournal.Journal(SceneGraphManager.class, "Scene Graph Manager: Testing add function for nodexmlData is null ");
+		}
+		
+		else if (node == null)	
+		{
+			CJournal.Journal(SceneGraphManager.class, "Scene Graph Manager: Testing add function for node, node or xmlData is null ");
+		}
 		//find parent, if no parent then add to root
 		if (root == null)
 		{
@@ -43,7 +56,7 @@ public class SceneGraphManager extends Thread {
 		}
 		if (node == null)
 		{
-			DebugManager.Debug(SceneGraphManager.class, "SceneGrapHManager node is null");
+			DebugManager.Debug(SceneGraphManager.class, "SceneGraphManager node is null");
 		}
 		
 		for (SceneGraphNode sgn : root.children)
@@ -51,10 +64,10 @@ public class SceneGraphManager extends Thread {
 			if (sgn == parent && node != null)
 			{
 				sgn.children.add(node);
-				DebugManager.Debug(SceneGraphManager.class, "Adding node, sgn==parent");
-				DebugManager.Debug(SceneGraphManager.class, "New node: " + node.xmlData.getName());
-				DebugManager.Debug(SceneGraphManager.class, "SGN node is " + parent.xmlData.getName());
-				DebugManager.Debug(SceneGraphManager.class, "Parent node is " + parent.xmlData.getName());
+				CJournal.Journal(SceneGraphManager.class, "Adding node, sgn==parent");
+				CJournal.Journal(SceneGraphManager.class, "New node: " + node.xmlData.getName());
+				CJournal.Journal(SceneGraphManager.class, "SGN parent node is " + parent.xmlData.getName());
+				
 			}
 			else
 			{
@@ -120,13 +133,13 @@ public class SceneGraphManager extends Thread {
 		{
 			
 			System.out.println("**Element Name " + sgn.xmlData.getName() + "***");
-			recursive_output(root, null, sgn);
+			recursive_output(sgn);
 			
 		}
 		
 	}
 	
-	public static void recursive_output(SceneGraphNode node, SceneGraphNode parent, SceneGraphNode search)
+	public static void recursive_output(SceneGraphNode search)
 	{
 		
 		//find parent, if no parent then add to root
@@ -144,13 +157,15 @@ public class SceneGraphManager extends Thread {
 		for (SceneGraphNode sgn : search.children)
 		{
 					
-			System.out.println("***R Element Name " + node.xmlData.getName() + "***");
-			recursive_output(node, null, sgn);
+			System.out.println("***R Element Name " + sgn.xmlData.getName() + "***");
+			recursive_output(sgn);
 			return;
 		}
 		
 		
 				
 	}
+	
+	
 	
 }

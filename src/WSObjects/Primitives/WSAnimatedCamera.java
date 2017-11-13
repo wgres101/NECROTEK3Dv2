@@ -18,17 +18,17 @@ public class WSAnimatedCamera extends WSObject {
 	}
 	
 	@Override
-	public void ParseMessage() {
+	public void InstanceParseMessage() {
 		// TODO Auto-generated method stub
-		super.ParseMessage();
+		super.InstanceParseMessage();
 	}
 
-	public void Update()
+	public void InstanceUpdate()
 	{
 		//called Update
 	}
 	
-	public void Destroy()
+	public void InstanceDestroy()
 	{
 		//called Destroy
 	}

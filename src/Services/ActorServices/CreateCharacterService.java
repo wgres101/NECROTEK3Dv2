@@ -1,9 +1,33 @@
 package Services.ActorServices;
 
+import org.jdom2.Element;
+
 import MessageManagement.Message;
 import Services.ServiceRoot;
+import WSObjects.WSObject;
 
 public class CreateCharacterService extends ServiceRoot{
+	
+	
+	public CreateCharacterService(Element e) {
+		super(e);
+		// TODO Auto-generated constructor stub
+		e = new Element("CharacterService");
+	}
+
+	public static void Launch() {}
+	
+	public static void Init() {
+		
+		
+		
+	}
+	
+	public static void Destroy() {}
+	
+	public static WSObject SpawnWebServiceObject() {
+		return null;}
+
 	
 	public void parseMessage(Message message)
 	{

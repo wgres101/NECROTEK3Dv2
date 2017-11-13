@@ -3,6 +3,7 @@ package GameMap;
 import org.jdom2.Element;
 
 import Factory.WebServiceFactory;
+import IDE.SceneGraph;
 import Journaling.CJournal;
 import SceneGraph.GraphNodeInstance;
 import SceneGraph.SceneGraphManager;
@@ -76,7 +77,6 @@ public class XMLSceneLoader {
 
 		if (node.xmlData.getName().equals("FirstPersonPlayerCharacterService")) {
 			CJournal.Journal(XMLSceneLoader.class, "Instantiate First Player Character Service from XML Map");
-
 			ServiceRoot character_service = createFirstPersonPlayerCharacterService(node, parent);
 
 			CJournal.Journal(XMLSceneLoader.class, "Instantiate First Player Character WSObject from XML Map");
@@ -84,9 +84,19 @@ public class XMLSceneLoader {
 
 			CJournal.Journal(XMLSceneLoader.class, "Adding First Player Character Service to Scene Graph");
 
-			//SceneGraphManager.add(node, parent);
+			SceneGraphManager.add(node, parent);
 		}
 
+		if (node.xmlData.getName().equals("WSFirstPersonPlayerCharacter")) {
+			CJournal.Journal(XMLSceneLoader.class, "Instantiate First Player Character Service from XML Map");
+			WSObject character = createWSFirstPersonPlayerCharacter(node, parent);
+
+			
+
+			CJournal.Journal(XMLSceneLoader.class, "Adding First Player Character Service to Scene Graph");
+
+			SceneGraphManager.add(node, parent);
+		}
 		
 		if (node.xmlData.getName().equals("PointLightService")) {
 			CJournal.Journal(XMLSceneLoader.class, "Instantiate Point Light Service");
@@ -98,7 +108,7 @@ public class XMLSceneLoader {
 
 			CJournal.Journal(XMLSceneLoader.class, "Adding WSPointLight Object to Scene Graph");
 
-			//SceneGraphManager.add(node, parent);
+			SceneGraphManager.add(node, parent);
 		}
 
 		
@@ -112,8 +122,16 @@ public class XMLSceneLoader {
 
 		ServiceRoot service = WebServiceFactory.launchWebService("CharacterService");
 		WSObject instance = WebServiceFactory.launchWebServiceInstance("CharacterInstance");
-		SceneGraphManager.add(service, parent);
-		SceneGraphManager.add(instance, parent);
+		//SceneGraphManager.add(service, parent);
+		//SceneGraphManager.add(instance, parent);
+		return instance;
+	}
+	
+	
+	
+	public static WSObject createWSFirstPersonPlayerCharacter(SceneGraphNode node, SceneGraphNode parent)
+	{
+		WSObject instance = WebServiceFactory.launchWebServiceInstance("WSFirstPersonPlayerCharacter");
 		return instance;
 	}
 
@@ -146,9 +164,10 @@ public class XMLSceneLoader {
 
 	public static ServiceRoot createFirstPersonPlayerCharacterService(SceneGraphNode node, SceneGraphNode parent) {
 		ServiceRoot service = WebServiceFactory.launchWebService("FirstPersonPlayerCharacterService");
-		SceneGraphManager.add(service, parent);
+		//SceneGraphManager.add(service, parent);
 		return service;
 	}
+	
 
 	public static ServiceRoot createCameraObjectService(SceneGraphNode node, SceneGraphNode parent) {
 		ServiceRoot service = WebServiceFactory.launchWebService("CameraObjectService");
@@ -167,15 +186,14 @@ public class XMLSceneLoader {
 
 	public static ServiceRoot createPointLightService(SceneGraphNode node, SceneGraphNode parent) {
 		ServiceRoot service = WebServiceFactory.launchWebService("PointLightService");
-		SceneGraphManager.add(service, parent);
+		//SceneGraphManager.add(service, parent);
 		return service;
 	}
 
 	public static WSObject createWSPointLight(SceneGraphNode node, SceneGraphNode parent) {
-		ServiceRoot service = WebServiceFactory.launchWebService("PointLightService");
-		WSObject instance = WebServiceFactory.launchWebServiceInstance("PointLightService");
-		SceneGraphManager.add(service, parent);
-		SceneGraphManager.add(instance, parent);
+		
+		WSObject instance = WebServiceFactory.launchWebServiceInstance("WSPointLight");
+		//SceneGraphManager.add(instance, parent);
 
 		return instance;
 	}

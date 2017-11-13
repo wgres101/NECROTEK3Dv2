@@ -42,7 +42,7 @@ public class WSVectorCamera extends WSObject {
 			//to update internal variables
 			//and to execute per turn actions
 			//used to update state
-	public void Update()
+	public void InstanceUpdate()
 	{
 		//called Update
 		//
@@ -53,7 +53,7 @@ public class WSVectorCamera extends WSObject {
 		
 		//called upon when object is no longer needed
 		
-		public void Destroy()
+		public void InstanceDestroy()
 		{
 			//called Destroy
 		}

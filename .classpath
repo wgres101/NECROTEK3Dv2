@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-9">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/Ted Gress/Desktop/lwjgl"/>
+			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Ted Gress/Desktop/jdom-2.0.6/jdom-2.0.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Ted Gress/Desktop/jdom-2.0.6/jdom-2.0.6-contrib.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Ted Gress/Desktop/jdom-2.0.6/jdom-2.0.6-javadoc.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Ted Gress/Desktop/jdom-2.0.6/jdom-2.0.6-junit.jar"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Ted Gress/Desktop/jdom-2.0.6/jdom-2.0.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6-contrib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6-junit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/javax.jws-3.1.2.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

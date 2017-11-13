@@ -11,10 +11,16 @@ package SchedulingManager;
 //regardless of the rendering frame
 
 //An EVENT wraps a task
-public class CEvent {
+public class CEvent implements Comparable {
 
 
 	CTask task = new CTask();
 	EEventMachine current_event; 
+	
+	public int compareTo(Object o)
+	{
+	    return -1;
+	}
+
 }
 
