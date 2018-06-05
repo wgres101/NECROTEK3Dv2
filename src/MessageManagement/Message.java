@@ -1,5 +1,7 @@
 package MessageManagement;
 
+import java.sql.Time;
+
 import SchedulingManager.EEventMachine;
 
 
@@ -15,6 +17,18 @@ public class Message implements Runnable,  Comparable<Message> {
 		
 		Object sourceReference; //reference to the generator of this message
 
+		String name;
+		
+		String nameOfSender;
+		
+		String nameOfReceiver;
+		
+		Time deliveryTime;
+	
+		String data;
+		
+		String parameters;
+		
 		@Override
 		public void run() {
 			// TODO Auto-generated method stub

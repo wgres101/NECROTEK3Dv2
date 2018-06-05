@@ -7,9 +7,24 @@ public class SaveGameManager {
 
 	///saveable objects inherit from this
 	
+	AddSaveObject()
+	//adds the object to be saved to the list
+	 * 
+	 * 
+	 * 
+	 */
+	
+
+	//Save()
+	//iterates throguh the save list and saves them to disk
+
+
+
+	//Load()
+	//loads saved data from disk
 	
 	//
-	SAVERECORD GetSaveData() { //return the data table for object\
+/*	SAVERECORD GetSaveData() { //return the data table for object\
 		
 		return object_save_data;
 	}

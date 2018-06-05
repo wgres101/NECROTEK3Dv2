@@ -1,5 +1,10 @@
 package Journaling.Logger;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+
 //book 3 section 1.15
 
 //INCOMPLETE
@@ -7,17 +12,32 @@ package Journaling.Logger;
 //keeps a breadcrumb trail of the events that occur in the game
 
 
-public class OutputLog {
-/*
-	public class t_InitializationPolicy
-	{
-		typedef //type// t_Type; // defines the argument type used for intilization
-		static bool m_Convert(t_Type i_value) { } //takes an argument of t_Type and converts it to a boolean value
+public class OutputLog  extends Thread {
+
+	public static ArrayList<String> log = new ArrayList<String>();
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		PrintWriter writer = null;
+		try {
+			writer = new PrintWriter("necroteklog.txt", "UTF-8");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		writer.close();
 	}
 	
-	public class t_BooleanPolicy
+	public static void addToLog(String logstring)
 	{
-		typedef // type // t_Boolean;
+		log.add(logstring);
 	}
-*/
+	
+	
+	
 }

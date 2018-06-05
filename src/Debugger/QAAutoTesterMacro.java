@@ -9,7 +9,7 @@ public class QAAutoTesterMacro {
 	QAAutoTesterMacro(String breakpointName)
 	{
 		System.out.println("QA Break at:" + breakpointName);
-		
+		System.exit(0);
 	}
 	
 }

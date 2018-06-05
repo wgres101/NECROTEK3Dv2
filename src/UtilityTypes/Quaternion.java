@@ -308,7 +308,15 @@ public class Quaternion {
 			
 		}
 		
-	
+		//quaternion representing a rotation
+		//q_rotation = cos(theta/2) + Asin(theta/2) where A is the unite length axis A = (A_x,A_y,A_z)
+		/*public static Quaternion QuaternionRotation(float theta, Vec3f axis)
+		{
+			Quaternion q = new Quaternion();
+			
+		}*/
+		
+		
 		
 	}
 

@@ -12,5 +12,10 @@
 	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6-junit.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/jdom-2.0.6/jdom-2.0.6-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/ted_g/eclipse-workspace/necrotek_v/javax.jws-3.1.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/Documents/jogamp/gluegen-rt.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/Documents/jogamp/gluegen-rt-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/Documents/jogamp/jogl-all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/Documents/jogamp/jogl-all-natives-windows-amd64.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ted_g/Documents/jogamp/jogl-awt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

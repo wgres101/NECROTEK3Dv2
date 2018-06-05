@@ -31,8 +31,15 @@ public enum EEventMachine {
 				EM_DESTROY, //Demands the destruction of a specific entitiy
 				
 				EM_SHUTDOWN, //Destroy after nicely shutting down
+				EM_INITIALIZE,
 				
 				EM_DRAW, //'Render Me' to the world
+				
+				EM_DRAW_OVERLAY, //certain enntitie smight need to perform drawing operations after all normal rendering has taken place
+								//For example, a sun entity might handle drawing glare or halos when the player is
+								//is looking into it. The game loop can send DRAWOVERLAY to all entities after the normal 
+								//DRAW message has been sent
+				EM_DRAW_SHADOW,	//similarly, many shadow algorithms are performed aftet primary rendering
 				
 				EM_UPDATE, //option to update according to the world by tick
 				
@@ -42,17 +49,13 @@ public enum EEventMachine {
 				
 				EM_USERINPUT, // Called upon user input from a device
 				
-				EM_FORCE, //An explosion occurred, or something major effecting a lot of entities
+				
 				
 				EM_DAMAGED, //a character or characteres received damage
 				
 				EM_ONDAMAGE, //an enemy character has been damaged
 				
-				EM_GIVEPOINTS, //add points like skill points for example to an entity
 				
-				EM_DRAWOVERLAY, //Effecfts that occur after normal rendering, like a lens flare
-				
-				EM_DRAWSHADOW, //effects for shadowes that occur after normal rendering
 				
 				EM_SETOWNER, //can be used to establish routines between nodes in a scene graph
 				
@@ -60,7 +63,7 @@ public enum EEventMachine {
 				
 				EM_TESTHIT, //Requests the recipient perform a hit test to see if there was a collision
 				
-				EM_IHITYOU, //Tell a character that you hit them 
+			
 				
 				EM_CLIENT_UPDATE, //sends a messsage to the client to update its state
 				
@@ -76,9 +79,15 @@ public enum EEventMachine {
 		
 				EM_CLOCK_TICK, //for actions that occur at every tick
 				
+				EM_INSPECTOR_PANEL_UPDATE,
+				
+				EM_UI_THREAD,
+				
 				EM_COLLISION, ///a collision occured
 				
 				EM_UPDATE_ANIMATIONS, //update the animation frames for all the animated objects
+				
+				EM_UPDATE_AI,
 				
 				EM_UPDATE_PHYSICS,  //a request to update the physics in the game
 		
@@ -91,8 +100,45 @@ public enum EEventMachine {
 				  EM_TURN_RIGHT_90,
 				  EM_TURN_LEFT_90,
 				  EN_SET_RANDOM_DIRECTION,
-				  EM_MOVEMENT_STOP
+				  EM_MOVEMENT_STOP,
+				  
+				  EM_UPDATE_LOGIC_LAYER, //update the logic layer
+	
+					EM_HOTLOAD, //call hotload periodically
+					EM_SAVE_ME_NOW, //au to-save
+					EM_NETWORK, //network handler
+				 EM_LAGGING,
+				 EM_LOW_PRIORIATY,
 				 
+				 /**communication between entities*/
+				 
+				 EM_SET_VAR,
+				 EM_GET_VAR,
+				 EM_VELOCITY,
+				 EM_PITCH,
+				 EM_YAW,
+				 EM_ROLL,
+				 EM_POS_X,
+				 EM_POS_Y,
+				 EM_POS_Z,
+				 EM_SKIN,
+				 EM_DAMAGE,	//when a projectile entity strikes a target it sends a DAMAGE message telling the
+				 			//recipient how manyu hit point sof damage it wants to impart
+				 EM_FORCE,	//an explosion could affect multiple objects in the world, effecttively damaging them
+				 EM_GIVEPOINTS,	//when enemy is destroyed, deals out points
+				 EM_SET_OWNER, //if an entity tree is used as a scene graph, SETOWNER can be used to establish ownership relationships between entities.
+				 				//For example, when the player entit y fires a rocket, it sends SETOWNER to the new rocket, letting the rocket know who fired it
+				 EM_IHITYOU,	//When an entitu determines via onre or more EM_TESTHIT messages, that it ha sactually
+				 				//collided with an object, The EM_IHITYOU is sent back to the collider with information concerning it
+				 				//and how to respond
+				 /* network */
+				 EM_SERVERUPDATE, //server nodes send SERVERUPDATE to handle AI, decisio nmaking and position updating.
+				 					//Additionally entities on the server can transmit network packets to sync t h emselves across nodes
+				 EM_CLIENTUPDATE,	//This message is used instead of the standard EM_UPDATE to allow client nodes to only dead-reckon their entities, without peerforming any AI or dynamics
+				 EM_NETPROCESS,		//As the game loop receives network traffic, it distribute spackets destinee d for individual entities via NETPROCESS. This allows each entity class
+				 						//to use its own most efficient means of network synchronization.
+				 EM_PLAYER_MOVETO;	//the player has moved to a new location
+				 ;
 		};
 
 	

@@ -1,10 +1,26 @@
 package SceneGraph;
 
+
+
+/* The scenegraph contains octrees for rendering, collision detection, 
+ * It also contains matrix transformations for object to world projection,
+ * and contains static and dynamic objects, particle systems,
+ * and animations for dynamic objects, including Inverse Kinematics
+ */
+
+
+
+
+
+
+
+
 import Debugger.DebugManager;
 import Factory.WebServiceFactory;
 import GameMap.XMLAdapter;
 import Journaling.CJournal;
 import SchedulingManager.CEvent;
+import SchedulingManager.EEventMachine;
 import Services.CharacterServices.FirstPersonCharacterService;
 
 
@@ -59,51 +75,48 @@ public class SceneGraphManager extends Thread {
 			DebugManager.Debug(SceneGraphManager.class, "SceneGraphManager node is null");
 		}
 		
+		if (parent == root)
+		{
+		
+			//CJournal.Journal(SceneGraphManager.class, "Adding node " + node.xmlData.getName() + ", parent is root");
+			root.children.add(node);
+		}
+		else
+		{
+			if (root.children.contains(parent))
+			{
+				parent.children.add(node);
+			}
+			
+			else
+			{
+				root.children.add(parent);
+				parent.children.add(node);
+			}
+		}
+		
+			
+		/*
 		for (SceneGraphNode sgn : root.children)
 		{
-			if (sgn == parent && node != null)
+			if (sgn != null && sgn.children != null && node != null && node.xmlData != null && parent.xmlData != null)
 			{
 				sgn.children.add(node);
 				CJournal.Journal(SceneGraphManager.class, "Adding node, sgn==parent");
 				CJournal.Journal(SceneGraphManager.class, "New node: " + node.xmlData.getName());
 				CJournal.Journal(SceneGraphManager.class, "SGN parent node is " + parent.xmlData.getName());
+			}
+			
+			else
+			{
 				
 			}
-			else
-			{
-				recursive_add(node, parent, sgn);
-			}
-		}
+		}\
+		*/
 		
 	}
+		
 	
-	public static void recursive_add(SceneGraphNode node, SceneGraphNode parent, SceneGraphNode search)
-	{
-		
-
-		if (search == null)
-		{
-			return;
-		}
-		
-		//find parent, if no parent then add to root
-		for (SceneGraphNode alpha : search.children)
-		{
-		
-			
-			
-			if (alpha == parent)
-			{
-				DebugManager.Debug(SceneGraphManager.class, "Recrusive Adding node, alpha==parent");
-				search.children.add(node);
-			}
-			else
-			{
-				recursive_add(node, parent, alpha);
-			}
-		}
-	
-	}
 	
 	
 	public static void update(CEvent event)
@@ -114,6 +127,50 @@ public class SceneGraphManager extends Thread {
 	public static void parseMessages(CEvent event)
 	{
 		//parse messagefs distributed by message manager
+		if (event.current_event == EEventMachine.EM_UPDATE)
+		{
+			root.Update();
+		}
+		if (event.current_event == EEventMachine.EM_INITIALIZE)
+		{
+			root.Init();
+		}
+		if (event.current_event == EEventMachine.EM_COLLISION)
+		{
+			root.Collision();
+		}
+		if (event.current_event == EEventMachine.EM_INSPECTOR_PANEL_UPDATE)
+		{
+			root.UpdateInspector();
+		}
+		if (event.current_event == EEventMachine.EM_UI_THREAD)
+		{
+			root.UpdateUI();
+		}
+		if (event.current_event == EEventMachine.EM_UPDATE_ANIMATIONS)
+		{
+			root.UpdateAnimations();
+		}
+		if (event.current_event == EEventMachine.EM_UPDATE_PHYSICS)
+		{
+			root.UpdatePhysics();
+		}
+		
+		if (event.current_event == EEventMachine.EM_UPDATE_AI)
+		{
+			root.UpdateAI();
+		}
+		
+		if (event.current_event == EEventMachine.EM_DRAW)
+		{
+			root.Render();
+		}
+		
+//		if (event.current_event == EEventMachine.EM_USERINPUT)
+//		{
+//			root.UserInput();
+//		}
+		
 	}
 	
 	public static void output()
@@ -129,11 +186,18 @@ public class SceneGraphManager extends Thread {
 		{
 			DebugManager.Debug(SceneGraphManager.class, "Children is null - output");
 		}
+		CJournal.Journal(SceneGraphManager.class, "There are " + root.children.size() + "children of root");
+		CJournal.Journal(SceneGraphManager.class, "Root element is: " + root.xmlData.getName());
 		for (SceneGraphNode sgn : root.children)
 		{
-			
+			if (sgn.xmlData == null)
+			{
+				DebugManager.Debug(SceneGraphManager.class, "SceneGraphNode sgn xmlData is null");
+			}
+			else {
 			System.out.println("**Element Name " + sgn.xmlData.getName() + "***");
-			recursive_output(sgn);
+			}
+			//recursive_output(sgn);
 			
 		}
 		
@@ -156,13 +220,21 @@ public class SceneGraphManager extends Thread {
 		}
 		for (SceneGraphNode sgn : search.children)
 		{
-					
-			System.out.println("***R Element Name " + sgn.xmlData.getName() + "***");
-			recursive_output(sgn);
-			return;
+			
+			if (sgn.xmlData == null)
+			{
+				DebugManager.Debug(SceneGraphManager.class, "R SceneGraphNode sgn xmlData is null");
+			}
+			else {
+				System.out.println("***R Element Name " + sgn.xmlData.getName() + "***");	
+			}
+			
+			
+			
 		}
+		recursive_output(search);
 		
-		
+		return;
 				
 	}
 	

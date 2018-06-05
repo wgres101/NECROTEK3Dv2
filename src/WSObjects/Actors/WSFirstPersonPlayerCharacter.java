@@ -3,10 +3,13 @@ package WSObjects.Actors;
 import org.jdom2.Element;
 
 import GameMap.CHexagonCoordinates;
+import RenderEngine.IThreeDimensionalObject;
+
 import WSObjects.WSObject;
 
-public class WSFirstPersonPlayerCharacter  extends WSObject {
+public class WSFirstPersonPlayerCharacter  extends WSObject implements IThreeDimensionalObject {
 
+	 
 	 public WSFirstPersonPlayerCharacter(Element e) {
 		super(e);
 		// TODO Auto-generated constructor stub
@@ -37,7 +40,28 @@ public class WSFirstPersonPlayerCharacter  extends WSObject {
 	
 	//position in x,y
 	
-	public int x = 150;
-	public int y = 150;
+	public int playerx = 150;
+	public int playery = 150;
+	public int playerz = 0;
 	
+	public void Render()
+	{
+		
+	}
+	
+	public void PlayerMoveTo(int x, int y, int z)
+	{
+		
+	
+		if (xmlData.getName().equals("WSFirstPersonPlayerCharacter"))
+		{
+			//update players position
+			playerx = x;
+			playery = y;
+			playerz = z;
+			//traverse graph for new hexagon
+			
+		
+		}
+	}
 }

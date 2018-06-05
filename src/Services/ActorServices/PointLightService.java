@@ -13,17 +13,17 @@ public class PointLightService extends CreateLightActorService {
 		e = new Element("PointLightService");
 	}
 
-	public static void Launch() {}
+	public  void Launch() {}
 	
-	public static void Init() {
+	public  void Init() {
 		
 		
 		
 	}
 	
-	public static void Destroy() {}
+	public  void Destroy() {}
 	
-	public static WSObject SpawnWebServiceObject() {
+	public  WSObject SpawnWebServiceObject() {
 		return null;}
 
 	

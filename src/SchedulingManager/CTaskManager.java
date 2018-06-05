@@ -11,6 +11,11 @@ import SchedulingManager.Timer.CTimerManager;
 //the display for this is similar to Windows' task managerf
 
 
+//Scehduler->TaskManager-->Task--->Event
+//Task is a grouping of events
+
+
+
 //coordinates task execution (where in this case, the classes it monitors are services?
 
 //Handles the registrationa and organization of taks
@@ -19,9 +24,28 @@ import SchedulingManager.Timer.CTimerManager;
 //such as start time, execution frequency, duration, priority, and other required properties.
 //
 
-public class CTaskManager {
+public class CTaskManager extends Thread{
 
 	static Vector<CTask> taskList = new Vector<CTask>();
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+		while (true)
+		{
+			//System.out.println("Running task manager");
+			
+			//try {
+			//	Thread.sleep(1000);
+			//} catch (InterruptedException e) {
+			//	// TODO Auto-generated catch block
+			//	e.printStackTrace();
+			//}
+		}
+	}
+		
 	
 	public static Vector<CTask> getCurrentTasks()
 	{

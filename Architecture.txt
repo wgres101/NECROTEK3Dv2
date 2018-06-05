@@ -1,6 +1,14 @@
 ARCHITECUTRE AND DESIGN
 
 
+BUILD MAP LOADING AND SCENE GRAPH FIRST
+BUILD GRAPHICS SYSTEM SECOND
+BUILD INPUT SYSTEM THIRD
+BUILD BUILD ANIMATION SYSTEM FOURTH
+BUILD BUILD COLLISION DETECTION SYSTEM FIFTH
+BUILD PHYSICS SYSTEM SIXTH
+BUILD AI SYSTEM SEVENTH
+
 
 1) Every object (such as a cube or sphere all the way to a rigidbody component) has its
 own WebService and WSObject. The WebService controls all the functionality -that is
@@ -42,6 +50,7 @@ when it reaches within two hexagonals its data will
 be loaded into the game. This yields a neverending
 map if desired - if tied in with procedural functinos.
 All objects are required to register with the AssetHandler.
+This is replaced by the classes in GameMap
 
 8) Blackboard: The blackboard allows a quick way to access foreign variables. All public
 variables that span across more than one class are to register with the blackboard manager.

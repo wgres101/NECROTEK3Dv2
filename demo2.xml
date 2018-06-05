@@ -1,29 +1,45 @@
 <LevelRoot>
 
-	<WSHexTile horizontalSize = "10.0" verticalSize = "10.0" centerPoint = "5.0">
-	
-		<PlayerCharacterService>
 		
-			<WSPlayerCharacter startx = "5.0" starty = "5.0"/>
 
-			<CameraService>
-				<WSCameraObject starx = "3.0" starty="3.0" startz="10.0"/>
-			</CameraService>
+	<Hexagon> 
+	    hexagonid = "0"
+		hexagonlower_left_x = "100"
+		hexagonlower_left_y = "0"
+		hexagonlower_right_x = "200"
+		hexagonlower_right_y = "0"
+		hexagonmidright_x = "300"
+		hexagonmidright_y = "150"
+		hexagonupper_right_x = "200"
+		hexagonupper_right_y = "300"
+		hexagonupper_left_x = "100"
+		hexagonupper_left_y = "300"
+		hexagonmidleft_x = "0"
+		hexagonmidleft_y = "160"
+	</Hexagon>
 
-		</PlayerCharacterService>
-
-		<PointLightService>
-			<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
-		</PointLightService>
+	<PointLightService>
+		<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
+	</PointLightService>
 	
-		<BoxService>
-			<WSBox p_min = "-1.0" p_max = "1.0"/>
-		</BoxService>
+	<BoxService>
+		<WSBox p_min = "-1.0" p_max = "1.0"/>
+	</BoxService>
 	
-	</WSHexTile>
+	<HealthPotionService>
+		<WSHealthPotion healpercent="50" use="once" x="2.0" y="20" z="30" />
+	</HealthPotionService>
 
-
-
-
+	<PuchService>
+		<WSPouch carry="60 stones" x="30" y="25" z="0"/>
+	</PuchService>
+	
+	<CandleService>
+		<WSCandle brightness="10" x="50" y="100" z="0"/>
+	</CandleService>
+	
 
 </LevelRoot>
+
+
+

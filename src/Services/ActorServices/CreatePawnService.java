@@ -14,24 +14,24 @@ public class CreatePawnService extends CreateCharacterService {
 	
 	
 	// adds to a list that are to be saved
-	public static void AddSaveObject() {
+	public  void AddSaveObject() {
 
 	}
 
-	public static void Load() {
+	public  void Load() {
 		// load on demand
 	}
 
-	public static void Save() {
+	public  void Save() {
 
 		// performs that action of saving game
 		// calls SaveData() (this does the actual writing of the save)
 	}
 
-	public static void Update() {
+	public  void Update() {
 	}; // called every tick
 
-	public static void Message(Message message) {
+	public  void Message(Message message) {
 
 		// do some stuff
 

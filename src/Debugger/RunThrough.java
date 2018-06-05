@@ -1,6 +1,7 @@
 package Debugger;
 
 import IDE.Main;
+import Journaling.JournalManager;
 import MessageManagement.Message;
 import SchedulingManager.CTask;
 import SchedulingManager.EEventMachine;
@@ -10,7 +11,7 @@ public class RunThrough {
 	
 	public static void run()
 	{
-		JournalManager.setJournalEntry(RunThrough.class,"RunThrough beginning initialization");		
+		//JournalManager.setJournalEntry(RunThrough.class,"RunThrough beginning initialization");		
 		
 		Message message = new Message();
 		

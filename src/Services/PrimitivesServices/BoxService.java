@@ -22,33 +22,33 @@ public class BoxService extends ServiceRoot {
 	}
 
 	@WebMethod
-	public static void Render()
+	public  void Render()
 	{
 		
 	}
 	
 	@WebMethod
-	public static void parseMessage() {
+	public  void parseMessage() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@WebMethod
-	public static void Launch() {}
+	public  void Launch() {}
 	
 	@WebMethod
-	public static void Init() {}
+	public  void Init() {}
 	
 	@WebMethod
-	public static void Update() {}
+	public  void Update() {}
 	
 	@WebMethod
-	public static void Destroy() {}
+	public  void Destroy() {}
 	
 	@WebMethod
-	public static WSObject SpawnWebServiceObject() {
+	public  WSObject SpawnWebServiceObject() {
 		
-		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("BoxService");
+		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("BoxService", null);
 		
 		
 		return ws_object;

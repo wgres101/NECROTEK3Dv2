@@ -1,6 +1,8 @@
 package GameMap;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
 
 import Journaling.CJournal;
 
@@ -56,30 +58,273 @@ A high lands town might have stone walls with cracks and vines and or broken dow
 public class GameMapManager {
 
 	
+	//traverse graph
+	//check each hexdagon for "IsInMap"
+	//each hexagon has an id, used below to load t he hexagon from the map
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//for the hotloader
 	
 	//indices represent maps to be loaded
-	static HashMap<Integer, CHexagonCoordinates> mapIndex = new HashMap<Integer, CHexagonCoordinates>();
+	//static HashMap<Integer, CHexagonCoordinates> mapIndex = new HashMap<Integer, CHexagonCoordinates>();
 	
 	
 	//indices represent maps to be loaded
 	static String [] filenames = new String[] { "demo.xml", "demo2.xml" };
 	
-	public static void LoadIndices()
+	//Hexagon->Sector->Portal Room->Octree->Portal=>DynamicBSP
+	
+		
+	
+	
+	
+	/*
+	
+	//this retrieves a map from the map index 
+	public static CHexagonCoordinates retrieveNMap(int top_left_x, int top_left_y)
 	{
+		//parameters are coordinates of current map
+		//map values are coordinate stored in the map
 		
-		CJournal.Journal(GameMapManager.class, "Loading map indices into hashmap for hotloader");
+		//iterating over all the maps is iterating over all the hexagons
+		//retrieving north map from this hexagon
 		
 		
-		mapIndex.put(0, new CHexagonCoordinates(100, 200, 200, 0, 0, 100, 300, 100, 200, 200, 100, 0, 300, 200 ));
+		for (Entry<Integer, CHexagonCoordinates> entry : mapIndex.entrySet()) {
+		    Integer key = entry.getKey();
+		    CHexagonCoordinates value = entry.getValue();
+		    
+		    int bottom_left_x = value.lower_left_x;
+		    int bottom_left_y = value.lower_left_y;
+		    
+		    //is map coordinates north of current coordinates
+		    if (bottom_left_x > top_left_x && bottom_left_y > top_left_y)
+		    {
+		    	//return new hexagon
+		    	CHexagonCoordinates hex = value;
+		    	hex.lower_left_x = bottom_left_x;
+		    	hex.lower_left_y = bottom_left_y;
+		    	
+		    	return hex;
+		    }  
+		    
+		}
 		
-		return;
+		
+		
+		return null;
+
 	}
+	
+	
+	//this retrieves a map from the map index 
+	public static CHexagonCoordinates retrieveNWMap(int upper_left_x, int upper_left_y)
+	{
+		//parameters are coordinates of current map
+		//map values are coordinate stored in the map
+		
+		//iterating over all the maps is iterating over all the hexagons
+		//retrieving north map from this hexagon
+		
+		
+		for (Entry<Integer, CHexagonCoordinates> entry : mapIndex.entrySet()) {
+		    Integer key = entry.getKey();
+		    CHexagonCoordinates value = entry.getValue();
+		    
+		    int bottom_right_x = value.lower_right_x;
+		    int bottom_right_y = value.lower_right_y;
+		    
+		    //is map coordinates north west of current coordinates
+		    if (bottom_right_x <= upper_left_x  &&  bottom_right_y >= upper_left_y)
+		    {
+		    	//return new hexagon
+		    	CHexagonCoordinates hex = value;
+		    	hex.lower_left_x = bottom_right_x;
+		    	hex.lower_left_y = bottom_right_y;
+		    	
+		    	return hex;
+		    }  
+		    
+		}
 		
 		
 		
+		return null;
+
+	}
+	
+	//this retrieves a map from the map index 
+		public static CHexagonCoordinates retrieveSWMap(int upper_right_x, int upper_right_y)
+		{
+			//parameters are coordinates of current map
+			//map values are coordinate stored in the map
+			
+			//iterating over all the maps is iterating over all the hexagons
+			//retrieving north map from this hexagon
+			
+			
+			for (Entry<Integer, CHexagonCoordinates> entry : mapIndex.entrySet()) {
+			    Integer key = entry.getKey();
+			    CHexagonCoordinates value = entry.getValue();
+			    
+			    int top_right_x = value.upper_right_x;
+			    int top_right_y = value.upper_right_y;
+			    
+			    //is map coordinates north west of current coordinates
+			    if (top_right_x <= upper_right_x  &&  top_right_y <= upper_right_y)
+			    {
+			    	//return new hexagon
+			    	CHexagonCoordinates hex = value;
+			    	hex.upper_right_x = top_right_x;
+			    	hex.upper_right_y = top_right_y;
+			    	
+			    	return hex;
+			    }  
+			    
+			}
+			
+			
+			
+			return null;
+
+		}
 		
 		
+
+		//this retrieves a map from the map index 
+			public static CHexagonCoordinates retrieveSMap(int upper_left_x, int upper_left_y)
+			{
+				//parameters are coordinates of current map
+				//map values are coordinate stored in the map
+				
+				//iterating over all the maps is iterating over all the hexagons
+				//retrieving north map from this hexagon
+				
+				
+				for (Entry<Integer, CHexagonCoordinates> entry : mapIndex.entrySet()) {
+				    Integer key = entry.getKey();
+				    CHexagonCoordinates value = entry.getValue();
+				    
+				    int top_left_x = value.upper_left_x;
+				    int top_left_y = value.upper_left_y;
+				    
+				    int top_right_x = value.upper_right_x;
+				    int top_right_y = value.upper_right_x;
+				    
+				    
+				    //is map coordinates north west of current coordinates
+				    if (top_right_x <= upper_left_x &&  top_right_y <= upper_left_y)
+				    {
+				    	//return new hexagon
+				    	CHexagonCoordinates hex = value;
+				    	hex.upper_right_x = top_right_x;
+				    	hex.upper_right_y = top_right_y;
+				    	
+				    	return hex;
+				    }  
+				    
+				}
+				
+				
+				
+				return null;
+
+			}
+			
+				
+			public static CHexagonCoordinates retrieveSEMap(int midleftx, int  midlefty)
+			{
+				//parameters are coordinates of current map
+				//map values are coordinate stored in the map
+				
+				//iterating over all the maps is iterating over all the hexagons
+				//retrieving north map from this hexagon
+				
+				
+				for (Entry<Integer, CHexagonCoordinates> entry : mapIndex.entrySet()) {
+				    Integer key = entry.getKey();
+				    CHexagonCoordinates value = entry.getValue();
+				    
+				    int midleft_x = value.midleft_x;
+				    int midleft_y = value.midleft_y;
+				    
+				    int midright_x = value.midright_x;
+				    int midright_y = value.midright_y;
+				    
+				    //is map coordinates north west of current coordinates/
+				    //OVEFLOW
+				    if (midleftx >= midleft_x && midlefty <= midleft_x)
+				    	
+				    {
+				    	//return new hexagon
+				    	CHexagonCoordinates hex = value;
+				    	hex.midleft_x = midleft_x;
+				    	hex.midleft_y = midleft_y;
+				    	
+				    	return hex;
+				    }  
+				    
+				}
+				
+				
+				
+				return null;
+
+			}
+			
+			public static CHexagonCoordinates retrieveNEMap(int midleftx, int midlefty)
+			{
+				//parameters are coordinates of current map
+				//map values are coordinate stored in the map
+				
+				//iterating over all the maps is iterating over all the hexagons
+				//retrieving north map from this hexagon
+				
+				
+				for (Entry<Integer, CHexagonCoordinates> entry : mapIndex.entrySet()) {
+				    Integer key = entry.getKey();
+				    CHexagonCoordinates value = entry.getValue();
+				    
+				    int mid_left_x = value.midleft_x;
+				    int mid_left_y = value.midleft_y;
+				    
+				    int mid_right_x = value.midright_x;
+				    int mid_right_y = value.midright_y;
+				    
+				    //is map coordinates north west of current coordinates/
+				    //OVEFLOW
+				    if (midleftx >= mid_left_x)
+				    	
+				    {
+				    	//return new hexagon
+				    	CHexagonCoordinates hex = value;
+				    	hex.midleft_x = mid_left_x;
+				    	hex.midleft_y = mid_left_y;
+				    	
+				    	return hex;
+				    }  
+				    
+				}
+				
+				
+				
+				return null;
+
+			}
+					
+		
+		*/
 		
 	
 	

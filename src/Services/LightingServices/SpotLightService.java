@@ -14,14 +14,14 @@ public SpotLightService(Element e) {
 		// TODO Auto-generated constructor stub
 	}
 
-public static void Launch() {}
+public  void Launch() {}
 	
-	public static void Init() {}
+	public  void Init() {}
 	
-	public static void Update() {}
+	public  void Update() {}
 	
-	public static void Destroy() {}
+	public  void Destroy() {}
 	
-	public static WSObject SpawnWebServiceObject() { return null;}
+	public  WSObject SpawnWebServiceObject() { return null;}
 	
 }

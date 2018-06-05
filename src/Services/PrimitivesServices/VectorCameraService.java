@@ -13,17 +13,17 @@ public class VectorCameraService extends ServiceRoot {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void Launch() {}
+	public  void Launch() {}
 	
-	public static void Init() {
+	public  void Init() {
 		
 		
 		
 	}
 	
-	public static void Destroy() {}
+	public  void Destroy() {}
 	
-	public static WSObject SpawnWebServiceObject() {
+	public  WSObject SpawnWebServiceObject() {
 		return null;}
 
 

@@ -1,5 +1,7 @@
 package SchedulingManager;
 
+import java.util.ArrayList;
+
 import MessageManagement.Message;
 
 //start time
@@ -12,7 +14,7 @@ import MessageManagement.Message;
 //this is what gets scheduled and executed
 //tasks need to be small and indepedent
 
-//one ctask can have multiple message sin it
+//one ctask can have multiple tasks in it
 
 //a task wraps a message
 public class CTask {
@@ -22,7 +24,22 @@ public class CTask {
 	
 	public boolean dead = false;
 	
-	public Message message = new Message();
+	//public CEvent task = new CEvent();
 	
+	public Message message;
+	
+	//start time
+	public double startTime;
+	
+	//execution frequency
+	public double executeFrequency;
+	
+	//duration
+	public double duration;
+	
+	//priority
+	int priority;
+	
+	ArrayList<CEvent> events = new ArrayList<CEvent>();
 	
 }

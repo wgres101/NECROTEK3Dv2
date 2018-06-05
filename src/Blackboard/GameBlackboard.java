@@ -8,6 +8,9 @@ import Journaling.CJournal;
 
 public class GameBlackboard extends Thread {
 
+	
+	
+	
 	boolean started = false;
 	
 	@Override
@@ -20,6 +23,8 @@ public class GameBlackboard extends Thread {
 		}
 	}
 
+	
+	
 	public static void Init()
 	{
 		

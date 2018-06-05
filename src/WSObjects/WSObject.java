@@ -17,10 +17,14 @@ public class WSObject extends ServiceRoot {
 		
 		// TODO Auto-generated constructor stub
 	}
-	
+	public WSObject() { 
+		
+	}
 
+	public Element xmlData;
+	
 	//called upon initialization of object
-	public void Init(ServiceRoot AnimatedCharacterService)
+	public  void Init(ServiceRoot AnimatedCharacterService)
 	{
 		//Called Init
 		
@@ -33,14 +37,14 @@ public class WSObject extends ServiceRoot {
 	//to update internal variables
 	//and to execute per turn actions
 	//used to update state
-	public void InstanceUpdate()
+	public  void InstanceUpdate()
 	{
 		//called Update
 	}
 	
 	//called upon when object is no longer needed
 	
-	public void InstanceDestroy()
+	public  void InstanceDestroy()
 	{
 		//called Destroy
 	}

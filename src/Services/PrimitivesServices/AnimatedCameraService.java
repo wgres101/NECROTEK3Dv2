@@ -15,17 +15,17 @@ public class AnimatedCameraService extends ServiceRoot {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void Launch() {}
+	public  void Launch() {}
 	
-	public static void Init() {}
+	public  void Init() {}
 	
-	public static void Update() {}
+	public  void Update() {}
 	
-	public static void Destroy() {}
+	public  void Destroy() {}
 	
-	public static WSObject SpawnWebServiceObject() {
+	public  WSObject SpawnWebServiceObject() {
 		
-		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("VectorCameraInstance");
+		WSObject ws_object = WebServiceFactory.launchWebServiceInstance("VectorCameraInstance", null);
 		
 		
 		return ws_object;

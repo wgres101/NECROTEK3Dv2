@@ -1,5 +1,6 @@
 package ObjectManagement;
 
+import Journaling.CJournal;
 
 //GEMS 7
 
@@ -41,7 +42,10 @@ public class ObjectManager implements Runnable {
 
 	static Pool pool = new Pool();
 	
-	
+	public static void InitPool()
+	{
+		pool.InitPool();
+	}
 	
 	public static Object requestClass(Class classVar, String name)
 	{
@@ -51,11 +55,12 @@ public class ObjectManager implements Runnable {
 		return null;
 	}
 	
-	public static Object requestObjectOfClass()
+	public static Object requestObjectOfClass(Class<? extends Object> class1)
 	{
 
 	    Object t = Pool.requestMemoryTyped();
-		Debugger.DebugManager.Debug(ObjectManager.class, "Attempting to get memory from Pool");
+	    
+		CJournal.Journal(ObjectManager.class, "Attempting to get memory from Pool");
 		
 		
 		return t;

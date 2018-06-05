@@ -37,7 +37,13 @@ public interface GraphNodeInstance extends Component {
 	
 	}
 	
-	public void BeginPlay()
+	//called by the animation unit
+	
+	public void Animate() 
+	{
+	}
+	
+	public void BeginPlay() //called when first initialzied
 	{
 	}
 	
@@ -48,6 +54,11 @@ public interface GraphNodeInstance extends Component {
 	}
 	
 	
+	//called by the collision detector
+	@WebMethod
+	public void Collision()
+	{
+	}
 
 	
 	//put end object code here

@@ -15,7 +15,7 @@ public class CEvent implements Comparable {
 
 
 	CTask task = new CTask();
-	EEventMachine current_event; 
+	public EEventMachine current_event; 
 	
 	public int compareTo(Object o)
 	{

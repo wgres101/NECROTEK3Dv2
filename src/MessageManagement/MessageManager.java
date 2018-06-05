@@ -122,6 +122,10 @@ public  class MessageManager extends Thread {
 			{
 			}
 			
+			public void UpdateLogicLayer()
+			{
+				
+			}
 		
 		public static void Train()
 		{

@@ -29,24 +29,23 @@ public class WSSpotLight {
 	public void Init(ServiceRoot AnimatedCharacterService)
 	{
 		//Called Init
-		
-		 Tweakable.tweak(WVPMatrix, WVPMatrix);
+		Tweakable tweaker = new Tweakable();
+		 tweaker.Tweak("WVPMatrix", Mat4.class, WVPMatrix);
 		 Mat4 WMatrix;
+	
 		 
-		 Tweakable.tweak(CameraModelPosition, CameraModelPosition);
+		 tweaker.Tweak("MaterialEmissive", Float3.class, MaterialEmissive);
 		 
-		 Tweakable.tweak(MaterialEmissive, MaterialEmissive);
-		 
-		 Tweakable.tweak(MaterialAmbient, MaterialAmbient);
-		 Tweakable.tweak(MaterialDiffuse, MaterialDiffuse);
-		 Tweakable.tweak(MaterialSpecular, MaterialSpecular);
-		 Tweakable.tweak(Light0ModelPosition, Light0ModelPosition);
-		 Tweakable.tweak(Light0ModelDirection, Light0ModelDirection);
-		 Tweakable.tweak(Light0Ambient, Light0Ambient);
-		 Tweakable.tweak(Light0Diffuse, Light0Diffuse);
-		 Tweakable.tweak(Light0Specular, Light0Specular);
-		 Tweakable.tweak(Light0SpotCutoff, Light0SpotCutoff);
-		 Tweakable.tweak(Light0Attenuation, Light0Attenuation);
+		 tweaker.Tweak("MaterialAmbient", Float3.class,MaterialAmbient);
+		 tweaker.Tweak("MaterialDiffuse", Float3.class,MaterialDiffuse);
+		 tweaker.Tweak("MaterialSpecular", Float3.class,MaterialSpecular);
+		 tweaker.Tweak("Light0ModelPosition", Float3.class,Light0ModelPosition);
+		 tweaker.Tweak("Light0ModelDirection",Float3.class, Light0ModelDirection);
+		 tweaker.Tweak("Light0Ambient", Float3.class,Light0Ambient);
+		 tweaker.Tweak("Light0Diffuse",Float3.class,Light0Diffuse);
+		 tweaker.Tweak("Light0Specular",Float3.class,Light0Specular);
+		 tweaker.Tweak("Light0SpotCutoff", Float3.class,Light0SpotCutoff);
+		 tweaker.Tweak("Light0Attenuation",Float3.class, Light0Attenuation);
 		 	
 	}
 	

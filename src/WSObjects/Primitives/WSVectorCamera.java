@@ -42,7 +42,7 @@ public class WSVectorCamera extends WSObject {
 			//to update internal variables
 			//and to execute per turn actions
 			//used to update state
-	public void InstanceUpdate()
+	public  void InstanceUpdate()
 	{
 		//called Update
 		//
@@ -53,59 +53,59 @@ public class WSVectorCamera extends WSObject {
 		
 		//called upon when object is no longer needed
 		
-		public void InstanceDestroy()
+		public  void InstanceDestroy()
 		{
 			//called Destroy
 		}
 		
 		//called every turn. checks messagemanager for message
 		
-		public void ParseMessage()
+		public  void ParseMessage()
 		{
 			
 		}
 		
 		
-		public static void Launch() {}
+		public  void Launch() {}
 		
 		
 		//called on object creation
 		
-		public static void Init() {}
+		public  void Init() {}
 		
 
 
-		public static void  Render()
+		public  void  Render()
 		{
 			
 		}
 
-		public static void parseMessage()
+		public  void parseMessage()
 		{
 			
 		}
 		
-		public static void  Collision()
+		public  void  Collision()
 		{
 			
 		}
 		
 		//when the game requires this particular state to be active
 		
-		public static void  OnEnter()
+		public  void  OnEnter()
 		{
 			
 		}
 		
 		//When the object no longer needs to be attachd to the scene graph
 		
-		public static void  OnExit()
+		public  void  OnExit()
 		{
 		}
 
 		//for exammple, hitting the pause button
 		
-		public static void  OnSuspend()
+		public  void  OnSuspend()
 		{
 		}
 		

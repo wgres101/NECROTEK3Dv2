@@ -15,17 +15,17 @@ public class CreateCharacterService extends ServiceRoot{
 		e = new Element("CharacterService");
 	}
 
-	public static void Launch() {}
+	public  void Launch() {}
 	
-	public static void Init() {
+	public  void Init() {
 		
 		
 		
 	}
 	
-	public static void Destroy() {}
+	public  void Destroy() {}
 	
-	public static WSObject SpawnWebServiceObject() {
+	public  WSObject SpawnWebServiceObject() {
 		return null;}
 
 	

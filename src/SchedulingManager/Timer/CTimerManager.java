@@ -30,7 +30,7 @@ public class CTimerManager  implements Runnable
 	
 	public static CTimer getNewTimer(long frames_per_tick,long ticks_per_second) 
 	{
-		CJournal.Journal(CTimerManager.class, "Creating a CTimer Object");
+		//CJournal.Journal(CTimerManager.class, "Creating a CTimer Object");
 		
 		CTimer timer_obj = new CTimer();
 		
@@ -48,7 +48,7 @@ public class CTimerManager  implements Runnable
 
 
 		/* timer_obj.t.schedule(new CTimer(), 0, callback_object_type); */ 
-		CJournal.Journal(CTimerManager.class, "Timer creation success. Adding CTimer object to internal list Of Timers");
+		//moveCJournal.Journal(CTimerManager.class, "Timer creation success. Adding CTimer object to internal list Of Timers");
 		
 		listOfTimers.addElement(timer_obj);
 		

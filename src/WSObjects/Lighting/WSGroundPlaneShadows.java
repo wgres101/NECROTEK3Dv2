@@ -29,7 +29,11 @@ public class WSGroundPlaneShadows {
 	
 	
 	public void Update() {
-		Tweakable.tweak(shadowProjectionMatrix, shadowProjectionMatrix);
+		
+		Tweakable tweaker = new Tweakable();
+		tweaker.Tweak("shadowProjectionMatrix", Mat4.class, shadowProjectionMatrix);
+		
+		
 		Blackboard.GameBlackboard.registerVariable("shadowProjectionMatrix", shadowProjectionMatrix);
 
 		

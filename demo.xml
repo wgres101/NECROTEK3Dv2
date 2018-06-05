@@ -3,11 +3,27 @@
 <LevelRoot>
 
 	<FirstPersonPlayerCharacterService>
-		<WSFirstPersonPlayerCharacter startx="0.0" starty="0.0" startz="0.0"/>
+		<WSFirstPersonPlayerCharacter startx="0.0" starty="0.0" startz="0.0" currentx = "0.0" currenty ="0.0" currentz="0.0"/>
 		<CameraService>
 		<WSCameraObject startx = "0.0" starty="0.0" startz="0"/>
 		</CameraService>
 	</FirstPersonPlayerCharacterService>		
+
+	<GameStartHexagon> 
+	    hexagonid = "0"
+		hexagonlower_left_x = "100"
+		hexagonlower_left_y = "0"
+		hexagonlower_right_x = "200"
+		hexagonlower_right_y = "0"
+		hexagonmidright_x = "300"
+		hexagonmidright_y = "150"
+		hexagonupper_right_x = "200"
+		hexagonupper_right_y = "300"
+		hexagonupper_left_x = "100"
+		hexagonupper_left_y = "300"
+		hexagonmidleft_x = "0"
+		hexagonmidleft_y = "160"
+	</GameStartHexagon>
 
 	<PointLightService>
 		<WSPointLight startx="-2.0" starty="0.0" startz="2.0"/>
@@ -18,7 +34,7 @@
 	</BoxService>
 	
 	<DaemonArmsService>
-		<WSDaemonArms str_requirement="60" defend_chance="50" defense="0"/>
+		<WSDaemonArms  str_requirement="60" defend_chance="50" defense="0"/>
 	</DaemonArmsService>
 	
 	<DaemonBoneService>

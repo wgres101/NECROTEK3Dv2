@@ -6,12 +6,24 @@ package Handle;
 
 public class HANDLE {
 
+	
 
 	class NullResource<T>
 	{
 		// instead of setting something to null
 		// we set it to a null object
 		// so we never have to do a check for null
+	}
+	
+	static class DataType <T>
+	{
+		T variable;
+		
+		public void StoreDataType(T variable)
+		{
+		    
+			return;
+		}
 	}
 	
 	

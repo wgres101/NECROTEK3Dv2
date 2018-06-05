@@ -18,6 +18,9 @@ import SchedulingManager.CScheduler;
 
 public class Main  extends JFrame   {
 
+	
+	
+	
 	//static CoreRaster coreRaster = new CoreRaster();
 
 	static MessageManager messageManager = new MessageManager();

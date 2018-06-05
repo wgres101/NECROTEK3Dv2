@@ -2,6 +2,8 @@ package Journaling.Profiler;
 
 import java.util.ArrayList;
 
+import Journaling.JournalManager;
+
 //profiler uses a unique begin and end function + parameters
 //in these blocks critical output is displayed for debugging
 
@@ -39,7 +41,13 @@ public class CProfilerManager {
 	{
 		if (node != null)
 		{
-			System.out.println("ID:" + node.ID + "Location:" + node.location_message + "Start Time:" + node.start_time + "End Time" + node.end_time);  
+			try {
+				JournalManager.JournalEntry(CProfilerManager.class, "printProfileTree", "ID:" + node.ID + "Location:" + node.location_message + "Start Time:" + node.start_time + "End Time" + node.end_time);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//System.out.println("ID:" + node.ID + "Location:" + node.location_message + "Start Time:" + node.start_time + "End Time" + node.end_time);  
 			printProfileTree(node);
 		}
 		

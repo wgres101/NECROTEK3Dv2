@@ -1,10 +1,16 @@
-
+import GameMap.CHotLoader;
 
 //these are all the classes that can be fired
 //and have Update() methods
 public class FireableEvents {
 
-	//AssetHotLoader
+	public void fireHotLoader()
+	{
+		//CHotLoader.HotLoad();
+	}
+	
+	
+	
 	//MainHUD
 	//MenuManager
 	//InspectorPanels
